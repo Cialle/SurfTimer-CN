@@ -4,13 +4,19 @@
 // Each hint is automatically preceded by your chat prefix
 // Each line is a new hint
 
-Type {lightgreen}!bonus {default}to teleport to the bonus stage
-Type {lightgreen}!stages {default}to teleport to a stage
-Type {lightgreen}!reset {default}or {lightgreen}!r {default}to go back to the beginning of the map
-Type {lightgreen}!rs {default}to go back to the beginning of your stage
-Type {lightgreen}!maptop {default}to see the top map times
-Type {lightgreen}!replay {default}to see a replay of the fastest map run
-Type {lightgreen}!flashlight {default}if the map is too dark
-Type {lightgreen}!howto {default}to see a tutorial on how to surf
-Type {lightgreen}!nc {default}to toggle noclip on and off
-Tired of seeing these hints? Type {lightgreen}!togglehints {default}to toggle them on or off
+// 在此处记录您想要在游戏中显示的所有提示
+// 每个提示的最大长度为265个字符
+//
+// 每个提示都会自动以您的聊天前缀为前缀显示
+// 每行是一个新的提示
+
+
+键入 {lightgreen}!bonus / !b {default}可传送到奖励关卡
+键入 {lightgreen}!stages / !s {default}可传送到一个关卡
+键入 {lightgreen}!reset / !r {default}或 {lightgreen}!r {default}可返回地图开头
+键入 {lightgreen}!rs / !back {default}可返回到你的关卡开头
+键入 {lightgreen}!top {default}查看最快地图时间
+键入 {lightgreen}!replay {default}查看当前最快记录的回放
+键入 {lightgreen}!flashlight {default}如果地图太暗，打开手电筒
+键入 {lightgreen}!nc {default}切换飞行模式开关
+厌倦了看到这些提示吗？键入 {lightgreen}!togglehints {default}切换它们的开启或关闭

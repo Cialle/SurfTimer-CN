@@ -1,2 +1,4 @@
 // assign whitelists to the default title function here
+// 在这里为默认标题函数分配白名单。
 // put each users steamid on a new line in STEAM_1:X:YYYYYYYYY format (SteamID32) like:
+// 每个用户的SteamID应以“STEAM_1:X:YYYYYYYYY”的格式（SteamID32）单独占一行，例如：

@@ -8,6 +8,17 @@
 //
 // Available colors: {default}, {red}, {lightred}, {darkred}, {bluegray}, {blue}, {darkblue}, {purple}, {orchid}, {yellow}, {gold}, {lightgreen}, {green}, {lime}, {gray}, {gray2}
 
+// 在这里分配要强制执行的默认标题
+// 确保 ck_enforce_default_titles 设置为大于 0
+//
+// 可接受 "steamid" 或 "flag"
+// SteamID 必须以 "STEAM_1:X:YYYYYYYYY" 的格式（SteamID32）提供
+// "type" 可以是 "chat"、"scoreboard" 或 "both"，以更改标题显示的位置，默认为 both
+// 注意：SteamID 或 flag 的第一个匹配将确定分配的标题
+//
+// 可用颜色：{default}、{red}、{lightred}、{darkred}、{bluegray}、{blue}、{darkblue}、{purple}、{orchid}、{yellow}、{gold}、{lightgreen}、{green}、{lime}、{gray}、{gray2}
+
+
 "Default Titles"
 {
   "0"

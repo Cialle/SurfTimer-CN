@@ -4,196 +4,235 @@
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Normal mode activated. Change to practice mode by writing {lightgreen}!tele"
+	    "chi"       "{1} 已启用正常模式。通过输入{lightgreen}!tele切换至练习模式。"
 	}
 	"PracticeInStartZone"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You can't make a checkpoint inside the start zone!"
+    	"chi"       "{1} 无法在起始区域内设置检查点！"
 	}
 	"PracticeInSpectate"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You can't go to a checkpoint whilst spectating!"
+		"chi"		"{1} 在观战时无法前往检查点！"
 	}
 	"ToogleCheckpoints1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Checkpoints disabled"
+		"chi"		"{1} 检查点已禁用"
 	}
 	"ToggleCheckpoints2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Checkpoints enabled"
+		"chi"		"{1} 检查点已启用"
 	}
 	"ToggleCheckpoints3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Checkpoints will be enabled when you restart your timer"
+		"chi"		"{1} 当您重新启动计时器时，检查点将被启用"
 	}
 	"HideChat1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Hide chat enabled"
+		"chi"		"{1} 隐藏聊天已启用"
 	}
 	"HideChat2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Hide chat disabled"
+		"chi"		"{1} 隐藏聊天已禁用"
 	}
 	"HideViewModel1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Weapon viewmodel disabled"
+		"chi"		"{1} 武器视图模型已禁用"
 	}
 	"HideViewModel2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Weapon viewmodel enabled"
+		"chi"		"{1} 武器视图模型已启用"
 	}
 	"AvgTime"
 	{
 		"#format"	"{1:s},{2:s},{3:i}"
 		"en"		"{1} Avg. Map Time: {lightgreen}{2} {default}[{lightgreen}{3}{default}]"
+		"chi"		"{1} 平均地图时间：{lightgreen}{2} {default}[{lightgreen}{3}{default}]"
 	}
 	"AvgTimeBonus"
 	{
 		"#format"	"{1:s},{2:s},{3:i}"
 		"en"		"{1} Avg. Bonus Time: {lightgreen}{2} {default}[{lightgreen}{3}{default}]"
+		"chi"		"{1} 平均奖励时间：{lightgreen}{2} {default}[{lightgreen}{3}{default}]"
 	}
 	"TimeleftMinutes"
 	{
 		"#format"	"{1:s},{2:s},{3:i}"
 		"en"		"{1} {blue}{2} {default}- {lightgreen}{3} minutes remaining"
+		"chi"		"{1} {blue}{2} {default}- 剩余 {lightgreen}{3} 分钟"
 	}
 	"TimeleftSeconds"
 	{
 		"#format"	"{1:s},{2:s},{3:i}"
 		"en"		"{1} {blue}{2} {default}- {lightgreen}{3} seconds remaining"
+		"chi"		"{1} {blue}{2} {default}- 剩余 {lightgreen}{3} 秒"
 	}
 	"TimeleftCounter"
 	{
 		"#format"	"{1:s},{2:s},{3:i}"
 		"en"		"{1} {blue}{2} {default}- {lightgreen}{3} seconds remaining"
+		"chi"		"{1} {blue}{2} {default}- 剩余 {lightgreen}{3} 秒"
 	}
 	"MissedMapBest"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} You missed your PB of [{lightgreen}{2}{default}]"
+		"chi"		"{1} 你错过了你的个人最佳时间 [{lightgreen}{2}{default}]"
 	}
 	"SkillGroup"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} You are now ranked as {2}"
+		"chi"		"{1} 你现在的排名是 {2}"
 	}
 	"Rc_PlayerRankStart"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Refreshing profile data"
+		"chi"		"{1} 正在刷新个人资料数据"
 	}
 	"Rc_PlayerRankFinished"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} Profile refreshed. [{purple}{2}{default}]"
+		"chi"		"{1} 个人资料已刷新。[{purple}{2}{default}]"
 	}
 	"Rc_PlayerRankFinished2"
 	{
 		"#format"	"{1:s},{2:s},{3:i}"
 		"en"		"{1} {red}{2} {default}Profile refreshed. [{purple}{3}{default}]"
+		"chi"		"{1} {red}{2} {default}个人资料已刷新。[{purple}{3}{default}]"
 	}
 	"EarnedPoints"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i}"
 		"en"		"{1} {yellow}{2}{default} has earned {purple}{3} {default}points [{purple}{4}{default} Total]"
+		"chi"		"{1} {yellow}{2}{default} 赚取了 {purple}{3} {default}分 [{purple}{4}{default} 总计]"
 	}
 	"EarnedPoints2"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s},{5:i}"
 		"en"		"{1} {yellow}{2}{default} has earned {purple}{3} {red}{4} {default}points [{purple}{5}{default} Total]"
+		"chi"		"{1} {yellow}{2}{default} 赚取了 {purple}{3} {red}{4} {default}分 [{purple}{5}{default} 总计]"
 	}
-	"NoPlayerTop"
+		"NoPlayerTop"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No players found"
+		"chi"		"{1} 未找到任何玩家"
 	}
 	"NoRecordTop"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No map times found"
+		"chi"		"{1} 未找到任何地图时间"
 	}
 	"PrUpdateStarted"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Recalculating player rankings. This may take a while, please wait! [You can follow the progress in your console]"
+		"chi"		"{1} 重新计算玩家排名。可能需要一些时间，请等待！[您可以在控制台中查看进度]"
 	}
 	"PrUpdateFinished"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {lightgreen}Recalculation finished!"
+		"chi"		"{1} {lightgreen}重新计算完成！"
 	}
 	"StopRecalculation"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Recalculation stopped!"
+		"chi"		"{1} 重新计算已停止！"
 	}
 	"NewMapRecord"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} {yellow}{2} {default}beat the map record! {3}"
+		"chi"		"{1} {yellow}{2} {default}打破了地图纪录！{3}"
 	}
 	"ReplayFinishingMsg"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} {yellow}{2}{default} has finished in [{lightgreen}{3}{default}]"
+		"chi"		"{1} {yellow}{2}{default}已完成，用时[{lightgreen}{3}{default}]"
 	}
 	"ReplayFinishingMsgBonus"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2}{default} has finished [{orange}{3}{default}] in [{lightgreen}{4}{default}]"
+		"chi"		"{1} {yellow}{2}{default}已完成[{orange}{3}{default}]，用时[{lightgreen}{4}{default}]"
 	}
 	"MapFinished1"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:i},{5:i},{6:s},{7:s}"
 		"en"		"{1} {yellow}{2}{default} finished in {lightgreen}{3}{default}. [Rank: {lightgreen}{4}/{5} {default}{6} | Record: {lightgreen}{7}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成，用时 {lightgreen}{3}{default}。 [排名: {lightgreen}{4}/{5} {default}{6} | 纪录: {lightgreen}{7}{default}]"
 	}
 	"MapFinished3"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:i},{6:i},{7:s},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished in {lightgreen}{3}{default}. Improving their best time by [{lightgreen}{4}{default}]. [Rank: {lightgreen}{5}/{6} {default}{7} | Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成，用时 {lightgreen}{3}{default}。 改善了他们的最佳时间 [{lightgreen}{4}{default}]。 [排名: {lightgreen}{5}/{6} {default}{7} | 纪录: {lightgreen}{8}{default}]"
 	}
 	"MapFinished5"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:i},{6:i},{7:s},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished in {lightgreen}{3}{default}. Missing their best time by [{red}{4}{default}]. [Rank: {lightgreen}{5}/{6} {default}{7} | Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成，用时 {lightgreen}{3}{default}。 未达到他们的最佳时间 [{red}{4}{default}]。 [排名: {lightgreen}{5}/{6} {default}{7} | 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished1"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {red}{4}{default}. Missing their best time by [{red}{5}{default}]. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {red}{4}{default}。未达到他们的最佳时间 [{red}{5}{default}]。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished2"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} {yellow}{2} {default}beat the [{orange}{3}{default}] record!"
+		"chi"		"{1} {yellow}{2} {default}打破了 [{orange}{3}{default}] 纪录！"
 	}
 	"BonusFinished3"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. [Rank: {lightgreen}1/1 {default}| Record: {lightgreen}{5}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。 [排名: {lightgreen}1/1 {default}| 纪录: {lightgreen}{5}{default}]"
 	}
 	"BonusFinished4"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. Improving the best time by {lightgreen}{5}{default}. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最佳时间 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished5"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. Improving the best time by {lightgreen}{5}{default}. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最佳时间 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished6"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. Improving their best time by {lightgreen}{5}{default}. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最佳时间 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	/*===================================
 	=    Style Bonus Time Messages     	=
@@ -202,36 +241,43 @@
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2}{default} set the {orange}{3} {red}{4} {default}record!"
+		"chi"		"{1} {yellow}{2}{default} 创造了 {orange}{3} {red}{4} {default}纪录！"
 	}
 	"StyleNewBonusRecord"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2}{default} beat the {orange}{3} {red}{4} {default}record!"
+		"chi"		"{1} {yellow}{2}{default} 打破了 {orange}{3} {red}{4} {default}纪录！"
 	}
 	"StyleBonusFinished1"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}set a {orange}{3} {red}{4} {default}SR of {lightgreen}{5}"
+		"chi"		"{1} {yellow}{2}{default} 创造了 {orange}{3} {red}{4} {default}SR 纪录，用时 {lightgreen}{5}"
 	}
 	"StyleBonusFinished2"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:s},{8:i},{9:i}"
 		"en"		"{1} {yellow}{2} {default}finished {orange}{3} {red}{4} {default}in {lightgreen}{5} {default}[SR {lightgreen}{6} {default}| PB {blue}{7} {default}| Rank {lightgreen}{8}/{9}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 {orange}{3} {red}{4} {default}用时 {lightgreen}{5} {default}[SR {lightgreen}{6} {default}| 个人最佳 {blue}{7} {default}| 排名 {lightgreen}{8}/{9}{default}]"
 	}
 	"StyleBonusFinished3"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:i},{8:i}"
 		"en"		"{1} {yellow}{2} {default}set a {orange}{3} {red}{4} {default}PB of {lightgreen}{5} {default}[SR {red}{6} {default}| Rank {lightgreen}{7}/{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 创造了 {orange}{3} {red}{4} {default}PB，用时 {lightgreen}{5} {default}[SR {red}{6} {default}| 排名 {lightgreen}{7}/{8}{default}]"
 	}
 	"StyleBonusFinished4"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:s},{8:i},{9:i}"
 		"en"		"{1} {yellow}{2} {default}finished {orange}{3} {red}{4} {default}in {lightgreen}{5} {default}[SR {red}{6} {default}| PB {blue}{7} {default}| Rank {lightgreen}{8}/{9}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 {orange}{3} {red}{4} {default}用时 {lightgreen}{5} {default}[SR {red}{6} {default}| 个人最佳 {blue}{7} {default}| 排名 {lightgreen}{8}/{9}{default}]"
 	}
 	"StyleBonusFinished5"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:s},{8:i},{9:i}"
 		"en"		"{1} {yellow}{2} {default}finished {orange}{3} {red}{4} {default}in {lightgreen}{5} {default}[SR {red}{6} {default}| PB {yellow}{7} {default}| Rank {lightgreen}{8}/{9}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 {orange}{3} {red}{4} {default}用时 {lightgreen}{5} {default}[SR {red}{6} {default}| 个人最佳 {yellow}{7} {default}| 排名 {lightgreen}{8}/{9}{default}]"
 	}
 	/*===================================
 	=    Prac WRCP Time Messages     	=
@@ -240,1761 +286,2116 @@
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i}"
 		"en"		"{1} {blue}[Practice]{default} Stage {2}: {lightgreen}{3} {default}[{4}{default} | {5}{default}] {blue}[Rank {6}]"
+		"chi"		"{1} {blue}[练习]{default} 第 {2} 关卡: {lightgreen}{3} {default}[{4}{default} | {5}{default}] {blue}[排名 {6}]"
 	}
 	"PracWrcp2"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s},{5:s},{6:s},{7:i}"
 		"en"		"{1} {blue}[Practice]{yellow} {2} {default}| {purple}Stage {3}{default}: {lightgreen}{4} {default}[{5}{default} | {6}{default}] {blue}[Rank {7}]"
+		"chi"		"{1} {blue}[练习]{yellow} {2} {default}| {purple}第 {3} 关卡{default}: {lightgreen}{4} {default}[{5}{default} | {6}{default}] {blue}[排名 {7}]"
 	}
 	"PracWrcp3"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i},{7:i},{8:i}"
 		"en"		"{1} {blue}[Practice]{default} Completed Stage {2} {red}{3} {default}in {lightgreen}{4} {5} {default}[Rank: {lightgreen}{6}/{7}{default}] {blue}[Rank {8}]"
+		"chi"		"{1} {blue}[练习]{default} 完成第 {2} 关卡 {red}{3} {default}用时 {lightgreen}{4} {5} {default}[排名: {lightgreen}{6}/{7}{default}] {blue}[排名 {8}]"
 	}
 	"PracWrcp4"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i},{7:i},{8:i}"
 		"en"		"{1} {blue}[Practice]{default} Completed Stage {2} {red}{3} {default}in {lightgreen}{4} {5} {default}[Rank: {lightgreen}{6}/{7}{default}] {blue}[Rank {8}]"
+		"chi"		"{1} {blue}[练习]{default} 完成第 {2} 关卡 {red}{3} {default}用时 {lightgreen}{4} {5} {default}[排名: {lightgreen}{6}/{7}{default}] {blue}[排名 {8}]"
 	}
 	/*============END============*/
 	"BonusFinished7"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:i},{6:i},{7:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. [Rank: {lightgreen}{5}/{6} {default}| Record: {lightgreen}{7}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。 [排名: {lightgreen}{5}/{6} {default}| 记录: {lightgreen}{7}{default}]"
 	}
 	"PlayerNotFound"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Player {2} not found"
+		"chi"		"{1} 未找到玩家 {2}"
 	}
 	"ConsoleOutput"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} See console for output!"
+		"chi"		"{1} 查看控制台获取输出信息！"
 	}
 	"PlayerHasNoMapRecords"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} {yellow}{2} {default}doesn't have any map times"
+		"chi"		"{1} {yellow}{2}{default} 没有任何地图时间记录"
 	}
 	"NoTopRecords"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} No map times found for {blue}{2}"
+		"chi"		"{1} {blue}{2}{default} 没有找到任何地图时间记录"
 	}
 	"Goto1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {lightgreen}!goto {default}command is serverside disabled"
+		"chi"		"{1} {lightgreen}!goto {default}命令在服务器端已禁用"
 	}
 	"Goto2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You can't use {lightgreen}!goto {default}if player blocking is enabled"
+		"chi"		"{1} 如果启用了玩家阻挡，你无法使用 {lightgreen}!goto"
 	}
 	"Goto3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You must {lightgreen}!stop {default}your timer to use {lightgreen}!goto"
+		"chi"		"{1} 你必须 {lightgreen}!stop {default} 你的计时器才能使用 {lightgreen}!goto"
 	}
 	"Goto5"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Player {2} has teleported to you"
+		"chi"		"{1} 玩家 {2} 已传送到你的位置"
 	}
 	"Goto6"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} You can't teleport to {2} because the player was crouching"
+		"chi"		"{1} 你无法传送到 {2}，因为该玩家正在蹲伏"
 	}
 	"Goto7"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} You can't teleport to {2} because the player was not on the ground"
+		"chi"		"{1} 你无法传送到 {2}，因为该玩家不在地面上"
 	}
 	"RadioCommandsDisabled"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Radio commands are disabled"
+		"chi"		"{1} 无法使用广播命令"
 	}
 	"HidePlayers1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Hide players disabled"
+		"chi"		"{1} 隐藏玩家已禁用"
 	}
 	"HidePlayers2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Hide players enabled"
+		"chi"		"{1} 隐藏玩家已启用"
 	}
 	"Pause1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Pause function is disabled on this server"
+		"chi"		"{1} 在此服务器上，暂停功能已禁用"
 	}
 	"Pause2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Pause disabled"
+		"chi"		"{1} 暂停已禁用"
 	}
 	"Pause3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Pause enabled"
+		"chi"		"{1} 暂停已启用"
 	}
 	"QuakeSounds1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Quake sounds enabled"
+		"chi"		"{1} 启用 Quake 音效"
 	}
 	"QuakeSounds2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Quake sounds disabled"
+		"chi"		"{1} 禁用 Quake 音效"
 	}
 	"AutoBhop1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} AutoBhop enabled"
+		"chi"		"{1} 自动 Bhop 已启用"
 	}
 	"AutoBhop2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} AutoBhop disabled"
+		"chi"		"{1} 自动 Bhop 已禁用"
 	}
 	"AutoBhop3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} AutoBhop disabled. [server-sided]"
+		"chi"		"{1} 自动Bhop已禁用。[服务器端]"
 	}
 	"HelpMsg"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type {lightgreen}!help {default}to get a list of timer commands"
+		"chi"		"{1} 输入 {lightgreen}!help {default}获取计时器命令列表"
 	}
 	"Disconnected1"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"Player {yellow}{1} {default}has left the game. [{2}]"
+		"chi"		"玩家 {yellow}{1} {default}已退出游戏。[{2}]"
 	}
 	"Connected2"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"Player {yellow}{1} {default}connected from {green}{2}"
+		"chi"		"玩家 {yellow}{1} {default}来自 {green}{2} 连接"
 	}
 	"Connected1"
 	{
 		"#format"	"{1:s}"
 		"en"		"Player {yellow}{1} {default}connected"
+		"chi"		"玩家 {yellow}{1} {default}已连接"
 	}
 	"BPress1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} The server hasn't finished loading it's settings, please wait"
+		"chi"		"{1} 服务器尚未完成加载设置，请稍候"
 	}
 	"BPress2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your settings are currently being loaded, please wait"
+		"chi"		"{1} 正在加载您的设置，请稍候"
 	}
 	"BPress3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} The server hasn't finished loading your settings, please wait"
+		"chi"		"{1} 服务器尚未完成加载您的设置，请稍候"
 	}
 	"BPress4"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:i}"
 		"en"		"{1} {blue}[Practice]{default} finished bonus {yellow}{2}{default} in {yellow}{3}{default} [{blue}{4}{default} | {blue}Rank {5}{default}]"
+		"chi"		"{1} {blue}[练习]{default} 完成奖励 {yellow}{2}{default} 在 {yellow}{3}{default} 内 [{blue}{4}{default} | {blue}排名 {5}{default}]"
 	}
 	"BPress5"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:i}"
 		"en"		"{1} {blue}[Practice]{default} finished the map in {yellow}{2}{default} [{blue}{3}{default} | {blue}Rank {4}{default}]"
+		"chi"		"{1} {blue}[练习]{default} 完成地图在 {yellow}{2}{default} 内 [{blue}{3}{default} | {blue}排名 {4}{default}]"
 	}
 	"BPress6"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished {red}{3} {default}in {lightgreen}{4}{default}. Missing their best time by [{red}{5}{default}]. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 {red}{3} {default}在 {lightgreen}{4}{default}。相对最佳时间差 [{red}{5}{default}]。[排名: {lightgreen}{6}/{7} {default}| 记录: {lightgreen}{8}{default}]"
 	}
 	"ErrorStageTime"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} Error saving your {purple}stage {2} {default}time"
+		"chi"		"{1} 保存您的 {purple}关卡 {2} {default}时间时发生错误"
 	}
 	"ErrorPracWrcpTime"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} {darkred}Error {default}saving your {purple}stage {2} {default}practice time"
+		"chi"		"{1} {darkred}错误 {default}保存您的 {purple}关卡 {2} {default}练习时间"
 	}
 	"MSettings1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type the max velocity you want to set"
+		"chi"		"{1} 输入要设置的最大速度"
 	}
 	"MSettings2"
 	{
 		"#format"	"{1:s},{2:f}"
 		"en"		"{1} Current sv_maxvelocity: {2}"
+		"chi"		"{1} 当前 sv_maxvelocity: {2}"
 	}
 	"MSettings3"
 	{
 		"#format"	"{1:s}"
 		"en"		"Server cvar 'sv_maxvelocity' changed to {1}"
+		"chi"		"服务器变量 'sv_maxvelocity' 已更改为 {1}"
 	}
 	"MSettings4"
 	{
 		"#format"	"{1:s},{2:f}"
 		"en"		"{1} Usage: sm_announcerecord <0/1/2> [0 = All Finishes, 1 = PB Only, 2 = WR Only] [Current Announce Record: {2}]"
+		"chi"		"{1} 用法: sm_announcerecord <0/1/2> [0 = 所有完成, 1 = 仅PB, 2 = 仅WR] [当前公告记录: {2}]"
 	}
 	"MSettings6"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_gravityfix <0/1> [0 Disabled, 1 Enabled] [Gravity Fix currently {green}enabled{default}]"
+		"chi"		"{1} 用法: sm_gravityfix <0/1> [0 Disabled, 1 Enabled] [Gravity Fix currently {green}enabled{default}]"
 	}
 	"MSettings7"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_gravityfix <0/1> [0 Disabled, 1 Enabled] [Gravity Fix currently {red}disabled{default}]"
+		"chi"		"{1} 用法: sm_gravityfix <0/1> [0 Disabled, 1 Enabled] [Gravity Fix currently {red}disabled{default}]"
 	}
 	"Commands1"
 	{
 		"#format"	"{1:s},{2:f},{3:f},{4:f}"
 		"en"		"{1} X: {2} Y: {3} Z: {4}"
+		"chi"		"{1} X: {2} Y: {3} Z: {4}"
 	}
 	"Commands2"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} TN: {2}"
+		"chi"		"{1} TN: {2}"
 	}
 	"Commands3"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} TN: {2}"
+		"chi"		"{1} TN: {2}"
 	}
 	"Commands4"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You may only use vote extend when there is 5 minutes left"
+		"chi"		"{1} 请等到还有5分钟时才能使用投票延长"
 	}
 	"Commands5"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Please wait until the current vote has finished"
+		"chi"		"{1} 请等待当前投票结束"
 	}
 	"VoteStartedBy"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Vote to extend started by {yellow}{2}"
+		"chi"		"{1} 投票延长由 {yellow}{2} 启动"
 	}
 	"Commands7Chat"
 	{
 		"#format"	"{1:s},{2:d}"
 		"en"		"{1} sm_tele #{2}"
+		"chi"		"{1} sm_tele #{2}"
 	}
 	"Commands7Console"
 	{
 		"#format"	"{1:d}"
-		"en"		"SurfTimer | sm_tele #{1}"
+		"en"		"sm_tele #{1}"
+		"chi"		"sm_tele #{1}"
 	}
 	"CheckpointRecreationNotAllowed"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {darkred}Checkpoint recreation not allowed on this server"
+		"chi"		"{1} {darkred}在此服务器上不允许重新创建检查点"
 	}
 	"Commands7Added"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} {lime}Added saveloc {default}to sm_tele #{2}"
+		"chi"		"{1} {lime}已添加保存点 {default}到 sm_tele #{2}"
 	}
 	"CheckpointRecreationToChat"
 	{
 		"#format"	"{1:i},{2:i},{3:i},{4:i},{5:i},{6:i},{7:i},{8:i},{9:i},{10:i},{11:.3f},{12:.3f},{13:.3f},{14:.3f},{15:i}"
 		"en"		"To Recreate use: !addsaveloc {1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}|{15}"
+		"chi"		"要重新创建，请使用: !addsaveloc {1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}|{15}"
 	}
 	"CheckpointRecreationToConsole"
 	{
 		"#format"	"{1:i}{2:i},{3:i},{4:i},{5:i},{6:i},{7:i},{8:i},{9:i},{10:i},{11:i},{12:.3f},{13:.3f},{14:.3f},{15:.3f},{16:i}"
-		"en"		"SurfTimer | To Recreate sm_tele #{1} use: sm_addsaveloc {2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}|{15}|{16}"
+		"en"		"To Recreate sm_tele #{1} use: sm_addsaveloc {2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}|{15}|{16}"
+		"chi"		"要重新创建 sm_tele #{1}，请使用: sm_addsaveloc {2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}|{10}|{11}|{12}|{13}|{14}|{15}|{16}"
 	}
 	"CheckpointRecreationUnable"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Unable to recreate saveloc: {darkred}Invalid number of inputs"
+		"chi"		"{1} 无法重新创建保存位置: {darkred}输入数量无效"
 	}
 	"InvalidMapNoStages"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Invalid stage or map has no stages!"
+		"chi"		"{1} 无效的关卡或地图没有关卡！"
 	}
 	"Commands8"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You reached the maximum of 128 savelocs!"
+		"chi"		"{1} 您已达到最大的128个保存位置！"
 	}
 	"Commands9"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_tele #id"
+		"chi"		"{1} 用法: sm_tele #id"
 	}
 	"Commands10"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Invalid id"
+		"chi"		"{1} 无效的ID"
 	}
 	"Commands11"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} There are no saved locations, use sm_saveloc to make one"
+		"chi"		"{1} 没有保存的位置，请使用 sm_saveloc 创建一个"
 	}
 	"Commands12"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}There are no saved locations to remove"
+		"chi"		"{1} {red}没有保存的位置可以移除"
 	}
 	"Commands13"
 	{
 		"#format"	"{1:s},{2:d}"
 		"en"		"{1} Set saveloc id to #{2}"
+		"chi"		"{1} 设置保存位置ID为 #{2}"
 	}
 	"Commands14"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {green}Saved locations cleared"
+		"chi"		"{1} {green}保存的位置已清除"
 	}
 	"Commands15"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}You are already at your most recent saved location."
+		"chi"		"{1} {red}您已经在您最近保存的位置了。"
 	}
 	"Commands16"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}You are already at your first saved location."
+		"chi"		"{1} {red}您已经在您的第一个保存的位置了。"
 	}
 	"NoBonusOnMap"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} There are no bonuses on this map"
+		"chi"		"{1} 此地图上没有奖励"
 	}
 	"InvalidBonusID"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} Invalid bonus ID {2}"
+		"chi"		"{1} 无效的奖励ID {2}"
 	}
 	"BTopUsage"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: !btop <bonus id> <mapname>"
+		"chi"		"{1} 用法: !btop <奖励ID> <地图名称>"
 	}
-	"BonusPRinfoUsage"{
+	"BonusPRinfoUsage"
+	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: !prinfo <mapname> <bonus id> <rank>"
+		"chi"		"{1} 用法: !prinfo <地图名称> <奖励ID> <排名>"
 	}
 	"Commands19"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Noclip enabled, timer {red}disabled"
+		"chi"		"{1} 穿墙已启用，计时器 {red}禁用"
 	}
 	"Commands20"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Noclip disabled, use {lightgreen}!SurfTimer {default}to re-enable your timer"
+		"chi"		"{1} 穿墙已禁用，使用 {lightgreen}!SurfTimer {default}重新启用您的计时器"
 	}
 	"Commands31"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Timer {red}disabled"
+		"chi"		"{1} 计时器 {red}禁用"
 	}
 	"Commands32"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Timer {green}enabled"
+		"chi"		"{1} 计时器 {green}启用"
 	}
 	"Commands33"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You can't pause while your timer is stopped"
+		"chi"		"{1} 在计时器停止时无法暂停"
 	}
 	"Commands34"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Are you sure you want to restart your run? Use {lightgreen}!r {default}again to restart"
+		"chi"		"{1} 您确定要重新开始吗？再次使用 {lightgreen}!r {default}重新开始"
 	}
 	"Commands37"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} There was a error when editing your centre hud"
+		"chi"		"{1} 编辑中央 HUD 时出现错误"
 	}
 	"Commands38"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} In order to restore the old functionality, set module 1 to spec list."
+		"chi"		"{1} 为了恢复旧功能，请将模块1设置为规格列表。"
 	}
 	"Commands39"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} There was a error when editing your side hud"
+		"en"		"{1} There was an error when editing your side HUD"
+		"chi"		"{1} 编辑侧边 HUD 时出现错误"
 	}
 	"Commands40"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_mytitle \"my custom title\""
+		"chi"		"{1} 用法: sm_mytitle \"我的自定义标题\""
 	}
 	"Commands41"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Title too long, Maximum 20 characters. [Not Including colours]"
+		"chi"		"{1} 标题过长，最大长度为20个字符。[不包括颜色]"
 	}
 	"Commands42"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_namecolour {colour}"
+		"chi"		"{1} 用法: sm_namecolour {颜色}"
 	}
 	"Commands43"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_textcolour {colour}"
+		"chi"		"{1} 用法: sm_textcolour {颜色}"
 	}
 	"Commands44"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Available Colours: {darkred}darkred {lightred}lightred {red}red {green}green {lime}lime {lightgreen}lightgreen {darkblue}darkblue {lightblue}lightblue {blue}blue {pink}pink {purple}purple {orange}orange {yellow}yellow {grey}grey {grey2}grey2 {default}default"
+		"chi"		"{1} 可用颜色: {darkred}darkred {lightred}lightred {red}red {green}green {lime}lime {lightgreen}lightgreen {darkblue}darkblue {lightblue}lightblue {blue}blue {pink}pink {purple}purple {orange}orange {yellow}yellow {grey}grey {grey2}grey2 {default}default"
 	}
 	"Commands46"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Please wait before using this command again"
+		"chi"		"{1} 请等待再次使用此命令"
 	}
 	"Commands47"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Triggers toggled"
+		"chi"		"{1} 触发器切换"
 	}
 	"Commands48"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Map finish is now {green}enabled"
+		"chi"		"{1} 地图结束现在 {green}启用"
 	}
 	"Commands49"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Map finish is now {red}disabled"
+		"chi"		"{1} 地图结束现在 {red}禁用"
 	}
 	"Commands50"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Repeat mode is now {green}enabled"
+		"chi"		"{1} 重复模式现在 {green}启用"
 	}
 	"Commands51"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Repeat mode is now {red}disabled"
+		"chi"		"{1} 重复模式现在 {red}禁用"
 	}
 	"Commands52"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Fixing replay bots"
+		"chi"		"{1} 修复重播机器人"
 	}
 	"Commands54"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_noclipspeed #"
+		"chi"		"{1} 用法: sm_noclipspeed #"
 	}
 	"Commands55"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} Player {yellow}{2} {default}not found on {lightgreen}{3}"
+		"chi"		"{1} 在 {lightgreen}{3} 上找不到玩家 {yellow}{2}"
 	}
 	"Commands56"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Player {yellow}{2} {default}not found"
+		"chi"		"{1} 找不到玩家 {yellow}{2}"
 	}
 	"NoZoneAccess"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You don't have access to the zones menu"
+		"chi"		"{1} 你没有访问区域菜单的权限"
 	}
 	"Commands58"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No Map Zones found!"
+		"chi"		"{1} 未找到地图区域！"
 	}
 	"TeleportingTo"
 	{
 		"#format"	"{1:s},{2:s},{3:f},{4:f},{5:f}"
 		"en"		"{1} Teleporting to {2} at {3} {4} {5}"
+		"chi"		"{1} 传送至 {2} 位于 {3} {4} {5}"
 	}
 	"Commands60" //come back aven
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type the bonus number"
+		"chi"		"{1} 输入奖励编号"
 	}
 	"Commands61"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type a bonus number first"
+		"chi"		"{1} 先输入奖励编号"
 	}
 	"Commands63"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} Vote to mute {yellow}{2} {default}started by {yellow}{3}"
+		"chi"		"{1} 由 {yellow}{3} 启动的静音投票 {yellow}{2} {default}已开始"
 	}
 	"Commands64"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} Vote to gag {yellow}{2} {default}started by {yellow}{3}"
+		"chi"		"{1} 由 {yellow}{3} 启动的禁声投票 {yellow}{2} {default}已开始"
 	}
 	"Commands65"
 	{
 		"#format"	"{1:s},{2:i},{3:i},{4:i}"
 		"en"		"{1} Vote failed. {red}{2}%%%% {default}vote required. [Received {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default}votes]"
+		"chi"		"{1} 投票失败。需要 {red}{2}%%%% 的投票。[收到 {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default}票]"
 	}
 	"Commands66"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i}"
 		"en"		"{1} Vote successful. Muting {yellow}{2}{default}. [Received {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default}votes]"
+		"chi"		"{1} 投票成功。将 {yellow}{2}{default} 静音。[收到 {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default}票]"
 	}
 	"Commands67"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i}"
 		"en"		"{1} Vote successful. Gagging {yellow}{2}{default}. [Received {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default}votes]"
+		"chi"		"{1} 投票成功。将 {yellow}{2}{default} 禁声。[收到 {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default}票]"
 	}
 	"Commands68"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} New start position saved"
+		"chi"		"{1} 已保存新的起始位置"
 	}
 	"Commands69"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You must be in a start/stage start zone to use {lightgreen}!startpos"
+		"chi"		"{1} 你必须在起始/关卡起始区域才能使用 {lightgreen}!startpos"
 	}
 	"Commands70"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type your message"
+		"chi"		"{1} 输入你的消息"
 	}
 	"Commands71"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Teleportation to the end zone has been disabled on this server"
+		"chi"		"{1} 在该服务器上禁用了传送至终点区域"
 	}
 	"Commands72"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You cannot use NoClip while you are dead"
+		"chi"		"{1} 在死亡状态下无法使用穿墙"
 	}
 	"Commands73"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_joinmsg \"{red}my cool {blue}join msg{default}\""
+		"chi"		"{1} 用法: sm_joinmsg \"{red}我的酷炫 {blue}加入消息{default}\""
 	}
 	"Commands74"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_brank #b"
+		"chi"		"{1} 用法: sm_brank #b"
 	}
 	"Commands76"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_brank #b player"
+		"chi"		"{1} 用法: sm_brank #b 玩家"
 	}
 	"Commands78"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zones are now {green}visible"
+		"chi"		"{1} 区域现在 {green}可见"
 	}
 	"Commands79"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zones are now {red}hidden"
+		"chi"		"{1} 区域现在 {red}隐藏"
 	}
 	"VoteInProgress"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} A vote is already in progress"
+		"chi"		"{1} 投票已经在进行中"
 	}
 	"Commands82"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your timer must be enabled to use {lightgreen}!startpos"
+		"chi"		"{1} 必须启用计时器才能使用 {lightgreen}!startpos"
 	}
 	"Commands83"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Start position reset"
+		"chi"		"{1} 起始位置已重置"
 	}
 	"Commands84"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You must complete the map first"
+		"chi"		"{1} 必须先完成地图"
 	}
 	"Commands85"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Player not found"
+		"chi"		"{1} 未找到玩家"
 	}
 	"Commands86"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} g_hTriggerMultiple is null!"
+		"chi"		"{1} g_hTriggerMultiple 为空！"
 	}
 	"Commands87"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} This is a linear map."
+		"chi"		"{1} 这是一个长图。"
 	}
 	"Commands88"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Please wait 0.1 seconds before using this command again"
+		"chi"		"{1} 请在再次使用此命令之前等待 0.1 秒"
 	}
 	"Commands89"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} New stage start position saved"
+		"chi"		"{1} 已保存新的关卡起始位置"
 	}
 	"Commands90"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You {darkred}do not{default} have a personal best yet, use:\n{1} !cpr {green}@<rank> @<rank> {blue}<mapname> {default}(mapname is optional)"
+		"chi"		"{1} 你 {darkred}尚未{default}有个人最佳纪录，使用：\n{1} !cpr {green}@<rank> @<rank> {blue}<mapname> {default}(地图名是可选的)"
 	}
 	"Commands91"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} You have a run with time {green}{2}{default} saved, type {yellow}/restore{default} to resume it"
+		"chi"		"{1} 你有一次时间为 {green}{2}{default} 的记录已保存，输入 {yellow}/restore{default} 恢复它"
 	}
 	"BotInUse"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} {darkred}{2} Replay Bot already in use"
+		"chi"		"{1} {darkred}{2} 回放机器人已经在使用中"
 	}
 	"CVote2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_cvote <extend, changemap, setnextmap> <mapname>"
+		"chi"		"{1} 用法: sm_cvote <extend, changemap, setnextmap> <mapname>"
 	}
 	"CVote4"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_cvote <changemap> <mapname>"
+		"chi"		"{1} 用法: sm_cvote <changemap> <mapname>"
 	}
 	"CVote5"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} Vote to change map to {blue}{2}{default} started by {yellow}{3}"
+		"chi"		"{1} 投票更换地图到 {blue}{2}{default} 由 {yellow}{3} 启动"
 	}
 	"CVote6"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_cvote <setnextmap> <mapname>"
+		"chi"		"{1} 用法: sm_cvote <setnextmap> <mapname>"
 	}
 	"CVote7"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} Vote to set next map to {blue}{2}{default} started by {yellow}{3}"
+		"chi"		"{1} 投票将下一张地图设为 {blue}{2}{default} 由 {yellow}{3} 启动"
 	}
 	"CVote8"
 	{
 		"#format"	"{1:s},{2:i},{3:i},{4:i}"
 		"en"		"{1} Vote failed. {lightgreen}{2}%%%% {default}vote required. [Received {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default}votes]"
+		"chi"		"{1} 投票失败。需要 {lightgreen}{2}%%%% 投票。[收到 {lightgreen}{3}%%%% {default}of {lightgreen}{4} {default} 票]"
 	}
 	"CVote9"
 	{
 		"#format"	"{1:s},{2:i},{3:i}"
 		"en"		"{1} Vote successful. [Received {lightgreen}{2}%%%% {default}of {lightgreen}{3} {default}votes]"
+		"chi"		"{1} 投票成功。[收到 {lightgreen}{2}%%%% {default}of {lightgreen}{3} {default} 票]"
 	}
 	"CVote10"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Extending map by 10 minutes"
+		"chi"		"{1} 将地图延长 10 分钟"
 	}
 	"CVote11"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Changing map to {2}"
+		"chi"		"{1} 更换地图为 {2}"
 	}
 	"CVote12"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Vote failed"
+		"chi"		"{1} 投票失败"
 	}
 	"CVote13"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Set next map to {2}"
+		"chi"		"{1} 设置下一张地图为 {2}"
 	}
 	"SQLTime1"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} http://steamcommunity.com/profiles/{2}/"
+		"chi"		"{1} http://steamcommunity.com/profiles/{2}/"
 	}
 	"VIP1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_givevip \"steamid\" \"viplvl\""
+		"chi"		"{1} 用法: sm_givevip \"steamid\" \"viplvl\""
 	}
 	"VIP2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_removevip \"steamid\""
+		"chi"		"{1} 用法: sm_removevip \"steamid\""
 	}
 	"VIP3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_addcredits \"steamid\" \"amount\""
+		"chi"		"{1} 用法: sm_addcredits \"steamid\" \"amount\""
 	}
 	"Timer1"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} {2}"
+		"chi"		"{1} {2}"
 	}
 	"Timer2"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Nextmap: {blue}{2}"
+		"chi"		"{1} 下一张地图: {blue}{2}"
 	}
 	"SQLTwo1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Map not found"
+		"chi"		"{1} 未找到地图"
 	}
 	"SQLTwo2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You must set a custom title using sm_mytitle before you can set your name colour"
+		"chi"		"{1} 在设置名字颜色之前，您必须使用 sm_mytitle 设置自定义标题"
 	}
 	"SQLTwo3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You must set a custom title using sm_mytitle before you can set your text colour"
+		"chi"		"{1} 在设置文本颜色之前，您必须使用 sm_mytitle 设置自定义标题"
 	}
 	"SQLTwo4.1"
 	{
 		"en"		"{darkred}-----------------------ANNOUNCEMENT-----------------------"
+		"chi"		"{darkred}-----------------------公告-----------------------"
 	}
 	"SQLTwo4.2"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}beat the {blue}{3} {default}map record in the {lime}{4} {default}server with a time of {lime}{5}"
+		"chi"		"{1} {yellow}{2} {default}在 {lime}{4} {default} 服务器中以 {lime}{5} 的时间打破了 {blue}{3} {default} 地图纪录"
 	}
 	"SQLTwo4.2Bonus"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:i},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}beat the {blue}{3} {default}bonus {yellow}{4} {default}record in the {lime}{5} {default}server with a time of {lime}{6}"
+		"chi"		"{1} {yellow}{2} {default}在 {lime}{5} {default} 服务器中以 {lime}{6} 的时间打破了 {blue}{3} {default} 奖励纪录"
 	}
 	"SQLTwo4.3"
 	{
 		"en"		"{darkred}----------------------------------------------------------"
+		"chi"		"{darkred}----------------------------------------------------------"
 	}
 	"SQLTwo5"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your join msg has been disabled"
+		"chi"		"{1} 您的加入消息已禁用"
 	}
 	"SQLTwo6"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Your join msg has been set to {2}"
+		"chi"		"{1} 您的加入消息已设置为 {2}"
 	}
 	"SQLTwo7"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No result found"
+		"chi"		"{1} 未找到结果"
 	}
 	"Admin1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Please give the zone a valid name"
+		"chi"		"{1} 请给区域一个有效的名称"
 	}
 	"Admin2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zone name too long. Maximum is 128 characters"
+		"chi"		"{1} 区域名称过长。最大长度为128个字符"
 	}
 	"Admin3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Cancelled bonus renaming"
+		"chi"		"{1} 取消奖励重命名"
 	}
 	"Admin5"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_addmaptier <Tier>"
+		"chi"		"{1} 用法: sm_addmaptier <Tier>"
 	}
 	"NoTierEntry"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Tier entry not found. Use sm_addmaptier <Tier> to add a tier first."
+		"chi"		"{1} Tier 难度未标注。请首先使用 sm_addmaptier <Tier> 添加 Tier 难度。"
 	}
 	"UpdateMapperName"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Mapper name already exists, updating to: {2}"
+t		"chi"		"{1} 映射器名称已存在，更新为: {2}"
 	}
 	"InsertMapperName"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Setting mapper name to: {2}"
+		"chi"		"{1} 将映射器名称设置为: {2}"
 	}
 	"MapperNameUsage"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_addmappername <String>"
+		"chi"		"{1} 用法: sm_addmappername <String>"
 	}
 	"Admin6"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Invalid tier number. Please choose a tier number between 1-8"
+		"chi"		"{1} 无效的 Tier 难度编号。请选择1-8之间的 Tier 难度编号"
 	}
 	"Admin7"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Spawnpoint edited"
+		"chi"		"{1} 刷新生成点"
 	}
 	"SpawnAdded"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Spawnpoint added"
+		"chi"		"{1} 添加生成点"
 	}
 	"Admin8"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Spawnpoint deleted"
+		"chi"		"{1} 删除生成点"
 	}
 	"Admin9"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No spawnpoint to delete!"
+		"chi"		"{1} 没有生成点可删除！"
 	}
 	"Admin11"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You don't have access to the admin menu"
+		"chi"		"{1} 你没有访问管理员菜单的权限"
 	}
 	"Admin12"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Usage: sm_refreshprofile <steamid>"
+		"chi"		"{1} 用法: sm_refreshprofile <steamid>"
 	}
 	"SurfZones1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You are noclipping or have noclipped recently, timer disabled"
+		"chi"		"{1} 你正在穿墙或最近进行过穿墙，计时器已禁用"
 	}
 	"SurfZones3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zones have been reloaded"
+		"chi"		"{1} 区域已重新加载"
 	}
 	"SurfZones4"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Please write the bonus name in chat or use {lightgreen}!cancel {default}to stop"
+		"chi"		"{1} 请在聊天中输入奖励名称，或使用 {lightgreen}!cancel {default} 停止"
 	}
 	"SurfZones5"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Bonus Start Zone Created"
+		"chi"		"{1} 奖励起始区域已创建"
 	}
 	"SurfZones6"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Bonus Saved!"
+		"chi"		"{1} 奖励已保存！"
 	}
 	"SurfZones7"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Failed to save bonus, error in coordinates"
+		"chi"		"{1} 保存奖励失败，坐标错误"
 	}
 	"SurfZones8"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zone saved"
+		"chi"		"{1} 区域已保存"
 	}
 	"SurfZones9"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type the desired target name [type reset to reset]"
+		"chi"		"{1} 输入所需的目标名称 [输入 reset 以重置]"
 	}
 	"SurfZones10"
 	{
 		"#format"	"{1:s},{2:s},{3:i}"
 		"en"		"{1} Type the prespeed to be set to {lightgreen}{2}-{3}"
+		"chi"		"{1} 输入要设置的预速度 {lightgreen}{2}-{3}"
 	}
 	"SurfZones12"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s}"
 		"en"		"{1} Set {2}-{3} hook name to {4}"
+		"chi"		"{1} 将 {2}-{3} 钩子名称设置为 {4}"
 	}
 	"SurfZones13"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zones cleared"
+		"chi"		"{1} 区域已清除"
 	}
 	"Hooks1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Cancelled"
+		"chi"		"{1} 已取消"
 	}
 	"Hooks2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Invalid Bonus"
+		"chi"		"{1} 无效的奖励"
 	}
 	"Hooks3"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} Bonus {2} to use with hooked zones"
+		"chi"		"{1} 奖励 {2} 用于使用钩子区域"
 	}
 	"Hooks4"
 	{
 		"#format"	"{1:s},{2:s},{3:f}"
 		"en"		"{1} {blue}{2} {default}max velocity set to {3}"
+		"chi"		"{1} {blue}{2} {default}最大速度设置为 {3}"
 	}
 	"Hooks5"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s}"
 		"en"		"{1} {2}-{3} set to {lime}{4}"
+		"chi"		"{1} {2}-{3} 设置为 {lime}{4}"
 	}
 	"Hooks6"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{green}{1} {default}{2} {3}{default}: {4}"
+		"chi"		"{green}{1} {default}{2} {3}{default}: {4}"
 	}
 	"Hooks7"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"*DEAD* {green}{1} {default}{2} {3}{default}: {4}"
+		"chi"		"*死亡* {green}{1} {default}{2} {3}{default}: {4}"
 	}
 	"Hooks8"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"{1} {2}{default}: {3}"
+		"chi"		"{1} {2}{default}: {3}"
 	}
 	"Hooks9"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"*DEAD* {1} {2}{default}: {3}"
+		"chi"		"*死亡* {1} {2}{default}: {3}"
 	}
 	"Hooks10"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You may not jump in this area"
+		"chi"		"{1} 你不能在这个区域跳跃"
 	}
 	"Hooks11"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You may not crouch in this area"
+		"chi"		"{1} 你不能在这个区域蹲伏"
 	}
 	"Hooks12"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Style set to {green}Normal{default}, A used"
+		"chi"		"{1} 风格设置为 {green}普通{default}，按下A"
 	}
 	"Hooks13"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Style set to {green}Normal{default}, D used"
+		"chi"		"{1} 风格设置为 {green}普通{default}，按下D"
 	}
 	"Hooks14"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Style set to {green}Normal"
+		"chi"		"{1} 风格设置为 {green}普通"
 	}
 	"Hooks15"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {darkred}You may only jump once inside this zone"
+		"chi"		"{1} {darkred}你只能在这个区域内跳跃一次"
 	}
 	"Misc1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zonegroup not found"
+		"chi"		"{1} 未找到区域组"
 	}
 	"Misc2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Destination zone not found!"
+		"chi"		"{1} 未找到目标区域！"
 	}
 	"Misc3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No zones found in the map"
+		"chi"		"{1} 在地图中找不到区域"
 	}
 	"Misc4"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {darkred}Stop spamming or you will get kicked!"
+		"chi"		"{1} {darkred}停止刷屏，否则将被踢出！"
 	}
 	"Misc5"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the record with a time of {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持记录，时间为 {lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"Misc6"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the record with a time of {lightgreen}{3} {default}for {orange}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持记录，时间为 {lightgreen}{3} {default}，在 {orange}{4} {default}上的 {blue}{5}"
 	}
 	"Misc7"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}sideways {default}record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}横向 {default}记录，时间为：{lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"Misc8"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}half-sideways {default}record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}半横向 {default}记录，时间为：{lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"Misc9"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}backwards {default}record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}向后 {default}记录，时间为：{lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"Misc10"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}low-gravity {default}record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}低重力 {default}记录，时间为：{lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"Misc11"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}slow motion {default}record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}慢动作 {default}记录，时间为：{lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"Misc12"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}fast forward {default}record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}快进 {default}记录，时间为：{lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"MiscFreestyle"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}freestyle {default}record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}FreeStyle {default}记录，时间为：{lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"Misc13"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}sideways {orange}{3} {default}record with time: {lightgreen}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}侧滑 {orange}{3} {default}记录，时间为：{lightgreen}{4} {default}在 {blue}{5}"
 	}
 	"Misc14"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}half-sideways {orange}{3} {default}record with time: {lightgreen}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}半侧滑 {orange}{3} {default}记录，时间为：{lightgreen}{4} {default}在 {blue}{5}"
 	}
 	"Misc15"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}backwards {orange}{3} {default}record with time: {lightgreen}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}倒滑 {orange}{3} {default}记录，时间为：{lightgreen}{4} {default}在 {blue}{5}"
 	}
 	"Misc16"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}low-gravity {orange}{3} {default}record with time: {lightgreen}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}低重力 {orange}{3} {default}记录，时间为：{lightgreen}{4} {default}在 {blue}{5}"
 	}
 	"Misc17"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}slow motion {orange}{3} {default}record with time: {lightgreen}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}慢动作 {orange}{3} {default}记录，时间为：{lightgreen}{4} {default}在 {blue}{5}"
 	}
 	"Misc18"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}fast forward {orange}{3} {default}record with time: {lightgreen}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}快进 {orange}{3} {default}记录，时间为：{lightgreen}{4} {default}在 {blue}{5}"
 	}
 	"MiscFreestyleBonus"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}freestyle{gold}{3} {default}record with time: {lightgreen}{4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}FreeStyle{gold}{3} {default}记录，时间为：{lightgreen}{4} {default}在 {blue}{5}"
 	}
 	"Misc19"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {darkred}Failed to save your data correctly! Please contact an admin"
+		"chi"		"{1} {darkred}未能正确保存您的数据！请联系管理员"
 	}
 	"Misc20"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{green}{1} {default}*SPEC* {2} {grey}{3}{default}: {4}"
+		"chi"		"{green}{1} {default}*观察* {2} {grey}{3}{default}：{4}"
 	}
 	"Misc21"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1}{blue}{2} {3}{default}: {4}"
+		"chi"		"{1}{blue}{2} {3}{default}：{4}"
 	}
 	"Misc22"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"*DEAD* {1}{blue}{2} {3}{default}: {4}"
+		"chi"		"*死亡* {1}{blue}{2} {3}{default}：{4}"
 	}
 	"Misc23"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1}{orange}{2} {3}{default}: {4}"
+		"chi"		"{1}{orange}{2} {3}{default}：{4}"
 	}
 	"Misc24"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"*DEAD* {1}{orange}{2} {3}{default}: {4}"
+		"chi"		"*死亡* {1}{orange}{2} {3}{default}：{4}"
 	}
 	"Misc25"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"*SPEC* {1} {grey}{2}{default}: {3}"
+		"chi"		"*观察* {1} {grey}{2}{default}：{3}"
 	}
 	"Misc26"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"*SPEC* {grey}{1}{default}: {2}"
+		"chi"		"*观察* {grey}{1}{default}：{2}"
 	}
 	"Misc27"
 	{
 		"#format"	"{1:s},{2:s},{3:s}"
 		"en"		"[{1}] *SPEC* {2}: {3}"
+		"chi"		"[{1}] *观察* {2}：{3}"
 	}
 	"Misc28"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"*SPEC* {1}: {2}"
+		"chi"		"*观察* {1}：{2}"
 	}
 	"Misc29"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} You have missed your best bonus time of [{orange}{2}{default}]"
+		"chi"		"{1} 您错过了您的最佳奖励时间 [{orange}{2}{default}]"
 	}
 	"Misc30"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s}"
 		"en"		"{1} CP [{lightgreen}{2}{default}]: {lightgreen}{3} {default}[PB: {4}{default} | {5}{default}]"
+		"chi"		"{1} CP [{lightgreen}{2}{default}]：{lightgreen}{3} {default}[PB：{4}{default} | {5}{default}]"
 	}
 	"Misc31"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}| CP [{lightgreen}{3}{default}]: {lightgreen}{4} {default}[PB: {5}{default} | {6}{default}]"
+		"chi"		"{1} {yellow}{2} {default}| CP [{lightgreen}{3}{default}]：{lightgreen}{4} {default}[PB：{5}{default} | {6}{default}]"
 	}
 	"Misc32"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s}"
 		"en"		"{1} CP [{lightgreen}{2}{default}]: {lightgreen}{3} {default}[PB: {lightgreen}N/A{default} | {4}{default}]"
+		"chi"		"{1} CP [{lightgreen}{2}{default}]：{lightgreen}{3} {default}[PB：{lightgreen}N/A{default} | {4}{default}]"
 	}
 	"Misc33"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}| CP [{lightgreen}{3}{default}]: {lightgreen}{4} {default}[PB: {lightgreen}N/A{default} | {5}{default}]"
+		"chi"		"{1} {yellow}{2} {default}| CP [{lightgreen}{3}{default}]：{lightgreen}{4} {default}[PB：{lightgreen}N/A{default} | {5}{default}]"
 	}
 	"Misc34"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:i},{6:i},{7:s}"
 		"en"		"{1} {yellow}{2}{default} finished {red}{3} {default}in [{lightgreen}{4}{default}]. [Rank: {lightgreen}{5}/{6} {default}| Record: {lightgreen}{7}{default}"
+		"chi"		"{1} {yellow}{2}{default} 完成 {red}{3} {default}在 [{lightgreen}{4}{default}]。 [排名：{lightgreen}{5}/{6} {default}| 记录：{lightgreen}{7}{default}]"
 	}
 	"Misc35"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished {red}{3} {default}in [{lightgreen}{4}{default}]. Improving their best time by [{lightgreen}{5}{default}]. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 {red}{3} {default}在 [{lightgreen}{4}{default}]。 通过 [{lightgreen}{5}{default}] 改进了他们的最佳时间。 [排名：{lightgreen}{6}/{7} {default}| 记录：{lightgreen}{8}{default}]"
 	}
 	"Misc36"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2}{default} beat the {red}{3} {default}map record! {4}"
+		"chi"		"{1} {yellow}{2}{default} 打破了 {red}{3} {default}地图记录！{4}"
 	}
 	"Misc37"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2}{default} beat the [{orange}{3}{default}] {red}{4} {default}record!"
+		"chi"		"{1} {yellow}{2}{default} 打破了 [{orange}{3}{default}] {red}{4} {default}记录！"
 	}
 	"Misc38"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}finished [{orange}{3}{default}] {red}{4} {default}in {lightgreen}{5}{default}. [Rank: {lightgreen}1/1 {default}| Record: {lightgreen}{6}{default}]"
+		"chi"		"{1} {yellow}{2} {default}完成 [{orange}{3}{default}] {red}{4} {default}在 {lightgreen}{5}{default}。 [排名：{lightgreen}1/1 {default}| 记录：{lightgreen}{6}{default}]"
 	}
 	"Misc39"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:i},{8:i},{9:s}"
 		"en"		"{1} {yellow}{2} {default}finished [{orange}{3}{default}] {red}{4} {default}in {lightgreen}{5}{default}. Improving the best time by {lightgreen}{6}{default}. [Rank: {lightgreen}{7}/{8} {default}| Record: {lightgreen}{9}{default}]"
+		"chi"		"{1} {yellow}{2} {default} 完成 [{orange}{3}{default}] {red}{4} {default}在 {lightgreen}{5}{default}。 通过 {lightgreen}{6}{default} 改进了最佳时间。 [排名：{lightgreen}{7}/{8} {default}| 记录：{lightgreen}{9}{default}]"
 	}
 	"Misc40"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:i},{8:i},{9:s}"
 		"en"		"{1} {yellow}{2} {default}finished [{orange}{3}{default}] {red}{4} {default}in {lightgreen}{5}{default}. Improving their best time by {lightgreen}{6}{default}. [Rank: {lightgreen}{7}/{8} {default}| Record: {lightgreen}{9}{default}]"
+		"chi"		"{1} {yellow}{2} {default} 完成 [{orange}{3}{default}] {red}{4} {default}在 {lightgreen}{5}{default}。 通过 {lightgreen}{6}{default} 改进了最佳时间。 [排名：{lightgreen}{7}/{8} {default}| 记录：{lightgreen}{9}{default}]"
 	}
 	"Misc41"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2} {default}finished [{orange}{3}{default}] {red}{4} {default}in {lightgreen}{5}{default}. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2} {default}完成 [{orange}{3}{default}] {red}{4} {default}用时 {lightgreen}{5}{default}。[排名: {lightgreen}{6}/{7} {default}| 记录: {lightgreen}{8}{default}]"
 	}
 	"Misc42"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:i},{8:i},{9:s}"
 		"en"		"{1} {yellow}{2} {default}finished [{orange}{3}{default}] {red}{4} {default}in {lightgreen}{5}{default}. Missing their best time by {red}{6}{default}. [Rank: {lightgreen}{7}/{8} {default}| Record: {lightgreen}{9}{default}]"
+		"chi"		"{1} {yellow}{2} {default}完成 [{orange}{3}{default}] {red}{4} {default}用时 {lightgreen}{5}{default}。差距最好成绩 {red}{6}{default}。[排名: {lightgreen}{7}/{8} {default}| 记录: {lightgreen}{9}{default}]"
 	}
 	"Misc43"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} This is a VIP feature"
+		"chi"		"{1} 这是VIP功能"
 	}
 	"Misc44"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Bug report sent - thanks"
+		"chi"		"{1} 已发送错误报告 - 谢谢"
 	}
 	"Misc45"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Report sent - thanks"
+		"chi"		"{1} 报告已发送 - 谢谢"
 	}
 	"SQL1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Recalculation in progress. Please wait!"
+		"chi"		"{1} 重新计算中，请稍候！"
 	}
 	"SQL2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No bonuses found"
+		"chi"		"{1} 未找到奖励"
 	}
 	"SQL3"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Invalid SteamID found"
+		"chi"		"{1} 发现无效的SteamID"
 	}
 	"SQL4"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Bonus name succesfully changed"
+		"en"		"{1} Bonus name successfully changed"
+		"chi"		"{1} 奖励名称已成功更改"
 	}
 	"SQL5"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Failed to create a zone, attempting a fix... Recreate the zone, please"
+		"chi"		"{1} 无法创建区域，正在尝试修复...请重新创建该区域"
 	}
 	"SQL6"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} Invalid zonegroup index selected, aborting. [{2}]"
+		"chi"		"{1} 选择了无效的区域组索引，正在中止。[{2}]"
 	}
 	"SQL7"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Zone group deleted"
+		"chi"		"{1} 区域组已删除"
 	}
 	"SQL8"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Zonegroup removal failed! [Error: {2}]"
+		"chi"		"{1} 区域组移除失败！[错误: {2}]"
 	}
 	"SQL9"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Zone Removed Succesfully"
+		"en"		"{1} Zone Removed Successfully"
+		"chi"		"{1} 区域已成功移除"
 	}
 	"SQL10"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} {darkred}Zone Removal Failed! {default}Error: {2}"
+		"chi"		"{1} {darkred}区域移除失败！ {default}错误: {2}"
 	}
 	"SQL11"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s}"
 		"en"		"{1} Stage {2}:{default} {lightgreen}{3} {default}[{4}{default} | {5}{default}]"
+		"chi"		"{1} 关卡 {2}:{default} {lightgreen}{3} {default}[{4}{default} | {5}{default}]"
 	}
 	"SQL12"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}| {purple}Stage {3}:{default} {lightgreen}{4} {default}[{5}{default} | {6}{default}]"
+		"chi"		"{1} {yellow}{2} {default}| {purple}关卡 {3}:{default} {lightgreen}{4} {default}[{5}{default} | {6}{default}]"
 	}
 	"SQL13"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i},{7:i}"
 		"en"		"{1} Completed {default}Stage {2} {red}{3} {default}in {lightgreen}{4} {5} {default}[Rank: {lightgreen}{6}/{7}{default}]"
+		"chi"		"{1} 完成 {default}关卡 {2} {red}{3} {default}用时 {lightgreen}{4} {5} {default}[排名: {lightgreen}{6}/{7}{default}]"
 	}
 	"SQL14"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i},{7:i}"
 		"en"		"{1} Completed {default}Stage {2} {red}{3} {default}in {lightgreen}{4} {5} {default}[Rank: {lightgreen}{6}/{7}{default}]"
+		"chi"		"{1} 完成 {default}关卡 {2} {red}{3} {default}用时 {lightgreen}{4} {5} {default}[排名: {lightgreen}{6}/{7}{default}]"
 	}
 	"SQL15"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s},{5:s},{6:i}"
 		"en"		"{1} {yellow}{2} {default}beat the [{purple}Stage {3}{default}] record! {lightgreen}{4} {5} {default}[Rank: {lightgreen}1/{6}{default}]"
+		"chi"		"{1} {yellow}{2} {default}打破了 [{purple}关卡 {3}{default}] 记录！ {lightgreen}{4} {5} {default}[排名: {lightgreen}1/{6}{default}]"
 	}
 	"SQL16"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i},{7:i}"
 		"en"		"{1} Stage {2}{default}: {lightgreen}{3} {default}[{4}{default} | {5}{default}] [Rank: {lightgreen}{6}/{7}{default}]"
+		"chi"		"{1} 关卡 {2}{default}: {lightgreen}{3} {default}[{4}{default} | {5}{default}] [排名: {lightgreen}{6}/{7}{default}]"
 	}
 	"SQL17"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s},{5:s},{6:s},{7:i},{8:i}"
 		"en"		"{1} {yellow}{2} {default}| Stage {3}{default}: {lightgreen}{4} {default}[{5}{default} | {6}{default}] [Rank: {lightgreen}{7}/{8}{default}]"
+		"chi"		"{1} {yellow}{2} {default}| 关卡 {3}{default}: {lightgreen}{4} {default}[{5}{default} | {6}{default}] [排名: {lightgreen}{7}/{8}{default}]"
 	}
 	"SQL18"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:s}"
 		"en"		"{1} {yellow}{2} {default}has set a new [{purple}Stage {3}{default}] record! {lightgreen}{4} {default}[Rank: {lightgreen}1/1{default}]"
+		"chi"		"{1} {yellow}{2} {default}创下了新的 [{purple}关卡 {3} {default}] 记录！ {lightgreen}{4} {default}[排名: {lightgreen}1/1{default}]"
 	}
 	"SQL19"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:i},{5:s},{6:s},{7:i},{8:i}"
 		"en"		"{1} {yellow}{2} {default}beat the {red}{3}{default} [{purple}Stage {4}{default}] record! {lightgreen}{5} {6} {default}[Rank: {lightgreen}{7}/{8}{default}]"
+		"chi"		"{1} {yellow}{2} {default}打破了 {red}{3}{default} [{purple}关卡 {4}{default}] 记录！ {lightgreen}{5} {6} {default}[排名: {lightgreen}{7}/{8}{default}]"
 	}
 	"SQL20"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i},{7:i}"
 		"en"		"{1} Completed Stage {2} {red}{3} {default}in {lightgreen}{4} {5} {default}[Rank: {lightgreen}{6}/{7}{default}]"
+		"chi"		"{1} 完成 关卡 {2} {red}{3} {default}用时 {lightgreen}{4} {5} {default}[排名: {lightgreen}{6}/{7}{default}]"
 	}
 	"SQL21"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s},{6:i},{7:i}"
 		"en"		"{1} Completed Stage {2} {red}{3} {default}in {lightgreen}{4} {5} {default}[Rank: {lightgreen}{6}/{7}{default}]"
+		"chi"		"{1} 完成 关卡 {2} {red}{3} {default}用时 {lightgreen}{4} {5} {default}[排名: {lightgreen}{6}/{7}{default}]"
 	}
 	"SQL22"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:i},{5:s}"
 		"en"		"{1} {yellow}{2} {default}has set a new {red}{3} {default}[{purple}Stage {4}{default}] record! {lightgreen}{5} {default}[Rank: {lightgreen}1/1{default}]"
+		"chi"		"{1} {yellow}{2} {default}创下了新的 {red}{3} {default}[{purple}关卡 {4}{default}] 记录！ {lightgreen}{5} {default}[排名: {lightgreen}1/1{default}]"
 	}
 	"SQL23"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Map {blue}{2} {default}not found or is linear"
+		"chi"		"{1} 地图 {blue}{2} {default}未找到或为长图"
 	}
 	"SQL24"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}No record found"
+		"chi"		"{1} {red}未找到记录"
 	}
 	"SQL25"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s}"
 		"en"		"{1} {yellow}{2} {default}holds the record with time: {lightgreen}{3} {default}for {purple}Stage {4} {default}on {blue}{5}"
+		"chi"		"{1} {yellow}{2} {default}保持记录时间: {lightgreen}{3} {default}在 {purple}关卡 {4} {default}上的 {blue}{5}"
 	}
 	"SQL26"
 	{
 		"#format"	"{1:s},{2:i},{3:s}"
 		"en"		"{1} No stage records for {purple}Stage {2} {default}on {blue}{3}"
+		"chi"		"{1} {purple}关卡 {2} {default}在 {blue}{3} 上无记录"
 	}
 	"SQL27"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}holds the {red}{3} {default}record with time: {lightgreen}{4} {default}for {purple}Stage {5} {default}on {blue}{6}"
+		"chi"		"{1} {yellow}{2} {default}保持 {red}{3} {default}记录时间: {lightgreen}{4} {default}在 {purple}关卡 {5} {default}上的 {blue}{6}"
 	}
 	"SQL28"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No result found for player or map"
+		"chi"		"{1} 未找到玩家或地图的结果"
 	}
 	"SQL29"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:s},{7:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}{5} with a time of {lightgreen}{6} {default}on {blue}{7}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}{5} 用时 {lightgreen}{6} {default}在 {blue}{7}"
 	}
 	"SQL30"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}with a time of {lightgreen}{5} {default}on {blue}{6}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}用时 {lightgreen}{5} {default}在 {blue}{6}"
 	}
 	"SQL31"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}with a time of {lightgreen}{5} {default}on {blue}{6}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}用时 {lightgreen}{5} {default}在 {blue}{6}"
 	}
 	"SQL32"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:s},{7:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}{5} with a time of {lightgreen}{6} {default}on {blue}{7}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}{5} 用时 {lightgreen}{6} {default}在 {blue}{7}"
 	}
 	"SQL33"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:s},{7:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}{5} with a time of {lightgreen}{6} {default}on {blue}{7}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}{5} 用时 {lightgreen}{6} {default}在 {blue}{7}"
 	}
 	"SQL34"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}with a time of {lightgreen}{5} {default}on {blue}{6}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}用时 {lightgreen}{5} {default}在 {blue}{6}"
 	}
 	"SQL35"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}with a time of {lightgreen}{5} {default}on {blue}{6}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}用时 {lightgreen}{5} {default}在 {blue}{6}"
 	}
 	"SQL36"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:s},{6:i},{7:s}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}with a time of {lightgreen}{5} {default}for {orange}bonus {6} {default}on {blue}{7}"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}用时 {lightgreen}{5} {default}在 {orange}奖励 {6} {default}上的 {blue}{7}"
 	}
 	"NoMapFound"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} No result found for {blue}{2}"
+		"chi"		"{1} 未找到 {blue}{2} 的结果"
 	}
 	"SQL38"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} {yellow}{2} {default}holds the record with time: {lightgreen}{3} {default}on {blue}{4}"
+		"chi"		"{1} {yellow}{2} {default}保持记录时间: {lightgreen}{3} {default}在 {blue}{4}"
 	}
 	"SQL39"
 	{
 		"#format"	"{1:s},{2:s},{3:i},{4:i},{5:i}"
 		"en"		"{1} {yellow}{2} {default}is ranked {lightgreen}{3}/{4} {default}with {lightgreen}{5} {default}points"
+		"chi"		"{1} {yellow}{2} {default}排名 {lightgreen}{3}/{4} {default}得分 {lightgreen}{5} {default}分"
 	}
 	"SQL40"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} No result found for {yellow}{2}"
+		"chi"		"{1} 未找到 {yellow}{2} 的结果"
 	}
 	"DeleteRecordsNewValue"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type new value in the chat, or {darkred}cancel{default} to cancel"
+		"chi"		"{1} 在聊天中输入新值，或输入 {darkred}cancel{default} 取消"
 	}
 	"DeleteRecordsDeletion"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Record deleted"
+		"chi"		"{1} 记录已删除"
 	}
 	"InvalidRun"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} {darkred}You must pass all {2} to finish your run"
+		"chi"		"{1} {darkred}你必须通过所有 {2} 才能完成你的记录"
 	}
 	"PrestrafeMessageToggleOn"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Prestrafe messages are now {green}enabled"
+		"chi"		"{1} 起始速度消息现在已 {green}启用"
 	}
 	"PrestrafeMessageToggleOff"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Prestrafe messages are now {red}disabled"
+		"chi"		"{1} 起始速度消息现在已 {red}禁用"
 	}
 	"HintsToggleOn"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Hints are now {green}enabled"
+		"chi"		"{1} 提示现在已 {green}启用"
 	}
 	"HintsToggleOff"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Hints are now {red}disabled"
+		"chi"		"{1} 提示现在已 {red}禁用"
 	}
 	"StartPrestrafe"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s}"
 		"en"		"{1} Start Prestrafe: {lightgreen}{2} u/s {default}[PB: {3} | SR: {4}]"
+		"chi"		"{1} 起点 起始速度: {lightgreen}{2} 单位/秒 {default}[PB: {3} | SR: {4}]"
 	}
 	"BonusPrestrafe"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s}"
 		"en"		"{1} Bonus {2} Prestrafe: {lightgreen}{3} u/s {default}[PB: {4} | SR: {5}]"
+		"chi"		"{1} 奖励 {2} 起始速度: {lightgreen}{3} 单位/秒 {default}[PB: {4} | SR: {5}]"
 	}
 	"StagePrestrafe"
 	{
 		"#format"	"{1:s},{2:i},{3:s},{4:s},{5:s}"
 		"en"		"{1} Stage {2} Prestrafe: {lightgreen}{3} u/s {default}[PB: {4} | SR: {5}]"
+		"chi"		"{1} 关卡 {2} 起始速度: {lightgreen}{3} 单位/秒 {default}[PB: {4} | SR: {5}]"
 	}
 	"SilentSpecMessageToggleOn"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Silent spectate is now {green}enabled"
+		"chi"		"{1} 静默旁观现在已 {green}启用"
 	}
 	"SilentSpecMessageToggleOff"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Silent spectate is now {red}disabled"
+		"chi"		"{1} 静默旁观现在已 {red}禁用"
 	}
 	"ToggleWrcpsMessageToggleOn"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} SRCP messages are now {green}enabled"
+		"chi"		"{1} SRCP 消息现在已 {green}启用"
 	}
 	"ToggleWrcpsMessageToggleOff"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} SRCP messages are now {red}disabled"
+		"chi"		"{1} SRCP 消息现在已 {red}禁用"
 	}
 	"ToggleCpsMessageToggleOn"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} CP messages are now {green}enabled"
+		"chi"		"{1} CP 消息现在已 {green}启用"
 	}
 	"ToggleCpsMessageToggleOff"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} CP messages are now {red}disabled"
+		"chi"		"{1} CP 消息现在已 {red}禁用"
 	}
 	"QuakeToggleOn"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Timer sounds are now {green}enabled"
+		"chi"		"{1} 计时器声音现在已 {green}启用"
 	}
 	"QuakeToggleOff"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Timer sounds are now {red}disabled"
+		"chi"		"{1} 计时器声音现在已 {red}禁用"
 	}
 	"StartSideLeft"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your start side is now {blue}left"
+		"chi"		"{1} 你的起始位置现在是 {blue}左边"
 	}
 	"StartSideRight"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your start side is now {yellow}right"
+		"chi"		"{1} 你的起始位置现在是 {yellow}右边"
 	}
 	"SpeedGradientWhite"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed gradient is now white"
+		"chi"		"{1} 你的速度渐变现在是白色"
 	}
 	"SpeedGradientRed"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed gradient is now {red}red"
+		"chi"		"{1} 你的速度渐变现在是 {red}红色"
 	}
 	"SpeedGradientGreen"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed gradient is now {green}green"
+		"chi"		"{1} 你的速度渐变现在是 {green}绿色"
 	}
 	"SpeedGradientBlue"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed gradient is now {blue}blue"
+		"chi"		"{1} 你的速度渐变现在是 {blue}蓝色"
 	}
 	"SpeedGradientYellow"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed gradient is now {yellow}yellow"
+		"chi"		"{1} 你的速度渐变现在是 {yellow}黄色"
 	}
 	"SpeedGradientMomentum"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed gradient is now {green}momen{red}tum"
+		"chi"		"{1} 你的速度渐变现在是 {green}动量"
 	}
 	"SpeedGradientCustom"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed gradient is now {green}C{orange}u{red}s{blue}t{yellow}o{grey}m"
+		"chi"		"{1} 你的速度渐变现在是 {green}自定义"
 	}
 	"SpeedModeXY"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed mode is now {yellow}X{orange}Y"
+		"chi"		"{1} 你的速度模式现在是 {yellow}X{orange}Y"
 	}
 	"SpeedModeXYZ"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed mode is now {yellow}X{orange}Y{red}Z"
+		"chi"		"{1} 你的速度模式现在是 {yellow}X{orange}Y{red}Z"
 	}
 	"SpeedModeZ"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your speed mode is now {red}Z"
+		"chi"		"{1} 你的速度模式现在是 {red}Z"
 	}
 	"PreSpeedModeXY"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your prestrafe speed mode is now {yellow}X{orange}Y"
+		"chi"		"{1} 你的起始速度显示模式现在是 {yellow}X{orange}Y"
 	}
 	"PreSpeedModeXYZ"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your prestrafe speed mode is now {yellow}X{orange}Y{red}Z"
+		"chi"		"{1} 你的起始速度显示模式现在是 {yellow}X{orange}Y{red}Z"
 	}
 	"PreSpeedModeZ"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your pretrafe speed mode is now {red}Z"
+		"chi"		"{1} 你的起始速度显示模式现在是 {red}Z"
 	}
 	"CenterSpeedOn"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} The center speed display is now {green}enabled"
+		"chi"		"{1} 中央速度显示现在已 {green}启用"
 	}
 	"CenterSpeedOff"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} The center speed display is now {red}disabled"
+		"chi"		"{1} 中央速度显示现在已 {red}禁用"
 	}
 	"TriggersEnabled"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Triggers are now {green}enabled {default}while noclipping"
+		"chi"		"{1} 触发器现在已 {green}启用 {default}在无碰撞时"
 	}
 	"TriggersDisabled"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Triggers are now {red}disabled {default}while noclipping"
+		"chi"		"{1} 触发器现在已 {red}禁用 {default}在无碰撞时"
 	}
 	"AutoResetDisabled"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your timer {green}won't reset {default}if you've missed your PB"
+		"chi"		"{1} 如果你错过了个人最佳时间，计时器 {green}不会重置 {default}"
 	}
 	"AutoResetEnabled"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your timer will {red}reset {default}if you've missed your PB"
+		"chi"		"{1} 如果你错过了个人最佳时间，计时器将 {red}重置 {default}"
 	}
 	"AutoResetMessage1"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} You got teleported to the start because auto-reset is enabled"
+		"chi"		"{1} 你被传送到起点，因为启用了自动重置"
 	}
 	"AutoResetMessage2"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Use {blue}sm_autoreset {default}to disable it"
+		"chi"		"{1} 使用 {blue}sm_autoreset {default}来禁用它"
 	}
 	"AutoResetMessageStyle"
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Auto-reset is enabled, but you weren't teleported because you're surfing in {gold}{2}"
+		"chi"		"{1} 自动重置已启用，但你没有被传送，因为你正在 {gold}{2} 冲浪"
 	}
 	"PRinfo_help_chat"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Open {yellow}console{default} to see the {yellow}formatted{default} options"
+		"chi"		"{1} 打开 {yellow}控制台{default} 查看 {yellow}格式化的{default} 选项"
 	}
 	"PRinfo_help"
 	{
 		"en"		"FORMATTING OPTIONS FOR COMMAND !prinfo \n!prinfo (with no arguments automatically selects the zone you are in) \n!prinfo <mapname> \n!prinfo <rank> \n!prinfo <bonus number> \n!prinfo <mapname> <rank> OR !prinfo <mapname> <bonus number> \n!prinfo <rank> <mapname> OR !prinfo <rank> <bonus number> \n!prinfo <bonus number> <mapname> OR !prinfo <bonus number> <rank> \n!prinfo <mapname> <rank> OR !prinfo <mapname> <bonus number> \n"
+		"chi"		"!prinfo 命令的格式选项 \n!prinfo（不带参数会自动选择您所在的区域） \n!prinfo <地图名称> \n!prinfo <等级> \n!prinfo <奖励编号> \n!prinfo <地图名称> <等级> 或 !prinfo <地图名称> <奖励编号> \n!prinfo <等级> <地图名称> 或 !prinfo <等级> <奖励编号> \n!prinfo <奖励编号> <地图名称> 或 !prinfo <奖励编号> <等级> \n!prinfo <地图名称> <等级> 或 !prinfo <地图名称> <奖励编号> \n"
 	}
 	"ColorChangeValue"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Type new value (0 - 255) in the chat, or {darkred}cancel{default} to cancel"
+		"chi"		"{1} 在聊天中输入新值（0 - 255），或 {darkred}cancel{default} 取消"
 	}
 	"CCP_01"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} sm_ccp only works on staged maps"
+		"chi"		"{1} sm_ccp 仅在关卡地图上有效"
 	}
 	"CCP_02"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Map not completed"
+		"chi"		"{1} 地图未完成"
 	}
 	"CCP_03"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No completions found."
+		"chi"		"{1} 未找到完成记录。"
 	}
 	"CCP_04"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No map record found"
+		"chi"		"{1} 未找到地图记录"
 	}
 	"CCP_05"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Old Personal Record, Improve your time"
+		"chi"		"{1} 旧个人记录，提高你的时间"
 	}
 	"CCP_06"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Map Record has no CCP saved, Old Record"
+		"chi"		"{1} 地图记录没有保存 CCP，旧记录"
 	}
 	"style_not_found"
 	{
 		"#format"	"{1:s},{2:i}"
 		"en"		"{1} {red}Wrong style value, type {yellow}!acronyms{red} to see all the available styles"
+		"chi"		"{1} {red}错误的风格值，输入 {yellow}!acronyms{red} 查看所有可用风格"
 	}
 	"style_acronyms_help_chat"
 	{
 		"#format"	"{1:s}"
-		"en"		"{1} Open {yellow}console{default} to see the all the {red}Style Acroynms{default}"
+		"en"		"{1} Open {yellow}console{default} to see the all the {red}Style Acronyms{default}"
+		"chi"		"{1} 打开 {yellow}控制台{default} 查看所有 {red}风格缩写{default}"
 	}
 	"style_acronyms_help"
 	{
-		"en"		"\nStyle Acronyms are the following : \nNormal - n \nSideways - sw \nHalf-Sideways - hsw \nBackwards - bw \nLow-Gravity - lg \nSlow Motion - sm \nFast Forward - ff \nFreestyle - fs \n"
+		"en"		"\nStyle Acronyms are the following: \nNormal - n \nSideways - sw \nHalf-Sideways - hsw \nBackwards - bw \nLow-Gravity - lg \nSlow Motion - sm \nFast Forward - ff \nFreestyle - fs \n"
+		"chi"		"\n风格缩写如下：\nNormal - n \nSideways - sw \nHalf-Sideways - hsw \nBackwards - bw \nLow-Gravity - lg \nSlow Motion - sm \nFast Forward - ff \nFreestyle - fs \n"
 	}
 	"ctop_help_chat"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}Wrong values entered, open console to see the formatting options"
+		"chi"		"{1} {red}输入了错误的值，请打开控制台查看格式选项"
 	}
 	"ctop_help"
 	{
 		"en"		"FORMATTING OPTIONS FOR COMMAND !ctop \n!ctop \n!ctop <countryname> \n!ctop #<style_acronym> \n!ctop <playername> # <style_acronym> OR !ctop #<style_acronym> <countryname> \n"
+		"chi"		"!ctop 命令的格式选项 \n!ctop \n!ctop <国家名称> \n!ctop #<风格缩写> \n!ctop <玩家名称> # <风格缩写> 或 !ctop #<风格缩写> <国家名称> \n"
 	}
 	"country_data_not_found"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No available data"
+		"chi"		"{1} 没有可用数据"
 	}
 	"Country_Rank"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:i},{5:i},{6:s},{7:i}"
 		"en"		"{1} {red}{2}{yellow}{3} {default}is ranked {lightgreen}{4}/{5} {default}in {blue}{6}{default} with {lightgreen}{7} {default}points"
+		"chi"		"{1} {red}{2}{yellow}{3} {default}在 {blue}{6}{default} 排名 {lightgreen}{4}/{5} {default}，得分 {lightgreen}{7} {default}"
 	}
 	"Player_Data_Not_Found"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No available data"
+		"chi"		"{1} 没有可用数据"
 	}
 	"crank_help_chat"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}Wrong values entered, Open console to see the formatting options"
+		"chi"		"{1} 输入了 {red}错误的值，请打开控制台查看格式选项"
 	}
 	"crank_help"
 	{
 		"en"		"FORMATTING OPTIONS FOR COMMAND !crank \n!crank \n!crank <playername> \n!crank #<style_acronym> \n!crank <playername> #<style_acronym> OR !crank #<style_acronym> <playername> \n"
+		"chi"		"!crank 命令的格式选项 \n!crank \n!crank <玩家名称> \n!crank #<风格缩写> \n!crank <玩家名称> #<风格缩写> 或 !crank #<风格缩写> <玩家名称> \n"
 	}
 	"continenttop_help_chat"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}Wrong values entered, open console to see the formatting options"
+		"chi"		"{1} 输入了 {red}错误的值，请打开控制台查看格式选项"
 	}
 	"continenttop_help"
 	{
 		"en"		"FORMATTING OPTIONS FOR COMMAND !continenttop \n!continenttop \n!continenttop <continent_acronym> \n!continenttop #<style_acronym> \n!continenttop <continent_acronym> # <style_acronym> OR !continenttop #<style_acronym> <continent_acronym> \n"
+		"chi"		"!continenttop 命令的格式选项 \n!continenttop \n!continenttop <大洲缩写> \n!continenttop #<风格缩写> \n!continenttop <大洲缩写> # <风格缩写> 或 !continenttop #<风格缩写> <大洲缩写> \n"
 	}
 	"continent_data_not_found"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} No available data"
+		"chi"		"{1} 没有可用数据"
 	}
 	"Continent_Rank"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:i},{5:i},{6:s},{7:i}"
 		"en"		"{1} {red}{2}{yellow}{3} {default}is ranked {lightgreen}{4}/{5} {default}in {blue}{6}{default} with {lightgreen}{7} {default}points"
+		"chi"		"{1} {red}{2}{yellow}{3} {default}在 {blue}{6}{default} 排名 {lightgreen}{4}/{5} {default}，得分 {lightgreen}{7} {default}"
 	}
 	"continentrank_help_chat"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {red}Wrong values entered, Open console to see the formatting options"
+		"chi"		"{1} 输入了 {red}错误的值，请打开控制台查看格式选项"
 	}
 	"continentrank_help"
 	{
 		"en"		"FORMATTING OPTIONS FOR COMMAND !continentrank \n!continentrank \n!continentrank <playername> \n!continentrank #<style_acronym> \n!continentrank <playername> #<style_acronym> OR !continentrank #<style_acronym> <playername> \n"
+		"chi"		"!continentrank 命令的格式选项 \n!continentrank \n!continentrank <玩家名称> \n!continentrank #<风格缩写> \n!continentrank <玩家名称> #<风格缩写> 或 !continentrank #<风格缩写> <玩家名称> \n"
 	}
 	"continent_acronyms_help_chat"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Open {yellow}console{default} to see the all the {red}Continent Acroynms{default}"
+		"chi"		"{1} 打开 {yellow}控制台{default} 查看所有 {red}大洲缩写{default}"
 	}
 	"continent_acronyms_help"
 	{
 		"en"		"\nContinent Acronyms are the following :\nAS => Asia \nAN => Antarctica \nAF => Africa \nSA => South America \nEU => Europe \nOC => Oceania \nNA => North America"
+		"chi"		"\n大洲缩写如下：\nAS => 亚洲 \nAN => 南极洲 \nAF => 非洲 \nSA => 南美洲 \nEU => 欧洲 \nOC => 大洋洲 \nNA => 北美洲"
 	}
 	"NextRankPointRequired"
 	{
 		"#format"	"{1:s},{2:i},{3:s}"
 		"en"		"{1} {yellow}{2}{default} points required to achieve next rank {3}"
+		"chi"		"{1} 需要 {yellow}{2}{default} 分才能达到下一个等级 {3}"
 	}
 	"MAX_RANK"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} {yellow}Already Max Rank!"
+		"chi"		"{1} {yellow}已经是最高等级！"
 	}
 	"InvalidObserverMode"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Invalid observer mode, go to First Person or Third Person view."
+		"chi"		"{1} 无效的观察者模式，请切换到第一人称或第三人称视图。"
 	}
 }
