@@ -94,7 +94,7 @@
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} You missed your PB of [{lightgreen}{2}{default}]"
-		"chi"		"{1} 你错过了你的个人最佳时间 [{lightgreen}{2}{default}]"
+		"chi"		"{1} 你错过了你的个人最好成绩 [{lightgreen}{2}{default}]"
 	}
 	"SkillGroup"
 	{
@@ -190,19 +190,19 @@
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:i},{6:i},{7:s},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished in {lightgreen}{3}{default}. Improving their best time by [{lightgreen}{4}{default}]. [Rank: {lightgreen}{5}/{6} {default}{7} | Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成，用时 {lightgreen}{3}{default}。 改善了他们的最佳时间 [{lightgreen}{4}{default}]。 [排名: {lightgreen}{5}/{6} {default}{7} | 纪录: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成，用时 {lightgreen}{3}{default}。 改善了ta的最好成绩 [{lightgreen}{4}{default}]。 [排名: {lightgreen}{5}/{6} {default}{7} | 纪录: {lightgreen}{8}{default}]"
 	}
 	"MapFinished5"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:i},{6:i},{7:s},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished in {lightgreen}{3}{default}. Missing their best time by [{red}{4}{default}]. [Rank: {lightgreen}{5}/{6} {default}{7} | Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成，用时 {lightgreen}{3}{default}。 未达到他们的最佳时间 [{red}{4}{default}]。 [排名: {lightgreen}{5}/{6} {default}{7} | 纪录: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成，用时 {lightgreen}{3}{default}。 未达到ta的最好成绩 [{red}{4}{default}]。 [排名: {lightgreen}{5}/{6} {default}{7} | 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished1"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {red}{4}{default}. Missing their best time by [{red}{5}{default}]. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {red}{4}{default}。未达到他们的最佳时间 [{red}{5}{default}]。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {red}{4}{default}。未达到ta的最好成绩 [{red}{5}{default}]。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished2"
 	{
@@ -220,19 +220,19 @@
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. Improving the best time by {lightgreen}{5}{default}. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最佳时间 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最好成绩 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished5"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. Improving the best time by {lightgreen}{5}{default}. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最佳时间 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最好成绩 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	"BonusFinished6"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished [{orange}{3}{default}] in {lightgreen}{4}{default}. Improving their best time by {lightgreen}{5}{default}. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最佳时间 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 [{orange}{3}{default}] 用时 {lightgreen}{4}{default}。改善了最好成绩 {lightgreen}{5}{default}。 [排名: {lightgreen}{6}/{7} {default}| 纪录: {lightgreen}{8}{default}]"
 	}
 	/*===================================
 	=    Style Bonus Time Messages     	=
@@ -497,7 +497,7 @@
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished {red}{3} {default}in {lightgreen}{4}{default}. Missing their best time by [{red}{5}{default}]. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成 {red}{3} {default}在 {lightgreen}{4}{default}。相对最佳时间差 [{red}{5}{default}]。[排名: {lightgreen}{6}/{7} {default}| 记录: {lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 {red}{3} {default}在 {lightgreen}{4}{default}。相对最好成绩差 [{red}{5}{default}]。[排名: {lightgreen}{6}/{7} {default}| 记录: {lightgreen}{8}{default}]"
 	}
 	"ErrorStageTime"
 	{
@@ -1239,7 +1239,7 @@
 	{
 		"#format"	"{1:s},{2:s}"
 		"en"		"{1} Mapper name already exists, updating to: {2}"
-t		"chi"		"{1} 映射器名称已存在，更新为: {2}"
+		"chi"		"{1} 映射器名称已存在，更新为: {2}"
 	}
 	"InsertMapperName"
 	{
@@ -1671,7 +1671,7 @@ t		"chi"		"{1} 映射器名称已存在，更新为: {2}"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:i},{7:i},{8:s}"
 		"en"		"{1} {yellow}{2}{default} finished {red}{3} {default}in [{lightgreen}{4}{default}]. Improving their best time by [{lightgreen}{5}{default}]. [Rank: {lightgreen}{6}/{7} {default}| Record: {lightgreen}{8}{default}]"
-		"chi"		"{1} {yellow}{2}{default} 完成 {red}{3} {default}在 [{lightgreen}{4}{default}]。 通过 [{lightgreen}{5}{default}] 改进了他们的最佳时间。 [排名：{lightgreen}{6}/{7} {default}| 记录：{lightgreen}{8}{default}]"
+		"chi"		"{1} {yellow}{2}{default} 完成 {red}{3} {default}在 [{lightgreen}{4}{default}]。 通过 [{lightgreen}{5}{default}] 提升了ta的最好成绩。 [排名：{lightgreen}{6}/{7} {default}| 记录：{lightgreen}{8}{default}]"
 	}
 	"Misc36"
 	{
@@ -1695,13 +1695,13 @@ t		"chi"		"{1} 映射器名称已存在，更新为: {2}"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:i},{8:i},{9:s}"
 		"en"		"{1} {yellow}{2} {default}finished [{orange}{3}{default}] {red}{4} {default}in {lightgreen}{5}{default}. Improving the best time by {lightgreen}{6}{default}. [Rank: {lightgreen}{7}/{8} {default}| Record: {lightgreen}{9}{default}]"
-		"chi"		"{1} {yellow}{2} {default} 完成 [{orange}{3}{default}] {red}{4} {default}在 {lightgreen}{5}{default}。 通过 {lightgreen}{6}{default} 改进了最佳时间。 [排名：{lightgreen}{7}/{8} {default}| 记录：{lightgreen}{9}{default}]"
+		"chi"		"{1} {yellow}{2} {default} 完成 [{orange}{3}{default}] {red}{4} {default}在 {lightgreen}{5}{default}。 通过 {lightgreen}{6}{default} 提升了最好成绩。 [排名：{lightgreen}{7}/{8} {default}| 记录：{lightgreen}{9}{default}]"
 	}
 	"Misc40"
 	{
 		"#format"	"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s},{7:i},{8:i},{9:s}"
 		"en"		"{1} {yellow}{2} {default}finished [{orange}{3}{default}] {red}{4} {default}in {lightgreen}{5}{default}. Improving their best time by {lightgreen}{6}{default}. [Rank: {lightgreen}{7}/{8} {default}| Record: {lightgreen}{9}{default}]"
-		"chi"		"{1} {yellow}{2} {default} 完成 [{orange}{3}{default}] {red}{4} {default}在 {lightgreen}{5}{default}。 通过 {lightgreen}{6}{default} 改进了最佳时间。 [排名：{lightgreen}{7}/{8} {default}| 记录：{lightgreen}{9}{default}]"
+		"chi"		"{1} {yellow}{2} {default} 完成 [{orange}{3}{default}] {red}{4} {default}在 {lightgreen}{5}{default}。 通过 {lightgreen}{6}{default} 提升了最好成绩。 [排名：{lightgreen}{7}/{8} {default}| 记录：{lightgreen}{9}{default}]"
 	}
 	"Misc41"
 	{
@@ -2199,13 +2199,13 @@ t		"chi"		"{1} 映射器名称已存在，更新为: {2}"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your timer {green}won't reset {default}if you've missed your PB"
-		"chi"		"{1} 如果你错过了个人最佳时间，计时器 {green}不会重置 {default}"
+		"chi"		"{1} 如果你错过了个人最好成绩，计时器 {green}不会重置 {default}"
 	}
 	"AutoResetEnabled"
 	{
 		"#format"	"{1:s}"
 		"en"		"{1} Your timer will {red}reset {default}if you've missed your PB"
-		"chi"		"{1} 如果你错过了个人最佳时间，计时器将 {red}重置 {default}"
+		"chi"		"{1} 如果你错过了个人最好成绩，计时器将 {red}重置 {default}"
 	}
 	"AutoResetMessage1"
 	{

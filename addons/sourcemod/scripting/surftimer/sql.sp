@@ -105,15 +105,15 @@ public void sql_DeleteMenuView(Handle owner, Handle hndl, const char[] error, an
 	int client = GetClientFromSerial(data);
 	
 	Menu editing = new Menu(callback_DeleteRecord);
-	editing.SetTitle("%s Records Editing Menu - %s\n► Editing %s record\n► Press the menu item to delete the record\n ", g_szMenuPrefix, g_EditingMap[client], g_EditTypes[g_SelectedEditOption[client]]);
+	editing.SetTitle("%s %s记录编辑菜单 - %s\n► 编辑%s记录\n► 按菜单项删除记录\n ", g_szMenuPrefix, g_EditingMap[client], g_EditTypes[g_SelectedEditOption[client]]);
 	
 	char menuFormat[88];
-	FormatEx(menuFormat, sizeof(menuFormat), "Style: %s\n► Press the menu item to change the style\n ", g_EditStyles[g_SelectedStyle[client]]);
+	FormatEx(menuFormat, sizeof(menuFormat), "风格：%s\n► 按菜单项更改风格\n ", g_EditStyles[g_SelectedStyle[client]]);
 	editing.AddItem("0", menuFormat);
 	
 	if(g_SelectedEditOption[client] > 0)
 	{
-		FormatEx(menuFormat, sizeof(menuFormat), "%s: %i\n► Press the menu item to change the %s\n ", g_SelectedEditOption[client] == 1 ? "Stage":"Bonus", g_SelectedType[client], g_SelectedEditOption[client] == 1 ? "stage":"bonus");
+		FormatEx(menuFormat, sizeof(menuFormat), "%s：%i\n► 按菜单项更改%s\n ", g_SelectedEditOption[client] == 1 ? "关卡" : "奖励", g_SelectedType[client], g_SelectedEditOption[client] == 1 ? "关卡" : "奖励");
 		editing.AddItem("0", menuFormat);
 	}
 	
@@ -123,7 +123,7 @@ public void sql_DeleteMenuView(Handle owner, Handle hndl, const char[] error, an
 	}
 	else if (!SQL_GetRowCount(hndl))
 	{
-		editing.AddItem("1", "No records found", ITEMDRAW_DISABLED);
+		editing.AddItem("1", "未找到记录", ITEMDRAW_DISABLED);
 		editing.Display(client, MENU_TIME_FOREVER);
 	}
 	else
@@ -140,7 +140,7 @@ public void sql_DeleteMenuView(Handle owner, Handle hndl, const char[] error, an
 			runTime = SQL_FetchFloat(hndl, 2);
 			char szRunTime[128];
 			FormatTimeFloat(data, runTime, 3, szRunTime, sizeof(szRunTime));
-			FormatEx(menuFormat, sizeof(menuFormat), "Rank: %d ► %s - %s", i, playerName, szRunTime);
+			FormatEx(menuFormat, sizeof(menuFormat), "排名: %d ► %s - %s", i, playerName, szRunTime);
 			ReplaceString(playerName, 32, ";;;", ""); // make sure the client dont has this in their name.
 			
 			FormatEx(menuFormatz, 128, "%s;;;%s;;;%s", playerName, steamID, szRunTime);
@@ -203,10 +203,10 @@ public int callback_DeleteRecord(Menu menu, MenuAction action, int client, int k
 		
 		Menu confirm = new Menu(callback_Confirm);
 
-		confirm.SetTitle("%s Records Editing Menu - Confirm Deletion\n► Deleting %s [%s] %s record\n ", g_szMenuPrefix, recordsBreak[0], recordsBreak[1], recordsBreak[2]);
+		confirm.SetTitle("%s记录编辑菜单 - 确认删除\n► 删除 %s [%s] %s 记录\n ", g_szMenuPrefix, recordsBreak[0], recordsBreak[1], recordsBreak[2]);
 
-		confirm.AddItem("0", "No");
-		confirm.AddItem(recordsBreak[1], "Yes\n \n► This cannot be undone");
+		confirm.AddItem("0", "否");
+		confirm.AddItem(recordsBreak[1], "是\n \n► 该操作无法撤销");
 
 		if (GetConVarBool(g_drDeleteSecurity))
 			confirm.Display(client, MENU_TIME_FOREVER);
@@ -1830,51 +1830,51 @@ public void sql_selectPlayerProfileCallback(Handle owner, Handle hndl, const cha
 		int unix = time - lastseen;
 		diffForHumans(unix, szLastSeen, sizeof(szLastSeen), 1);
 
-		Format(szMapPoints, 128, "Maps: %i/%i - [%i] (%s%c)", finishedMaps, g_pr_MapCount[0], mapPoints, szPerc, PERCENT);
+		Format(szMapPoints, 128, "地图：%i/%i - [%i] (%s%c)", finishedMaps, g_pr_MapCount[0], mapPoints, szPerc, PERCENT);
 
 		if (wrbPoints > 0)
-			Format(szBonusPoints, 128, "Bonuses: %i/%i - [%i+%i] (%s%c)", finishedBonuses, g_pr_BonusCount, bonusPoints, wrbPoints, szBPerc, PERCENT);
+			Format(szBonusPoints, 128, "奖励：%i/%i - [%i+%i] (%s%c)", finishedBonuses, g_pr_BonusCount, bonusPoints, wrbPoints, szBPerc, PERCENT);
 		else
-			Format(szBonusPoints, 128, "Bonuses: %i/%i - [%i] (%s%c)", finishedBonuses, g_pr_BonusCount, bonusPoints, szBPerc, PERCENT);
+			Format(szBonusPoints, 128, "奖励：%i/%i - [%i] (%s%c)", finishedBonuses, g_pr_BonusCount, bonusPoints, szBPerc, PERCENT);
 
 		if (wrPoints > 0)
-			Format(szTop10Points, 128, "Top10: %i - [%i+%i]", top10s, top10Points, wrPoints);
+			Format(szTop10Points, 128, "前10：%i - [%i+%i]", top10s, top10Points, wrPoints);
 		else
-			Format(szTop10Points, 128, "Top10: %i - [%i]", top10s, top10Points);
+			Format(szTop10Points, 128, "前10：%i - [%i]", top10s, top10Points);
 
 		if (wrcpPoints > 0)
-			Format(szStagePc, 128, "Stages: %i/%i [0+%d] (%s%c)", finishedStages, g_pr_StageCount, wrcpPoints, szSPerc, PERCENT);
+			Format(szStagePc, 128, "关卡：%i/%i [0+%d] (%s%c)", finishedStages, g_pr_StageCount, wrcpPoints, szSPerc, PERCENT);
 		else
-			Format(szStagePc, 128, "Stages: %i/%i [0] (%s%c)", finishedStages, g_pr_StageCount, szSPerc, PERCENT);
+			Format(szStagePc, 128, "关卡：%i/%i [0] (%s%c)", finishedStages, g_pr_StageCount, szSPerc, PERCENT);
 
-		Format(szMiPc, 128, "Map Improvement Pts: %i - [%i]", groups, groupPoints);
+		Format(szMiPc, 128, "地图改进点数：%i - [%i]", groups, groupPoints);
 
-		Format(szRecords, 128, "Records:\nMap WR: %i\nStage WR: %i\nBonus WR: %i", wrs, wrcps, wrbs);
+		Format(szRecords, 128, "记录：\n地图最快记录：%i\n关卡最快记录：%i\n奖励最快记录：%i", wrs, wrcps, wrbs);
 
-		Format(szCompleted, 1024, "Completed - Points (%s%c):\n%s\n%s\n%s\n%s\n \n%s\n \n%s\n \n", szTotalPerc, PERCENT, szMapPoints, szBonusPoints, szTop10Points, szStagePc, szMiPc, szRecords);
+		Format(szCompleted, 1024, "已完成 - 点数 (%s%c):\n%s\n%s\n%s\n%s\n \n%s\n \n%s\n \n", szTotalPerc, PERCENT, szMapPoints, szBonusPoints, szTop10Points, szStagePc, szMiPc, szRecords);
 
-		Format(g_pr_szrank[client], 512, "Rank: %s/%i %s\nTotal pts: %i\n \n", szRank, g_pr_RankedPlayers[style], szSkillGroup, points);
-		
+		Format(g_pr_szrank[client], 512, "排名：%s/%i %s\n总点数：%i\n \n", szRank, g_pr_RankedPlayers[style], szSkillGroup, points);
+
 		char szTop[128];
 		if (style > 0)
-			Format(szTop, sizeof(szTop), "[%s | %s | Online: %s]\n", szName, g_szStyleMenuPrint[style], szLastSeen);
+			Format(szTop, sizeof(szTop), "[%s | %s | 在线：%s]\n", szName, g_szStyleMenuPrint[style], szLastSeen);
 		else
-			Format(szTop, sizeof(szTop), "[%s ||| Online: %s]\n", szName, szLastSeen);
+			Format(szTop, sizeof(szTop), "[%s ||| 在线：%s]\n", szName, szLastSeen);
 
 		char szTitle[1024];
 		if (GetConVarBool(g_hCountry))
-			Format(szTitle, 1024, "%s-------------------------------------\n%s\nCountry: %s\n \n%s\n", szTop, szSteamId, szCountry, g_pr_szrank[client]);
+			Format(szTitle, 1024, "%s-------------------------------------\n%s\n国家：%s\n \n%s\n", szTop, szSteamId, szCountry, g_pr_szrank[client]);
 		else
 			Format(szTitle, 1024, "%s-------------------------------------\n%s\n \n%s", szTop, szSteamId, g_pr_szrank[client]);
 
 		Menu menu = CreateMenu(ProfileMenuHandler);
 		SetMenuTitle(menu, szTitle);
-		AddMenuItem(menu, "Finished maps", szCompleted);
-		AddMenuItem(menu, szSteamId, "Player Info");
+		AddMenuItem(menu, "已完成的地图", szCompleted);
+		AddMenuItem(menu, szSteamId, "玩家信息");
 
 		if (IsValidClient(client))
 			if (StrEqual(szSteamId, g_szSteamID[client]))
-				AddMenuItem(menu, "Refresh my profile", "Refresh my profile");
+				AddMenuItem(menu, "刷新我的资料", "刷新我的资料");
 
 		SetMenuExitButton(menu, true);
 		DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -1938,16 +1938,16 @@ public void completionMenu(int client)
 	int style = g_ProfileStyleSelect[client];
 	char szTitle[128];
 	if (style == 0)
-		Format(szTitle, 128, "[%s | Completion Menu]\n \n", g_szProfileName[client]);
+		Format(szTitle, 128, "[%s | 完成菜单]\n \n", g_szProfileName[client]);
 	else
-		Format(szTitle, 128, "[%s | %s | Completion Menu]\n \n", g_szProfileName[client], g_szStyleMenuPrint[style]);
+		Format(szTitle, 128, "[%s | %s | 完成菜单]\n \n", g_szProfileName[client], g_szStyleMenuPrint[style]);
 
 	Menu theCompletionMenu = CreateMenu(CompletionMenuHandler);
 	SetMenuTitle(theCompletionMenu, szTitle);
-	AddMenuItem(theCompletionMenu, "Complete Maps", "Complete Maps");
-	AddMenuItem(theCompletionMenu, "Incomplete Maps", "Incomplete Maps");
-	AddMenuItem(theCompletionMenu, "Top 10 Maps", "Top 10 Maps");
-	AddMenuItem(theCompletionMenu, "WRs", "WRs");
+	AddMenuItem(theCompletionMenu, "完成的地图", "完成的地图");
+	AddMenuItem(theCompletionMenu, "未完成的地图", "未完成的地图");
+	AddMenuItem(theCompletionMenu, "前10名地图", "前10名地图");
+	AddMenuItem(theCompletionMenu, "世界纪录", "世界纪录");
 	SetMenuExitBackButton(theCompletionMenu, true);
 	DisplayMenu(theCompletionMenu, client, MENU_TIME_FOREVER);
 }
@@ -2190,14 +2190,14 @@ public void sql_selectTopSurfersCallback(Handle owner, Handle hndl, const char[]
 
 	switch (style)
 	{
-		case 1: Format(title, 256, "Top 50 SW Times on %s \n    Rank    Time               Player", szFirstMap);
-		case 2: Format(title, 256, "Top 50 HSW Times on %s \n    Rank    Time               Player", szFirstMap);
-		case 3: Format(title, 256, "Top 50 BW Times on %s \n    Rank    Time               Player", szFirstMap);
-		case 4: Format(title, 256, "Top 50 Low-Gravity Times on %s \n    Rank    Time               Player", szFirstMap);
-		case 5: Format(title, 256, "Top 50 Slow Motion Times on %s \n    Rank    Time               Player", szFirstMap);
-		case 6: Format(title, 256, "Top 50 Fast Forward Times on %s \n    Rank    Time               Player", szFirstMap);
-		case 7: Format(title, 256, "Top 50 Freestyle Times on %s \n    Rank    Time               Player", szFirstMap);
-		default: Format(title, 256, "Top 50 Times on %s \n    Rank    Time               Player", szFirstMap);
+		case 1: Format(title, 256, "前 50 侧滑 记录 在 %s \n    排名    时间               玩家", szFirstMap);
+		case 2: Format(title, 256, "前 50 半侧滑 记录 在 %s \n    排名    时间               玩家", szFirstMap);
+		case 3: Format(title, 256, "前 50 倒滑 记录 在 %s \n    排名    时间               玩家", szFirstMap);
+		case 4: Format(title, 256, "前 50 低重力 记录 在 %s \n    排名    时间               玩家", szFirstMap);
+		case 5: Format(title, 256, "前 50 慢动作 记录 在 %s \n    排名    时间               玩家", szFirstMap);
+		case 6: Format(title, 256, "前 50 快进 记录 在 %s \n    排名    时间               玩家", szFirstMap);
+		case 7: Format(title, 256, "前 50 自由风格 记录 在 %s \n    排名    时间               玩家", szFirstMap);
+		default: Format(title, 256, "前 50 记录 在 %s \n    排名    时间               玩家", szFirstMap);
 	}
 
 	SetMenuTitle(menu, title);
@@ -2238,13 +2238,13 @@ public void db_selectBonusesInMapCallback(Handle owner, Handle hndl, const char[
 
 		SQL_FetchString(hndl, 0, mapname, 128);
 		zGrp = SQL_FetchInt(hndl, 1);
-		Format(MenuTitle, 248, "Choose a Bonus in %s", mapname);
+		Format(MenuTitle, 248, "选择一个奖励关卡在 %s", mapname);
 		listBonusesinMapMenu.SetTitle(MenuTitle);
 
 		SQL_FetchString(hndl, 2, BonusName, 128);
 
 		if (!BonusName[0])
-			Format(BonusName, 128, "bonus %i", zGrp);
+			Format(BonusName, 128, "奖励 %i", zGrp);
 
 		Format(MenuID, 248, "%s-%i", mapname, zGrp);
 
@@ -2257,7 +2257,7 @@ public void db_selectBonusesInMapCallback(Handle owner, Handle hndl, const char[
 			zGrp = SQL_FetchInt(hndl, 1);
 
 			if (StrEqual(BonusName, "NULL", false))
-				Format(BonusName, 128, "bonus %i", zGrp);
+				Format(BonusName, 128, "奖励 %i", zGrp);
 
 			Format(MenuID, 248, "%s-%i", mapname, zGrp);
 
@@ -2367,7 +2367,7 @@ public void sql_selectTopBonusSurfersCallback(Handle owner, Handle hndl, const c
 	}
 	else
 	CPrintToChat(client, "%t", "NoTopRecords", g_szChatPrefix, szMap);
-	Format(title, 256, "Top 50 Times on %s (B %i) \n    Rank    Time               Player", szFirstMap, zGrp);
+	Format(title, 256, "在%s上的前50次记录 (B %i) \n    排名    时间               玩家", szFirstMap, zGrp);
 	topMenu.SetTitle(title);
 	topMenu.OptionFlags = MENUFLAG_BUTTON_EXIT;
 	topMenu.Display(client, MENU_TIME_FOREVER);
@@ -2829,14 +2829,14 @@ public void SQL_ViewAllRecordsCallback3(Handle owner, Handle hndl, const char[] 
 		if (g_mapsCompletedLoop[client] == totalMaps)
 		{
 			char title[256];
-			Format(title, 256, "%i Finished maps for %s \n    Rank          Time          Mapname - Tier", totalMaps, szName);
+			Format(title, 256, "%i 已完成地图 %s \n    排名          时间          地图名称 - 难度", totalMaps, szName);
 			SetMenuTitle(g_CompletedMenu, title);
 			SetMenuOptionFlags(g_CompletedMenu, MENUFLAG_BUTTON_EXIT);
 			DisplayMenu(g_CompletedMenu, client, MENU_TIME_FOREVER);
 		}
 
 		if (IsValidClient(client))
-			PrintToConsole(client, "%s - Tier: %i, Time: %s, Rank: %i/%i", szMapName, tier, szTime, rank, count);
+			PrintToConsole(client, "%s - 难度: %i, 时间: %s, 排名: %i/%i", szMapName, tier, szTime, rank, count);
 	}
 }
 
@@ -5028,19 +5028,19 @@ public void SQL_selectzoneTypeIdsCallback(Handle owner, Handle hndl, const char[
 			case 1:Format(MenuItemName, 24, "Start");
 			case 2:Format(MenuItemName, 24, "End");
 			case 3: {
-				Format(MenuItemName, 24, "Stage");
+				Format(MenuItemName, 24, "关卡");
 				x = 2;
 			}
-			case 4:Format(MenuItemName, 24, "Checkpoint");
-			case 5:Format(MenuItemName, 24, "Speed");
-			case 6:Format(MenuItemName, 24, "TeleToStart");
-			case 7:Format(MenuItemName, 24, "Validator");
-			case 8:Format(MenuItemName, 24, "Checker");
+			case 4: Format(MenuItemName, 24, "检查点"); 
+			case 5: Format(MenuItemName, 24, "速度"); 
+			case 6: Format(MenuItemName, 24, "传送到起点"); 
+			case 7: Format(MenuItemName, 24, "验证器"); 
+			case 8: Format(MenuItemName, 24, "检查器"); 
 			// fluffys
-			case 9:Format(MenuItemName, 24, "AntiJump");
-			case 10:Format(MenuItemName, 24, "AntiDuck");
-			case 11:Format(MenuItemName, 24, "MaxSpeed");
-			default:Format(MenuItemName, 24, "Unknown");
+			case 9: Format(MenuItemName, 24, "防止跳跃"); 
+			case 10: Format(MenuItemName, 24, "防止蹲伏"); 
+			case 11: Format(MenuItemName, 24, "最大速度"); 
+			default: Format(MenuItemName, 24, "未知"); 
 		}
 
 		for (int k = 0; k < 35; k++)
@@ -5623,7 +5623,7 @@ public void sql_selectLatestRecordsCallback(Handle owner, Handle hndl, const cha
 	if (SQL_HasResultSet(hndl))
 	{
 		Menu menu = CreateMenu(LatestRecordsMenuHandler);
-		SetMenuTitle(menu, "Recently Broken Records");
+		SetMenuTitle(menu, "最近打破的记录");
 
 		int i = 1;
 		char szItem[128];
@@ -5641,7 +5641,7 @@ public void sql_selectLatestRecordsCallback(Handle owner, Handle hndl, const cha
 		}
 		if (i == 1)
 		{
-			PrintToConsole(data, "No records found.");
+			PrintToConsole(data, "未找到记录。");
 			delete menu;
 		}
 		else
@@ -5651,7 +5651,7 @@ public void sql_selectLatestRecordsCallback(Handle owner, Handle hndl, const cha
 		}
 	}
 	else
-	PrintToConsole(data, "No records found.");
+	PrintToConsole(data, "未找到记录。");
 	PrintToConsole(data, "----------------------------------------------------------------------------------------------------");
 	CPrintToChat(data, "%t", "ConsoleOutput", g_szChatPrefix);
 }
@@ -6430,9 +6430,9 @@ public void db_selectTop100PlayersCallback(Handle owner, Handle hndl, const char
 	Menu menu = new Menu(TopPlayersMenuHandler1);
 	char szTitle[256];
 	if (style == 0)
-		Format(szTitle, sizeof(szTitle), "Top 100 Players\n    Rank   Points       Maps            Player");
+		Format(szTitle, sizeof(szTitle), "前100名玩家\n    排名   分数       地图            玩家");
 	else
-		Format(szTitle, sizeof(szTitle), "Top 100 Players - %s\n    Rank   Points       Maps            Player", g_szStyleMenuPrint[style]);
+		Format(szTitle, sizeof(szTitle), "前100名玩家 - %s\n    排名   分数       地图            玩家", g_szStyleMenuPrint[style]);
 
 	menu.SetTitle(szTitle);
 	menu.Pagination = 5;
@@ -7451,12 +7451,12 @@ public void sql_viewWrcpMapCallback(Handle owner, Handle hndl, const char[] erro
 		{
 			g_szWrcpMapSelect[client] = mapnameresult;
 			Menu menu = CreateMenu(StageSelectMenuHandler);
-			SetMenuTitle(menu, "%s: select a stage\n------------------------------\n", mapnameresult);
+			SetMenuTitle(menu, "%s: 选择一个关卡\n------------------------------\n", mapnameresult);
 			int stageCount = totalstages;
 			for (int i = 1; i <= stageCount; i++)
 			{
 				stage[0] = i;
-				Format(szStageString, sizeof(szStageString), "Stage %i", i);
+				Format(szStageString, sizeof(szStageString), "关卡 %i", i);
 				AddMenuItem(menu, stage[0], szStageString);
 			}
 			g_bSelectWrcp[client] = true;
@@ -7587,7 +7587,7 @@ public void sql_selectStageTopSurfersCallback(Handle owner, Handle hndl, const c
 	else
 	CPrintToChat(client, "%t", "SQL26", g_szChatPrefix, stage, mapname);
 
-	Format(title, 256, "[Top 50 | Stage %i | %s] \n    Rank    Time               Player", stage, szMap);
+	Format(title, 256, "[前 50 | 关卡 %i | %s] \n    排名    时间               玩家", stage, szMap);
 	SetMenuTitle(menu, title);
 	SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
 	DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -8388,12 +8388,12 @@ public void sql_viewStyleWrcpMapCallback(Handle owner, Handle hndl, const char[]
 			Menu menu;
 			menu = CreateMenu(StageStyleSelectMenuHandler);
 
-			SetMenuTitle(menu, "%s: select a stage [%s]\n------------------------------\n", mapnameresult, g_szStyleMenuPrint[style]);
+			SetMenuTitle(menu, "%s: 选择一个关卡 [%s]\n------------------------------\n", mapnameresult, g_szStyleMenuPrint[style]);
 			int stageCount = totalstages;
 			for (int i = 1; i <= stageCount; i++)
 			{
 				stage[0] = i;
-				Format(szStageString, sizeof(szStageString), "Stage %i", i);
+				Format(szStageString, sizeof(szStageString), "关卡 %i", i);
 				AddMenuItem(menu, stage[0], szStageString);
 			}
 			g_bSelectWrcp[client] = true;
@@ -8479,7 +8479,7 @@ public void sql_selectStageStyleTopSurfersCallback(Handle owner, Handle hndl, co
 	else
 	CPrintToChat(client, "%t", "SQL26", g_szChatPrefix, stage, mapname);
 
-	Format(title, 256, "[Top 50 %s | Stage %i | %s] \n    Rank    Time               Player", g_szStyleMenuPrint[style], stage, szMap);
+	Format(title, 256, "[前 50 %s | 关卡 %i | %s] \n    排名    时间               玩家", g_szStyleMenuPrint[style], stage, szMap);
 	SetMenuTitle(menu, title);
 	SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
 	DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -9296,7 +9296,7 @@ public void db_selectMapImprovementCallback(Handle owner, Handle hndl, const cha
 		if (type == 0)
 		{
 			Menu mi = CreateMenu(MapImprovementMenuHandler);
-			SetMenuTitle(mi, "[Point Reward: %s]\n------------------------------\nTier: %i\n \nMapper: %s\n \n[Completion Points]\n \nMap Finish Points: %i\n \n[Map Improvement Groups]\n \n[Group 1] Ranks 11-%i ~ %i Pts\n[Group 2] Ranks %i-%i ~ %i Pts\n[Group 3] Ranks %i-%i ~ %i Pts\n[Group 4] Ranks %i-%i ~ %i Pts\n[Group 5] Ranks %i-%i ~ %i Pts\n \nSR Pts: %i\n \nTotal Completions: %i\n \n",szMapName, tier, g_szMapperName, mapcompletion, g1top, RoundFloat(g1points), g2bot, g2top, RoundFloat(g2points), g3bot, g3top, RoundFloat(g3points), g4bot, g4top, RoundFloat(g4points), g5bot, g5top, RoundFloat(g5points), iwrpoints, totalplayers);
+			SetMenuTitle(mi, "[积分奖励：%s]\n------------------------------\n难度：%i\n \n地图作者：%s\n \n[完成积分]\n \n地图完成奖励：%i\n \n[地图改进组]\n \n[第1组] 排名11-%i ~ %i 积分\n[第2组] 排名%i-%i ~ %i 积分\n[第3组] 排名%i-%i ~ %i 积分\n[第4组] 排名%i-%i ~ %i 积分\n[第5组] 排名%i-%i ~ %i 积分\n \nSR 积分：%i\n \n总完成数：%i\n \n", szMapName, tier, g_szMapperName, mapcompletion, g1top, RoundFloat(g1points), g2bot, g2top, RoundFloat(g2points), g3bot, g3top, RoundFloat(g3points), g4bot, g4top, RoundFloat(g4points), g5bot, g5top, RoundFloat(g5points), iwrpoints, totalplayers);
 			// AddMenuItem(mi, "", "", ITEMDRAW_SPACER);
 			AddMenuItem(mi, szMapName, "Top 10 Points");
 			SetMenuOptionFlags(mi, MENUFLAG_BUTTON_EXIT);
@@ -9305,7 +9305,7 @@ public void db_selectMapImprovementCallback(Handle owner, Handle hndl, const cha
 		else // Draw Top 10 Points Menu
 		{
 			Menu mi = CreateMenu(MapImprovementTop10MenuHandler);
-			SetMenuTitle(mi, "[Point Reward: %s]\n------------------------------\nTier: %i\n \n[Completion Points]\n \nMap Finish Points: %i\n \n[Top 10 Points]\n \nRank 1: %i Pts\nRank 2: %i Pts\nRank 3: %i Pts\nRank 4: %i Pts\nRank 5: %i Pts\nRank 6: %i Pts\nRank 7: %i Pts\nRank 8: %i Pts\nRank 9: %i Pts\nRank 10: %i Pts\n \nTotal Completions: %i\n",szMapName, tier, mapcompletion, iwrpoints, rank2, rank3, rank4, rank5, rank6, rank7, rank8, rank9, rank10, totalplayers);
+			SetMenuTitle(mi, "[积分奖励：%s]\n------------------------------\n层级：%i\n \n[完成积分]\n \n地图完成奖励：%i\n \n[Top 10 积分]\n \n排名1：%i 积分\n排名2：%i 积分\n排名3：%i 积分\n排名4：%i 积分\n排名5：%i 积分\n排名6：%i 积分\n排名7：%i 积分\n排名8：%i 积分\n排名9：%i 积分\n排名10：%i 积分\n \n总完成数：%i\n", szMapName, tier, mapcompletion, iwrpoints, rank2, rank3, rank4, rank5, rank6, rank7, rank8, rank9, rank10, totalplayers);
 			AddMenuItem(mi, "", "", ITEMDRAW_SPACER);
 			SetMenuOptionFlags(mi, MENUFLAG_BUTTON_EXIT);
 			DisplayMenu(mi, client, MENU_TIME_FOREVER);
@@ -9541,7 +9541,7 @@ public void sql_selectMapNameLikeCallback(Handle owner, Handle hndl, const char[
 				AddMenuItem(menu, szMapName2, szMapName2);
 			}
 
-			SetMenuTitle(menu, "Choose a map:");
+			SetMenuTitle(menu, "选择一张地图:");
 			SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
 			DisplayMenu(menu, client, MENU_TIME_FOREVER);
 		}
@@ -9796,17 +9796,17 @@ public void SQL_ViewPlayerPrMaptimeCallback2(Handle owner, Handle hndl, const ch
 	char szName[MAX_NAME_LENGTH];
 	GetClientName(target, szName, sizeof(szName));
 
-	SetMenuTitle(menu, "Personal Record for %s\n%s\n \n", szName, szMapName);
+	SetMenuTitle(menu, "个人记录：%s\n%s\n \n", szName, szMapName);
 	if (time != -1.0)
 	{
 		FormatTimeFloat(0, time, 3, szRuntimepro, 64);
-		Format(szMapInfo, 256, "Map Time: %s\nRank: %i/%i\n \n", szRuntimepro, rank, total);
+		Format(szMapInfo, 256, "地图用时：%s\n排名：%i/%i\n \n", szRuntimepro, rank, total);
 	}
 	else
 	{
-		Format(szMapInfo, 256, "Map Time: None\n \n", szRuntimepro, rank, total);
+		Format(szMapInfo, 256, "地图用时：无\n \n", szRuntimepro, rank, total);
 	}
-	AddMenuItem(menu, "map", szMapInfo);
+	AddMenuItem(menu, "地图", szMapInfo);
 
 	if (StrEqual(szMapName, g_szMapName))
 	{
@@ -9825,14 +9825,14 @@ public void SQL_ViewPlayerPrMaptimeCallback2(Handle owner, Handle hndl, const ch
 			if (stagetime[i] != -1.0)
 			{
 				FormatTimeFloat(0, stagetime[i], 3, szRuntimestages[i], 64);
-				Format(szStageInfo[i], 256, "Stage %i: %s\nRank: %i/%i\n \n", i, szRuntimestages[i], stagerank[i], totalcompletes[i]);
+				Format(szStageInfo[i], 256, "关卡 %i: %s\n排名: %i/%i\n \n", i, szRuntimestages[i], stagerank[i], totalcompletes[i]);
 			}
 			else
 			{
-				Format(szStageInfo[i], 256, "Stage %i: None\n \n", i);
+				Format(szStageInfo[i], 256, "关卡 %i: 无\n \n", i);
 			}
 
-			AddMenuItem(menu, "stage", szStageInfo[i]);
+			AddMenuItem(menu, "关卡", szStageInfo[i]);
 		}
 	}
 
@@ -9841,11 +9841,11 @@ public void SQL_ViewPlayerPrMaptimeCallback2(Handle owner, Handle hndl, const ch
 		for (int i = 1; i < g_totalBonusesPr[client]; i++)
 		{
 			if (g_fPersonalRecordBonus[i][client] != 0.0)
-				Format(szBonusInfo[i], 256, "Bonus %i: %s\nRank: %i/%i\n \n", i, g_szPersonalRecordBonus[i][target], g_MapRankBonus[i][target], g_iBonusCount[i]);
+				Format(szBonusInfo[i], 256, "奖励 %i: %s\n排名: %i/%i\n \n", i, g_szPersonalRecordBonus[i][target], g_MapRankBonus[i][target], g_iBonusCount[i]);
 			else
-				Format(szBonusInfo[i], 256, "Bonus %i: None\n \n", i);
+				Format(szBonusInfo[i], 256, "奖励 %i: 无\n \n", i);
 
-			AddMenuItem(menu, "bonus", szBonusInfo[i]);
+			AddMenuItem(menu, "奖励", szBonusInfo[i]);
 		}
 	}
 
@@ -10285,12 +10285,12 @@ public void SQL_ViewPlayerColoursCallback(Handle owner, Handle hndl, const char[
 		{
 			case 0:
 			{
-				Format(szTitle, 1024, "Changing Name Colour (Current: %s):\n \n", szColour);
+				Format(szTitle, 1024, "更改名称颜色 (当前: %s):\n \n", szColour);
 				Format(szType, 32, "name");
 			}
 			case 1:
 			{
-				Format(szTitle, 1024, "Changing Text Colour (Current: %s):\n \n", szColour);
+				Format(szTitle, 1024, "更改文本颜色 (当前: %s):\n \n", szColour);
 				Format(szType, 32, "text");
 			}
 		}
@@ -10299,22 +10299,22 @@ public void SQL_ViewPlayerColoursCallback(Handle owner, Handle hndl, const char[
 
 		changeColoursMenu.SetTitle(szTitle);
 
-		changeColoursMenu.AddItem(szType, "White");
-		changeColoursMenu.AddItem(szType, "Dark Red");
-		changeColoursMenu.AddItem(szType, "Green");
-		changeColoursMenu.AddItem(szType, "Lime Green");
-		changeColoursMenu.AddItem(szType, "Blue");
-		changeColoursMenu.AddItem(szType, "Moss Green");
-		changeColoursMenu.AddItem(szType, "Red");
-		changeColoursMenu.AddItem(szType, "Grey");
-		changeColoursMenu.AddItem(szType, "Yellow");
-		changeColoursMenu.AddItem(szType, "Light Blue");
-		changeColoursMenu.AddItem(szType, "Dark Blue");
-		changeColoursMenu.AddItem(szType, "Pink");
-		changeColoursMenu.AddItem(szType, "Light Red");
-		changeColoursMenu.AddItem(szType, "Purple");
-		changeColoursMenu.AddItem(szType, "Dark Grey");
-		changeColoursMenu.AddItem(szType, "Orange");
+		changeColoursMenu.AddItem(szType, "白色 (White)");
+		changeColoursMenu.AddItem(szType, "深红色 (Dark Red)");
+		changeColoursMenu.AddItem(szType, "绿色 (Green)");
+		changeColoursMenu.AddItem(szType, "酸橙绿 (Lime Green)");
+		changeColoursMenu.AddItem(szType, "蓝色 (Blue)");
+		changeColoursMenu.AddItem(szType, "苔藓绿 (Moss Green)");
+		changeColoursMenu.AddItem(szType, "红色 (Red)");
+		changeColoursMenu.AddItem(szType, "灰色 (Grey)");
+		changeColoursMenu.AddItem(szType, "黄色 (Yellow)");
+		changeColoursMenu.AddItem(szType, "淡蓝色 (Light Blue)");
+		changeColoursMenu.AddItem(szType, "深蓝色 (Dark Blue)");
+		changeColoursMenu.AddItem(szType, "粉色 (Pink)");
+		changeColoursMenu.AddItem(szType, "浅红色 (Light Red)");
+		changeColoursMenu.AddItem(szType, "紫色 (Purple)");
+		changeColoursMenu.AddItem(szType, "深灰色 (Dark Grey)");
+		changeColoursMenu.AddItem(szType, "橙色 (Orange)");
 
 		changeColoursMenu.ExitButton = true;
 		changeColoursMenu.Display(client, MENU_TIME_FOREVER);
@@ -10722,7 +10722,7 @@ public void SQL_SelectCPRTargetCPsCallback(Handle owner, Handle hndl, const char
 		Menu menu = CreateMenu(CPRMenuHandler);
 		char szTitle[256], szName[MAX_NAME_LENGTH];
 		GetClientName(client, szName, sizeof(szName));
-		Format(szTitle, sizeof(szTitle), "%s VS %s on %s\n \n", firstTargetName, g_szTargetCPR[client], g_szCPRMapName[client], rank);
+		Format(szTitle, sizeof(szTitle), "%s VS %s 在 %s\n \n", firstTargetName, g_szTargetCPR[client], g_szCPRMapName[client], rank);
 		SetMenuTitle(menu, szTitle);
 
 		float targetCPs, comparedCPs;
@@ -11097,40 +11097,39 @@ public void db_PRinfoDoneCallback(any pack){
 
 	SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
 	if(zonegroup == 0)
-		SetMenuTitle(menu, "PR info for %s on %s\n\n", playername, mapname);
+		SetMenuTitle(menu, "%s 在 %s 的个人记录信息\n\n", playername, mapname);
 	else
-		SetMenuTitle(menu, "PR info for %s on %s | Bonus %i\n\n", playername, mapname, zonegroup);
+		SetMenuTitle(menu, "%s 在 %s | 奖励 %i 的个人记录信息\n\n", playername, mapname, zonegroup);
 
-	if(rank == 0 || runtime == 0.0){
-		Format(szItem, sizeof(szItem), "Rank: N/A", rank);
+	if (rank == 0 || runtime == 0.0) {
+		Format(szItem, sizeof(szItem), "排名：无", rank);
+		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
+	} else if (rank != 99999 && rank != 9999999) {
+		Format(szItem, sizeof(szItem), "排名：%i\n", rank);
+		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
+
+		Format(szItem, sizeof(szItem), "个人记录：%s", szruntimeFormatted);
 		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
 	}
-	else if(rank != 99999 && rank != 9999999 ){
-		Format(szItem, sizeof(szItem), "Rank: %i\n", rank);
-		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
 
-		Format(szItem, sizeof(szItem), "Personal Record: %s", szruntimeFormatted);
-		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
-	}
-
-	Format(szItem, sizeof(szItem), "Total Time: %s\n", szTimeinZoneformatted);
+	Format(szItem, sizeof(szItem), "总时间：%s\n", szTimeinZoneformatted);
 	AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
 
 	if(attempts != 0.0){
-		Format(szItem, sizeof(szItem), "Completes : (%i / %i) (%.2f %%)\n\n", RoundToFloor(completes), RoundToFloor(attempts), (completes / attempts) * 100.0 );
+		Format(szItem, sizeof(szItem), "完成次数 : (%i / %i) (%.2f %%)\n\n", RoundToFloor(completes), RoundToFloor(attempts), (completes / attempts) * 100.0 );
 		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
 	}
 	else{
-		Format(szItem, sizeof(szItem), "Completes : N/A\n\n");
+		Format(szItem, sizeof(szItem), "完成次数 : 无\n\n");
 		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
 	}
 
 	if(stcomplete != 0.0){
-		Format(szItem, sizeof(szItem), "First Complete: %s\n", szstCompleteFormatted);
+		Format(szItem, sizeof(szItem), "首次完成 : %s\n", szstCompleteFormatted);
 		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
 	}
 	else{
-		Format(szItem, sizeof(szItem), "First Complete: N/A\n\n");
+		Format(szItem, sizeof(szItem), "首次完成 : 无\n\n");
 		AddMenuItem(menu, "", szItem, ITEMDRAW_DISABLED);
 	}
 
@@ -11485,9 +11484,9 @@ public void db_SelectCountryTOPCallback(Handle owner, Handle hndl, const char[] 
 		if (SQL_GetRowCount(hndl) == 0) {
 			CPrintToChat(client, "%t", "country_data_not_found", g_szChatPrefix);
 
-			SetMenuTitle(menu, "Country Top for %s | %s\n \n", szCountryName, g_szStyleMenuPrint[style]);
+			SetMenuTitle(menu, "%s | %s 的国家排行\n \n", szCountryName, g_szStyleMenuPrint[style]);
 
-			AddMenuItem(menu, "", "No Players Found", ITEMDRAW_DISABLED);
+			AddMenuItem(menu, "", "未找到玩家", ITEMDRAW_DISABLED);
 
 			SetMenuExitBackButton(menu, true);
 			DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -11536,7 +11535,7 @@ public void db_SelectCountryTOPCallback(Handle owner, Handle hndl, const char[] 
 			row++;
 		}
 
-		SetMenuTitle(menu, "Country Top for %s | %s\n \n    Rank   Points       Player", szCountryName, g_szStyleMenuPrint[Style]);
+		SetMenuTitle(menu, "国家 排行 在 %s | %s\n \n    排名   点数       玩家", szCountryName, g_szStyleMenuPrint[Style]);
 		SetMenuPagination(menu, 5);
 		SetMenuExitBackButton(menu, true);
 
@@ -11594,8 +11593,8 @@ public void db_GetCountriesNamesCallback(Handle owner, Handle hndl, const char[]
 		if (SQL_GetRowCount(hndl) == 0) {
 			CPrintToChat(client, "%t", "country_data_not_found", g_szChatPrefix);
 
-			SetMenuTitle(menu, "Countries List | %s\n \n", g_szStyleMenuPrint[style]);
-			AddMenuItem(menu, "", "No Countries Found", ITEMDRAW_DISABLED);
+			SetMenuTitle(menu, "国家列表 | %s\n \n", g_szStyleMenuPrint[style]);
+			AddMenuItem(menu, "", "没有找到国家", ITEMDRAW_DISABLED);
 
 			SetMenuExitBackButton(menu, true);
 			DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -11607,7 +11606,7 @@ public void db_GetCountriesNamesCallback(Handle owner, Handle hndl, const char[]
 		char szCountryName[56];
 
 		if (strcmp(g_szCountry[client], "", false) != 0) {
-			Format(szItem, sizeof szItem, "My Country\n ");
+			Format(szItem, sizeof szItem, "我的国家\n ");
 			Format(szBuffer, sizeof szBuffer, "%s-%d", g_szCountry[client], style);
 			AddMenuItem(menu, szBuffer, szItem);
 		}
@@ -11619,7 +11618,7 @@ public void db_GetCountriesNamesCallback(Handle owner, Handle hndl, const char[]
 			AddMenuItem(menu, szBuffer, szItem);
 		}
 
-		SetMenuTitle(menu, "Countries List | %s\n \n", g_szStyleMenuPrint[style]);
+		SetMenuTitle(menu, "国家列表 | %s\n \n", g_szStyleMenuPrint[style]);
 		SetMenuExitBackButton(menu, true);
 
 		DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -11910,9 +11909,9 @@ public void db_SelectContinentTOPCallback(Handle owner, Handle hndl, const char[
 		if (SQL_GetRowCount(hndl) == 0) {
 			CPrintToChat(client, "%t", "continent_data_not_found", g_szChatPrefix);
 
-			SetMenuTitle(menu, "Continent Top for %s | %s\n \n", szContinentName, g_szStyleMenuPrint[style]);
+			SetMenuTitle(menu, "大陆 排行 在 %s | %s\n \n", szContinentName, g_szStyleMenuPrint[style]);
 
-			AddMenuItem(menu, "", "No Players Found", ITEMDRAW_DISABLED);
+			AddMenuItem(menu, "", "没有找到玩家", ITEMDRAW_DISABLED);
 
 			SetMenuExitBackButton(menu, true);
 			DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -11960,7 +11959,7 @@ public void db_SelectContinentTOPCallback(Handle owner, Handle hndl, const char[
 			row++;
 		}
 
-		SetMenuTitle(menu, "Continent Top for %s | %s\n \n    Rank   Points       Player", szContinentName, g_szStyleMenuPrint[Style]);
+		SetMenuTitle(menu, "大陆 排行 在 %s | %s\n \n    排名   点数       玩家", szContinentName, g_szStyleMenuPrint[Style]);
 		SetMenuPagination(menu, 5);
 		SetMenuExitBackButton(menu, true);
 
@@ -12018,8 +12017,8 @@ public void db_GetContinentNamesCallback(Handle owner, Handle hndl, const char[]
 		if (SQL_GetRowCount(hndl) == 0) {
 			CPrintToChat(client, "%t", "continent_data_not_found", g_szChatPrefix);
 
-			SetMenuTitle(menu, "Continent's List | %s\n \n", g_szStyleMenuPrint[style]);
-			AddMenuItem(menu, "", "No Continent's Found", ITEMDRAW_DISABLED);
+			SetMenuTitle(menu, "州大陆的列表 | %s\n \n", g_szStyleMenuPrint[style]);
+			AddMenuItem(menu, "", "没有找到洲大陆", ITEMDRAW_DISABLED);
 
 			SetMenuExitBackButton(menu, true);
 			DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -12033,7 +12032,7 @@ public void db_GetContinentNamesCallback(Handle owner, Handle hndl, const char[]
 		GetContinentName(szContinentCode, szContinentName, sizeof szContinentName);
 
 		if (strcmp(g_szContinentCode[client], "", false) != 0) {
-			Format(szItem, sizeof szItem, "My Continent\n ");
+			Format(szItem, sizeof szItem, "我的洲大陆\n ");
 			Format(szBuffer, sizeof szBuffer, "%s-%d", g_szContinentCode[client], style);
 			AddMenuItem(menu, szBuffer, szItem);
 		}
@@ -12046,7 +12045,7 @@ public void db_GetContinentNamesCallback(Handle owner, Handle hndl, const char[]
 			AddMenuItem(menu, szBuffer, szItem);
 		}
 
-		SetMenuTitle(menu, "Continent's List | %s\n \n", g_szStyleMenuPrint[style]);
+		SetMenuTitle(menu, "州大陆的列表 | %s\n \n", g_szStyleMenuPrint[style]);
 		SetMenuExitBackButton(menu, true);
 
 		DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -12558,9 +12557,9 @@ public void DisplayCCPMenu(int client, float map_time, float record_time, int ma
 		//FORMAT STAGE DISPLAY
 		//IF THE STAGE RANK THE PLAYER GETS IS THE SLOWEST JUST INCREASE THE RANKS BY 1
 		if(g_iCCP_StageRank_Player[client][i] < g_iCCP_StageTotal_Player[client][i])
-			Format(szItem, sizeof(szItem), "Stage %i\nRank %i/%i\nAttempts : %i\nTime: %s (%s)\n \n", i+1, g_iCCP_StageRank_Player[client][i], g_iCCP_StageTotal_Player[client][i], g_iCCP_StageAttempts_Player[client][i], szStageTimeFormatted, szStageTimeDifferenceFormatted);
+			Format(szItem, sizeof(szItem), "关卡 %i\n排名 %i/%i\n尝试次数 : %i\n时间: %s (%s)\n \n", i+1, g_iCCP_StageRank_Player[client][i], g_iCCP_StageTotal_Player[client][i], g_iCCP_StageAttempts_Player[client][i], szStageTimeFormatted, szStageTimeDifferenceFormatted);
 		else
-			Format(szItem, sizeof(szItem), "Stage %i\nRank %i/%i\nAttempts : %i\nTime: %s (%s)\n \n", i+1, g_iCCP_StageRank_Player[client][i], g_iCCP_StageTotal_Player[client][i] + 1, g_iCCP_StageAttempts_Player[client][i], szStageTimeFormatted, szStageTimeDifferenceFormatted);
+			Format(szItem, sizeof(szItem), "关卡 %i\nRank %i/%i\n尝试次数 : %i\n时间: %s (%s)\n \n", i+1, g_iCCP_StageRank_Player[client][i], g_iCCP_StageTotal_Player[client][i] + 1, g_iCCP_StageAttempts_Player[client][i], szStageTimeFormatted, szStageTimeDifferenceFormatted);
 
 
 		AddMenuItem(ccp_menu, "", szItem, ITEMDRAW_DEFAULT);
@@ -12573,7 +12572,7 @@ public void DisplayCCPMenu(int client, float map_time, float record_time, int ma
 	char szMapTimeDiffFormatted[32];
 	FormatTimeFloat(client, record_time - map_time, 3, szMapTimeDiffFormatted, sizeof szMapTimeDiffFormatted);
 
-	Format(szItem, sizeof(szItem), "Map\nRank %i/%i\n%s (+%s)\n \n", map_rank, total_map_completions, szMapTimeFormatted, szMapTimeDiffFormatted);
+	Format(szItem, sizeof(szItem), "地图\n排名 %i/%i\n%s (+%s)\n \n", map_rank, total_map_completions, szMapTimeFormatted, szMapTimeDiffFormatted);
 	AddMenuItem(ccp_menu, "", szItem, ITEMDRAW_DEFAULT);
 
 	//MENU TITLE

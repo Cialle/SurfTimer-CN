@@ -114,9 +114,9 @@ public Action Admin_insertSpawnLocation(int client, int args)
 		return Plugin_Handled;
 
 	Menu menu = CreateMenu(ChooseTeleSideHandler);
-	SetMenuTitle(menu, "Choose side for this spawn location");
-	AddMenuItem(menu, "", "Left");
-	AddMenuItem(menu, "", "Right");
+	SetMenuTitle(menu, "选择此重生点的方向（玩家会设置默认方向）");
+	AddMenuItem(menu, "", "左侧");
+	AddMenuItem(menu, "", "右侧");
 	SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
 	DisplayMenu(menu, client, MENU_TIME_FOREVER);
 
@@ -167,17 +167,17 @@ public Action Admin_deleteSpawnLocation(int client, int args)
 	if (g_bGotSpawnLocation[g_iClientInZone[client][2]][1][0] || g_bGotSpawnLocation[g_iClientInZone[client][2]][1][1])
 	{
 		Menu menu = CreateMenu(DelSpawnLocationHandler);
-		SetMenuTitle(menu, "Choose side of spawn location to delete");
+		SetMenuTitle(menu, "选择要删除的重生点位置的侧边");
 
 		if (g_bGotSpawnLocation[g_iClientInZone[client][2]][1][0])
-			AddMenuItem(menu, "", "Left");
+			AddMenuItem(menu, "", "左侧");
 		else
-			AddMenuItem(menu, "", "Left", ITEMDRAW_DISABLED);
-		
+			AddMenuItem(menu, "", "左侧", ITEMDRAW_DISABLED);
+
 		if (g_bGotSpawnLocation[g_iClientInZone[client][2]][1][1])
-			AddMenuItem(menu, "", "Right");
+			AddMenuItem(menu, "", "右侧");
 		else
-			AddMenuItem(menu, "", "Right", ITEMDRAW_DISABLED);
+			AddMenuItem(menu, "", "右侧", ITEMDRAW_DISABLED);
 
 		SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
 		DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -244,15 +244,15 @@ public void ckAdminMenu(int client)
 
 		Handle adminmenu = CreateMenu(AdminPanelHandler);
 		if (IsPlayerZoner(client))
-			Format(szTmp, sizeof(szTmp), "SurfTimer %s Admin Menu (full access)", VERSION);
+			Format(szTmp, sizeof(szTmp), "SurfTimer %s 管理菜单（完全访问）", VERSION);
 		else
-			Format(szTmp, sizeof(szTmp), "SurfTimer %s Admin Menu (limited access)", VERSION);
+			Format(szTmp, sizeof(szTmp), "SurfTimer %s 管理菜单（有限访问）", VERSION);
 		SetMenuTitle(adminmenu, szTmp);
 
 		if (!g_pr_RankingRecalc_InProgress)
-			AddMenuItem(adminmenu, "[1.] Recalculate player ranks", "[1.] Recalculate player ranks");
+			AddMenuItem(adminmenu, "[1.] 重新计算玩家排名", "[1.] 重新计算玩家排名");
 		else
-			AddMenuItem(adminmenu, "[1.] Recalculate player ranks", "[1.] Stop the recalculation");
+			AddMenuItem(adminmenu, "[1.] 重新计算玩家排名", "[1.] 停止重新计算");
 
 		AddMenuItem(adminmenu, "", "", ITEMDRAW_SPACER);
 
@@ -260,100 +260,101 @@ public void ckAdminMenu(int client)
 
 		if (IsPlayerZoner(client))
 		{
-			Format(szTmp, sizeof(szTmp), "[%i.] Edit or create zones", menuItemNumber);
+			Format(szTmp, sizeof(szTmp), "[%i.] 编辑或创建区域", menuItemNumber);
 			AddMenuItem(adminmenu, szTmp, szTmp);
 		}
 		else
 		{
-			Format(szTmp, sizeof(szTmp), "[%i.] Edit or create zones", menuItemNumber);
+			Format(szTmp, sizeof(szTmp), "[%i.] 编辑或创建区域", menuItemNumber);
 			AddMenuItem(adminmenu, szTmp, szTmp, ITEMDRAW_DISABLED);
 		}
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Godmode  -  %s", menuItemNumber, (g_hCvarGodMode.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 上帝模式  -  %s", menuItemNumber, (g_hCvarGodMode.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Noblock  -  %s", menuItemNumber, (g_hCvarNoBlock.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 无阻挡模式  -  %s", menuItemNumber, (g_hCvarNoBlock.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Autorespawn  -  %s", menuItemNumber, (g_hAutoRespawn.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 自动重生  -  %s", menuItemNumber, (g_hAutoRespawn.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Strip weapons  -  %s", menuItemNumber, (g_hCleanWeapons.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 去除武器  -  %s", menuItemNumber, (g_hCleanWeapons.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Restore function  -  %s", menuItemNumber, (g_hcvarRestore.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] Restore功能  -  %s", menuItemNumber, (g_hcvarRestore.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] !pause command -  %s", menuItemNumber, (g_hPauseServerside.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] !pause 命令 -  %s", menuItemNumber, (g_hPauseServerside.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] !goto command  -  %s", menuItemNumber, (g_hGoToServer.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] !goto 命令  -  %s", menuItemNumber, (g_hGoToServer.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Radio commands  -  %s", menuItemNumber, (g_hRadioCommands.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 无线电命令  -  %s", menuItemNumber, (g_hRadioCommands.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Replay bot  -  %s", menuItemNumber, (g_hReplayBot.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 回放机器人  -  %s", menuItemNumber, (g_hReplayBot.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Player point system  -  %s", menuItemNumber, (g_hPointSystem.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 玩家积分系统  -  %s", menuItemNumber, (g_hPointSystem.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Player country tag  -  %s", menuItemNumber, (g_hCountry.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 玩家国家标签  -  %s", menuItemNumber, (g_hCountry.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Allow custom models  -  %s", menuItemNumber, (g_hPlayerSkinChange.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 允许自定义模型  -  %s", menuItemNumber, (g_hPlayerSkinChange.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
 		if (GetConVarBool(g_hNoClipS))
-			Format(szTmp, sizeof(szTmp), "[%i.] +noclip  -  Enabled", menuItemNumber);
+			Format(szTmp, sizeof(szTmp), "[%i.] +noclip  -  已启用", menuItemNumber);
 		else
-			Format(szTmp, sizeof(szTmp), "[%i.] +noclip (admin/vip excluded)  -  Disabled", menuItemNumber);
+			Format(szTmp, sizeof(szTmp), "[%i.] +noclip（管理员/VIP除外）  -  已禁用", menuItemNumber);
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
 		if (GetConVarBool(g_hAutoBhopConVar))
-			Format(szTmp, sizeof(szTmp), "[%i.] Auto bunnyhop (only surf_/bhop_ maps)  -  Enabled", menuItemNumber);
+			Format(szTmp, sizeof(szTmp), "[%i.] 自动Bhop（仅限 surf_/bhop_ 地图）  -  已启用", menuItemNumber);
 		else
-			Format(szTmp, sizeof(szTmp), "[%i.] Auto bunnyhop  -  Disabled", menuItemNumber);
+			Format(szTmp, sizeof(szTmp), "[%i.] 自动Bhop  -  已禁用", menuItemNumber);
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Allow map changes  -  %s", menuItemNumber, (g_hMapEnd.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 允许地图更改  -  %s", menuItemNumber, (g_hMapEnd.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Connect message  -  %s", menuItemNumber, (g_hConnectMsg.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 连接消息  -  %s", menuItemNumber, (g_hConnectMsg.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Disconnect message - %s", menuItemNumber, (g_hDisconnectMsg.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 断开连接消息 - %s", menuItemNumber, (g_hDisconnectMsg.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Info bot  -  %s", menuItemNumber, (g_hInfoBot.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 信息机器人  -  %s", menuItemNumber, (g_hInfoBot.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Attack spam protection  -  %s", menuItemNumber, (g_hAttackSpamProtection.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] Attack spam 保护  -  %s", menuItemNumber, (g_hAttackSpamProtection.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
 		menuItemNumber++;
 
-		Format(szTmp, sizeof(szTmp), "[%i.] Allow to end the current round  -  %s", menuItemNumber, (g_hAllowRoundEndCvar.BoolValue) ? "Enabled" : "Disabled");
+		Format(szTmp, sizeof(szTmp), "[%i.] 允许结束当前回合  -  %s", menuItemNumber, (g_hAllowRoundEndCvar.BoolValue) ? "已启用" : "已禁用");
 		AddMenuItem(adminmenu, szTmp, szTmp);
+
 		menuItemNumber++;
 
 		SetMenuExitButton(adminmenu, true);

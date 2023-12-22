@@ -51,7 +51,7 @@ public void SQL_ViewPlayerInfoCallback(Handle owner, Handle hndl, const char[] e
 
 		SetMenuTitle(menu, szTitle);
 
-		AddMenuItem(menu, szSteamId64, "Community Profile Link");
+		AddMenuItem(menu, szSteamId64, "社区简介链接:");
 		SetMenuExitButton(menu, true);
 		DisplayMenu(menu, client, MENU_TIME_FOREVER);
 	}
