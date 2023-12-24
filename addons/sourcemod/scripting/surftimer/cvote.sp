@@ -1,5 +1,5 @@
-char votetype[32];
-char mapnameforvote[64];
+char   votetype[32];
+char   mapnameforvote[64];
 
 Handle mapTime;
 
@@ -17,7 +17,7 @@ public void extendMap(int seconds)
 public Action start_vote(int client, int args)
 {
 	if (!IsValidClient(client))
-	return Plugin_Handled;
+		return Plugin_Handled;
 
 	if (IsVoteInProgress())
 	{
@@ -86,15 +86,15 @@ public int Handle_VoteMenuExtend(Menu menu, MenuAction action, int param1, int p
 	}
 	else if (action == MenuAction_VoteEnd)
 	{
-		char item[64], display[64];
+		char  item[64], display[64];
 		float percent, limit;
-		int iWinVotes, iTotalVotes;
+		int	  iWinVotes, iTotalVotes;
 
 		menu.GetItem(param1, item, sizeof(item), _, display, sizeof(display));
 		GetMenuVoteInfo(param2, iWinVotes, iTotalVotes);
 
 		float totalVotes = float(iTotalVotes);
-		float votes = float(iWinVotes);
+		float votes		 = float(iWinVotes);
 
 		if (strcmp(item, VOTE_NO) == 0 && param1 == 1)
 		{
@@ -112,13 +112,13 @@ public int Handle_VoteMenuExtend(Menu menu, MenuAction action, int param1, int p
 			limit = 0.50;
 
 		/* 0=yes, 1=no */
-		if ((strcmp(item, VOTE_YES) == 0 && FloatCompare(percent,limit) < 0 && param1 == 0) || (strcmp(item, VOTE_NO) == 0 && param1 == 1))
+		if ((strcmp(item, VOTE_YES) == 0 && FloatCompare(percent, limit) < 0 && param1 == 0) || (strcmp(item, VOTE_NO) == 0 && param1 == 1))
 		{
-			CPrintToChatAll("%t", "CVote8", g_szChatPrefix, RoundToNearest(100.0*limit), RoundToNearest(100.0*percent), iTotalVotes);
+			CPrintToChatAll("%t", "CVote8", g_szChatPrefix, RoundToNearest(100.0 * limit), RoundToNearest(100.0 * percent), iTotalVotes);
 		}
 		else
 		{
-			CPrintToChatAll("%t", "CVote9", g_szChatPrefix, RoundToNearest(100.0*percent), iTotalVotes);
+			CPrintToChatAll("%t", "CVote9", g_szChatPrefix, RoundToNearest(100.0 * percent), iTotalVotes);
 			CPrintToChatAll("%t", "CVote10", g_szChatPrefix);
 			extendMap(600);
 		}
@@ -136,12 +136,12 @@ public int Handle_VoteMenuChangeMap(Menu menu, MenuAction action, int param1, in
 	else if (action == MenuAction_VoteEnd)
 	{
 		/* 0=yes, 1=no */
-		if (param1 == 0) // yes
+		if (param1 == 0)	// yes
 		{
 			CreateTimer(5.0, Change_Map, INVALID_HANDLE, TIMER_FLAG_NO_MAPCHANGE);
 			CPrintToChatAll("%t", "CVote11", g_szChatPrefix, mapnameforvote);
 		}
-		else // No
+		else	// No
 		{
 			CPrintToChatAll("%t", "CVote12", g_szChatPrefix);
 		}
@@ -169,12 +169,12 @@ public int Handle_VoteMenuSetNextMap(Menu menu, MenuAction action, int param1, i
 	else if (action == MenuAction_VoteEnd)
 	{
 		/* 0=yes, 1=no */
-		if (param1 == 0) // yes
+		if (param1 == 0)	// yes
 		{
 			ServerCommand("sm_setnextmap %s", mapnameforvote);
 			CPrintToChatAll("%t", "CVote13", g_szChatPrefix, mapnameforvote);
 		}
-		else // No
+		else	// No
 		{
 			CPrintToChatAll("%t", "CVote12", g_szChatPrefix);
 		}

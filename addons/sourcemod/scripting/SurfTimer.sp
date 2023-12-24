@@ -14,6 +14,7 @@
 #include <sdktools>
 #include <adminmenu>
 #include <cstrike>
+#include <ripext>
 #include <geoip>
 #include <basecomm>
 #include <colorvariables>
@@ -38,10 +39,11 @@
 ====================================*/
 
 #include "surftimer/globals.sp"
+#include "surftimer/db/queries.sp"
+#include "surftimer/api_funcs.sp"
 #include "surftimer/api.sp"
 #include "surftimer/convars.sp"
 #include "surftimer/misc.sp"
-#include "surftimer/db/queries.sp"
 #include "surftimer/db/updater.sp"
 #include "surftimer/sql.sp"
 #include "surftimer/admin.sp"
@@ -56,6 +58,7 @@
 #include "surftimer/mapsettings.sp"
 #include "surftimer/cvote.sp"
 #include "surftimer/vip.sp"
+#include "surftimer/actual_api.sp"
 
 /*====================================
 =               Events               =
@@ -157,7 +160,7 @@ public void OnMapStart()
 	CreateTimer(30.0, EnableJoinMsgs, INVALID_HANDLE, TIMER_FLAG_NO_MAPCHANGE);
 
 	// Get mapname
-	GetCurrentMap(g_szMapName, 128);
+	GetCurrentMap(g_szMapName, sizeof(g_szMapName));
 
 	// Download map radar image if existing
 	AddRadarImages();
@@ -1155,7 +1158,10 @@ public void OnSettingChanged(Handle convar, const char[] oldValue, const char[] 
 		KillTimer(g_hZoneTimer);
 		g_hZoneTimer = INVALID_HANDLE;
 	}
-
+	if (convar == g_hSurfApiHost)
+	{
+		GetConVarString(g_hSurfApiHost, g_szApiHost, sizeof(g_szApiHost));
+	}
 	delete g_hZoneTimer;
 	g_hZoneTimer = CreateTimer(GetConVarFloat(g_hChecker), BeamBoxAll, _, TIMER_REPEAT);
 }

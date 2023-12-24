@@ -175,7 +175,7 @@ public Action StartTouchTrigger(int caller, int activator)
 	int client = activator;
 
 	// Ignore dead players
-	if (!IsValidClient(client) || !IsPlayerAlive(client)) {
+	if (!IsValidClient(client) || !IsPlayerAlive(client) || IsClientSourceTV(client)) {
 		return Plugin_Continue;
 	}
 
@@ -736,9 +736,7 @@ public void EndTouch(int client, int action[3])
 
 				/* Reset List newrecord-cp-list*/
 				if(g_aCheckpointsDifference[client] != null && !g_bNewReplay[client])
-				{
 					g_aCheckpointsDifference[client].Clear();
-				}
 				g_bValidRun[client] = false;
 			}
 		}

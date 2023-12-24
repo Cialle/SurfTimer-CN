@@ -1,3 +1,15 @@
+public Action hudPrestrafe(Handle timer, any userid)
+{
+	int client = GetClientOfUserId(userid);
+
+	if(IsValidClient(client) && IsClientInGame(client))
+	{
+		g_szPrespeedValue[client][0] = '\0';
+	}
+
+	return Plugin_Handled;
+}
+
 public Action reloadRank(Handle timer, any client)
 {
 	if (IsValidClient(client))
@@ -651,19 +663,6 @@ public Action DatabaseUpgrading(Handle timer)
 		for(int client = 1; client <= MaxClients; client++)
 			if(IsValidClient(client))
 				CPrintToChat(client, "Server is still updating database tables, pls wait...");
-
-	return Plugin_Handled;
-}
-
-// Clear global prestrafe var for the client
-public Action hudPrestrafe(Handle timer, any userid)
-{
-	int client = GetClientOfUserId(userid);
-	
-	if(IsValidClient(client) && IsClientInGame(client))
-	{
-		g_szPrespeedValue[client][0] = '\0';
-	}
 
 	return Plugin_Handled;
 }

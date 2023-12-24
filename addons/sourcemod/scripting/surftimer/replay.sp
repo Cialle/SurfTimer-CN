@@ -554,7 +554,7 @@ public void PlayRecord(int client, int type, int style, int use_CP)
 			Format(buffer, sizeof(buffer), "%s: %s (%s)", buffer2, g_szBonusName, g_szBonusTime);
 			SetClientName(client, buffer);
 
-			Format(buffer, sizeof(buffer), "SRB Replay (%s)", buffer2);
+			Format(buffer, sizeof(buffer), "WRB Replay (%s)", buffer2);
 			CS_SetClientClanTag(client, buffer);
 		}
 	}

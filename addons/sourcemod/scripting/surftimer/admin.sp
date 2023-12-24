@@ -16,7 +16,7 @@ public void Admin_renameZone(int client, const char[] name)
 		CPrintToChat(client, "%t", "Admin2", g_szChatPrefix);
 		return;
 	}
-	if (StrEqual(name, "!cancel", false)) // false -> non sensitive
+	if (StrEqual(name, "!cancel", false))	 // false -> non sensitive
 	{
 		CPrintToChat(client, "%t", "Admin3", g_szChatPrefix);
 		g_ClientRenamingZone[client] = false;
@@ -35,7 +35,7 @@ public void OnAdminMenuReady(Handle topmenu)
 	if (topmenu == g_hAdminMenu)
 		return;
 
-	g_hAdminMenu = topmenu;
+	g_hAdminMenu			 = topmenu;
 	TopMenuObject serverCmds = FindTopMenuCategory(g_hAdminMenu, ADMINMENU_SERVERCOMMANDS);
 	AddToTopMenu(g_hAdminMenu, "sm_ckadmin", TopMenuObject_Item, TopMenuHandler2, serverCmds, "sm_ckadmin", ADMFLAG_RCON);
 }
@@ -70,7 +70,7 @@ public Action Admin_insertMapperName(int client, int args)
 	else
 	{
 		char arg1[64];
-		//char sMapperName[64];
+		// char sMapperName[64];
 		GetCmdArgString(arg1, sizeof(arg1));
 
 		db_insertMapperName(client, arg1);
@@ -97,7 +97,7 @@ public Action Admin_insertMapTier(int client, int args)
 	else
 	{
 		char arg1[3];
-		int tier;
+		int	 tier;
 		GetCmdArg(1, arg1, sizeof(arg1));
 		tier = StringToInt(arg1);
 		if (tier < 9 && tier > -1)
@@ -155,7 +155,7 @@ public void InsertSpawnLocation(int client, int teleside)
 		db_insertSpawnLocations(SpawnLocation, SpawnAngle, Velocity, g_iClientInZone[client][2], teleside);
 		CPrintToChat(client, "%t", "SpawnAdded", g_szChatPrefix);
 	}
-	
+
 	CPrintToChat(client, "%f : %f : %f : %i", SpawnLocation, SpawnAngle, Velocity, g_iClientInZone[client][2]);
 }
 
@@ -240,7 +240,7 @@ public void ckAdminMenu(int client)
 
 	if (IsPlayerTimerAdmin(client))
 	{
-		char szTmp[128];
+		char   szTmp[128];
 
 		Handle adminmenu = CreateMenu(AdminPanelHandler);
 		if (IsPlayerZoner(client))
@@ -407,7 +407,7 @@ public int AdminPanelHandler(Handle menu, MenuAction action, int param1, int par
 				if (!g_pr_RankingRecalc_InProgress)
 				{
 					CPrintToChat(param1, "%t", "PrUpdateStarted", g_szChatPrefix);
-					g_bManualRecalc = true;
+					g_bManualRecalc		= true;
 					g_pr_Recalc_AdminID = param1;
 					RefreshPlayerRankTable(MAX_PR_PLAYERS);
 				}
@@ -415,7 +415,7 @@ public int AdminPanelHandler(Handle menu, MenuAction action, int param1, int par
 				{
 					for (int i = 66; i < MAX_PR_PLAYERS; i++)
 						g_bProfileRecalc[i] = false;
-					g_bManualRecalc = false;
+					g_bManualRecalc				  = false;
 					g_pr_RankingRecalc_InProgress = false;
 					CPrintToChat(param1, "%t", "StopRecalculation", g_szChatPrefix);
 				}
@@ -587,7 +587,7 @@ public Action Admin_RefreshPlayerRankTable(int client, int args)
 			return Plugin_Handled;
 		}
 	}
-	
+
 	RefreshPlayerRankTable(MAX_PR_PLAYERS);
 	return Plugin_Handled;
 }

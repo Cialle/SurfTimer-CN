@@ -1,7 +1,6 @@
 ﻿/*===================================
 =              Natives              =
 ===================================*/
-
 public int Native_GetTimerStatus(Handle plugin, int numParams)
 {
 	return g_bTimerRunning[GetNativeCell(1)];
@@ -80,7 +79,7 @@ public int Native_GetPlayerPoints(Handle plugin, int numParams)
 
 public int Native_GetPlayerSkillgroup(Handle plugin, int numParams)
 {
-	int client = GetNativeCell(1);
+	int	 client = GetNativeCell(1);
 	char str[256];
 	GetNativeString(2, str, 256);
 	if (IsValidClient(client) && !IsFakeClient(client))
@@ -99,13 +98,13 @@ public int Native_GetPlayerSkillgroup(Handle plugin, int numParams)
 
 public int Native_GetPlayerNameColored(Handle plugin, int numParams)
 {
-	int client = GetNativeCell(1);
+	int	 client = GetNativeCell(1);
 	char str[256];
 	GetNativeString(2, str, 256);
 	if (IsValidClient(client) && !IsFakeClient(client))
 	{
 		GetClientName(client, str, sizeof(str));
-		Format(str, sizeof(str), "%s%s",  g_pr_namecolour[client], str);
+		Format(str, sizeof(str), "%s%s", g_pr_namecolour[client], str);
 		SetNativeString(2, str, 256, true);
 	}
 	else
@@ -129,7 +128,7 @@ public int Native_GetMapData(Handle plugin, int numParams)
 	SetNativeString(1, szname, sizeof(szname), true);
 	SetNativeString(2, sztime, sizeof(sztime), true);
 
-	if(g_fRecordMapTime >= 0)
+	if (g_fRecordMapTime >= 0)
 		time = g_fRecordMapTime;
 	else
 		time = -1.0;
@@ -139,26 +138,26 @@ public int Native_GetMapData(Handle plugin, int numParams)
 }
 
 public int Native_GetBonusData(Handle plugin, int numParams)
-{	
-	int client = GetNativeCell(1);
+{
+	int	 client = GetNativeCell(1);
 
 	char szname[MAX_NAME_LENGTH];
 	GetNativeString(2, szname, MAX_NAME_LENGTH);
-	float WRtime = GetNativeCellRef(3);
-	float PBtime = GetNativeCellRef(4);
+	float WRtime	= GetNativeCellRef(3);
+	float PBtime	= GetNativeCellRef(4);
 
-	int zonegroup = g_iClientInZone[client][2];
+	int	  zonegroup = g_iClientInZone[client][2];
 
 	Format(szname, sizeof(szname), g_szBonusFastest[zonegroup]);
 	SetNativeString(2, szname, sizeof(szname), true);
 
-	if(g_fBonusFastest[zonegroup] > 0)
+	if (g_fBonusFastest[zonegroup] > 0)
 		WRtime = g_fBonusFastest[zonegroup];
 	else
 		WRtime = -1.0;
 	SetNativeCellRef(3, WRtime);
 
-	if(g_fPersonalRecordBonus[zonegroup][client] > 0)
+	if (g_fPersonalRecordBonus[zonegroup][client] > 0)
 		PBtime = g_fPersonalRecordBonus[zonegroup][client];
 	else
 		PBtime = -1.0;
@@ -168,26 +167,26 @@ public int Native_GetBonusData(Handle plugin, int numParams)
 }
 
 public int Native_GetStageData(Handle plugin, int numParams)
-{	
-	int client = GetNativeCell(1);
+{
+	int	 client = GetNativeCell(1);
 
 	char szname[MAX_NAME_LENGTH];
 	GetNativeString(2, szname, MAX_NAME_LENGTH);
 	float WRtime = GetNativeCellRef(3);
 	float PBtime = GetNativeCellRef(4);
 
-	int stage = g_Stage[0][client];
+	int	  stage	 = g_Stage[0][client];
 
 	Format(szname, sizeof(szname), g_szStageRecordPlayer[stage]);
 	SetNativeString(2, szname, sizeof(szname), true);
 
-	if(g_fStageRecord[stage] != 0.0)
+	if (g_fStageRecord[stage] != 0.0)
 		WRtime = g_fStageRecord[stage];
 	else
 		WRtime = -1.0;
 	SetNativeCellRef(3, WRtime);
 
-	if(g_fWrcpRecord[client][stage][g_iCurrentStyle[client]] != -1.0)
+	if (g_fWrcpRecord[client][stage][g_iCurrentStyle[client]] != -1.0)
 		PBtime = g_fWrcpRecord[client][stage][g_iCurrentStyle[client]];
 	else
 		PBtime = -1.0;
@@ -199,10 +198,10 @@ public int Native_GetStageData(Handle plugin, int numParams)
 public int Native_GetPlayerData(Handle plugin, int numParams)
 {
 	int client = GetNativeCellRef(1);
-	int rank = 99999;
+	int rank   = 99999;
 	if (IsValidClient(client) && !IsFakeClient(client))
 	{
-		char szCountry[16], szCountryCode[3], szContinentCode[3];
+		char  szCountry[16], szCountryCode[3], szContinentCode[3];
 		float time;
 
 		time = GetNativeCellRef(2);
@@ -254,10 +253,11 @@ public int Native_GetClientStyle(Handle plugin, int numParams)
 	int style;
 	if (IsValidClient(client))
 	{
-		if(!IsFakeClient(client)) {
+		if (!IsFakeClient(client))
+		{
 			style = g_iCurrentStyle[client];
 		}
-		else{
+		else {
 			if (client == g_RecordBot)
 				style = g_iSelectedReplayStyle;
 			else if (client == g_BonusBot)
@@ -318,31 +318,29 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 /*======  End of Natives  ======*/
 
-
 /*===================================
 =             Forwards              =
 ===================================*/
 
 void Register_Forwards()
 {
-	g_MapFinishForward = new GlobalForward("surftimer_OnMapFinished", ET_Event, Param_Cell, Param_Float, Param_String, Param_Float, Param_Float, Param_Cell, Param_Cell, Param_Cell, Param_Cell);
-	g_MapCheckpointForward = new GlobalForward("surftimer_OnCheckpoint", ET_Event, Param_Cell, Param_Float, Param_String, Param_Float, Param_String, Param_Float, Param_String, Param_Cell);
-	g_BonusFinishForward = new GlobalForward("surftimer_OnBonusFinished", ET_Event, Param_Cell, Param_Float, Param_String, Param_Float, Param_Float, Param_Cell, Param_Cell, Param_Cell, Param_Cell);
-	g_PracticeFinishForward = new GlobalForward("surftimer_OnPracticeFinished", ET_Event, Param_Cell, Param_Float, Param_String);
-	g_NewRecordForward = new GlobalForward("surftimer_OnNewRecord", ET_Event, Param_Cell, Param_Cell, Param_String, Param_String, Param_Cell, Param_Cell);
-	g_NewWRCPForward = new GlobalForward("surftimer_OnNewWRCP", ET_Event, Param_Cell, Param_Cell, Param_String, Param_String, Param_Cell, Param_Float);
-	g_StageFinishForward = new GlobalForward("surftimer_OnStageFinished", ET_Event, Param_Cell, Param_Cell, Param_String, Param_String, Param_Cell, Param_Float, Param_Float);
-
+	g_MapFinishForward		  = new GlobalForward("surftimer_OnMapFinished", ET_Event, Param_Cell, Param_Float, Param_String, Param_Float, Param_Float, Param_Cell, Param_Cell, Param_Cell, Param_Cell);
+	g_MapCheckpointForward	  = new GlobalForward("surftimer_OnCheckpoint", ET_Event, Param_Cell, Param_Float, Param_String, Param_Float, Param_String, Param_Float, Param_String, Param_Cell);
+	g_BonusFinishForward	  = new GlobalForward("surftimer_OnBonusFinished", ET_Event, Param_Cell, Param_Float, Param_String, Param_Float, Param_Float, Param_Cell, Param_Cell, Param_Cell, Param_Cell);
+	g_PracticeFinishForward	  = new GlobalForward("surftimer_OnPracticeFinished", ET_Event, Param_Cell, Param_Float, Param_String);
+	g_NewRecordForward		  = new GlobalForward("surftimer_OnNewRecord", ET_Event, Param_Cell, Param_Cell, Param_String, Param_String, Param_Cell, Param_Cell);
+	g_NewWRCPForward		  = new GlobalForward("surftimer_OnNewWRCP", ET_Event, Param_Cell, Param_Cell, Param_String, Param_String, Param_Cell, Param_Float);
+	g_StageFinishForward	  = new GlobalForward("surftimer_OnStageFinished", ET_Event, Param_Cell, Param_Cell, Param_String, Param_String, Param_Cell, Param_Float, Param_Float);
 	/* More Forwards */
-	g_OnClientTimerStart = new GlobalForward("surftimer_OnClientTimerStart", ET_Event, Param_Cell, Param_Cell);
-	g_OnClientWRCPTimerStart = new GlobalForward("surftimer_OnClientWRCPTimerStart", ET_Event, Param_Cell, Param_Cell, Param_Cell);
+	g_OnClientTimerStart	  = new GlobalForward("surftimer_OnClientTimerStart", ET_Event, Param_Cell, Param_Cell);
+	g_OnClientWRCPTimerStart  = new GlobalForward("surftimer_OnClientWRCPTimerStart", ET_Event, Param_Cell, Param_Cell, Param_Cell);
 	g_OnClientBonusTimerStart = new GlobalForward("surftimer_OnClientBonusTimerStart", ET_Event, Param_Cell, Param_Cell, Param_Cell);
-	g_OnClientPracTimerStart = new GlobalForward("surftimer_OnClientPracTimerStart", ET_Event, Param_Cell, Param_Cell, Param_Cell);
+	g_OnClientPracTimerStart  = new GlobalForward("surftimer_OnClientPracTimerStart", ET_Event, Param_Cell, Param_Cell, Param_Cell);
 }
 
 /**
  * Sends a forward on surftimer_OnClientTimerStart when a client timer starts (no WRCP or bonuses).
- * 
+ *
  * @param client           Index of the client.
  * @param style			   Style the client is currently in
  */
@@ -361,7 +359,7 @@ void OnClientTimerStartForward(int client)
 
 /**
  * Sends a forward on surftimer_OnClientWRCPTimerStart when a client WRCP timer starts (no bonuses or main map).
- * 
+ *
  * @param client           Index of the client.
  * @param style			   Style the client is currently in.
  * @param stage 		   Stage number the client is currently running.
@@ -385,7 +383,7 @@ void OnClientWRCPTimerStartForward(int client)
 
 /**
  * Sends a forward on surftimer_OnClientBonusTimerStartForward when a client Bonus timer starts (no WRCP or main map).
- * 
+ *
  * @param client           Index of the client.
  * @param style			   Style the client is currently in.
  * @param bonus 		   Bonus number the client is currently running.
@@ -406,7 +404,7 @@ void OnClientBonusTimerStartForward(int client)
 
 /**
  * Sends a forward on surftimer_OnClientPracTimerStart when a client enters practice mode.
- * 
+ *
  * @param client           Index of the client.
  * @param style			   Style the client is currently in.
  * @param locNum 		   Number of the saveloc the client teleported to.
@@ -427,7 +425,7 @@ void OnClientPracTimerStartForward(int client)
 
 /**
  * Sends a map finish forward on surftimer_OnMapFinished.
- * 
+ *
  * @param client           Index of the client who beat the map.
  * @param count            The number of times the map has been beaten.
  */
@@ -453,7 +451,7 @@ void SendMapFinishForward(int client, int count, int style)
 
 /**
  * Sends a map checkpoint forward on surftimer_OnCheckpoint.
- * 
+ *
  * @param client               Index of the client.
  * @param zonegroup            ID of the zone group.
  * @param zone                 ID of the zone.
@@ -463,12 +461,12 @@ void SendMapFinishForward(int client, int count, int style)
  * @param sz_srDiff_colorless  Colorless time diff with the record.
  */
 void SendMapCheckpointForward(
-	int client, 
-	int zonegroup, 
-	int zone, 
-	float time, 
-	const char[] szTime, 
-	const char[] szDiff_colorless, 
+	int	  client,
+	int	  zonegroup,
+	int	  zone,
+	float time,
+	const char[] szTime,
+	const char[] szDiff_colorless,
 	const char[] sz_srDiff_colorless)
 {
 	// Checkpoint forward
@@ -483,6 +481,7 @@ void SendMapCheckpointForward(
 	Call_PushFloat(g_fCheckpointServerRecord[zonegroup][zone]);
 	Call_PushString(sz_srDiff_colorless);
 	Call_PushCell(zone + 1);
+	// CPrintToChat(client, "SendMapCheckpointForward | zone %i , zonegroup %i", zone+1, zonegroup);
 
 	/* Finish the call, get the result */
 	Call_Finish();
@@ -490,7 +489,7 @@ void SendMapCheckpointForward(
 
 /**
  * Sends a bonus finish forward on surftimer_OnBonusFinished.
- * 
+ *
  * @param client           Index of the client.
  * @param rank             Rank of the client.
  * @param zGroup           Zone group of the bonus.
@@ -517,7 +516,7 @@ void SendBonusFinishForward(int client, int rank, int zGroup, int style)
 
 /**
  * Sends a practive finish forward on surftimer_OnPracticeFinished.
- * 
+ *
  * @param client           Index of the client.
  */
 void SendPracticeFinishForward(int client)
@@ -536,7 +535,7 @@ void SendPracticeFinishForward(int client)
 
 /**
  * Sends a new record forward on surftimer_OnNewRecord.
- * 
+ *
  * @param client           Index of the client.
  * @param szRecordDiff     String containing the formatted difference with the previous record.
  * @param bonusGroup       Number of the bonus. Default = -1.
@@ -560,7 +559,7 @@ void SendNewRecordForward(int client, const char[] szRecordDiff, int bonusGroup 
 
 /**
  * Sends a new WRCP forward on surftimer_OnNewWRCP.
- * 
+ *
  * @param client           Index of the client.
  * @param stage            ID of the stage.
  * @param szRecordDiff     String containing the formatted difference with the previous record.
@@ -585,7 +584,7 @@ void SendNewWRCPForward(int client, int stage, const char[] szRecordDiff, float 
 
 /**
  * Sends a new stage forward on surftimer_OnStageFinished.
- * 
+ *
  * @param client           Index of the client.
  * @param stage            ID of the stage.
  * @param szRecordDiff     String containing the formatted difference with the previous record.
@@ -595,7 +594,7 @@ void SendStageFinishedForward(int client, int stage, const char[] szRecordDiff, 
 {
 	char szStageTime[64];
 	FormatTimeFloat(client, g_fCurrentWrcpRunTime[client], 3, szStageTime, sizeof(szStageTime));
-	
+
 	/* Start stage finished function call */
 	Call_StartForward(g_StageFinishForward);
 

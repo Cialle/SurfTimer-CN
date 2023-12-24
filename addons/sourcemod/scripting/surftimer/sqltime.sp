@@ -1,8 +1,32 @@
-public void db_viewPlayerInfo(int client, char szSteamId[32])
+public void db_viewPlayerInfo(int client, char szSteamId[32]) // API'd up
 {
-	char szQuery[512];
-	Format(szQuery, 512, "SELECT steamid, steamid64, name, country, lastseen, joined, connections, timealive, timespec FROM ck_playerrank WHERE steamid = '%s';", szSteamId);
-	SQL_TQuery(g_hDb, SQL_ViewPlayerInfoCallback, szQuery, client, DBPrio_Low);
+	if (GetConVarBool(g_hSurfApiEnabled))
+	{
+		char apiRoute[512];
+		FormatEx(apiRoute, sizeof(apiRoute), "%s/surftimer/viewPlayerInfo?steamid32=%s", g_szApiHost, szSteamId);
+
+		DataPack dp = new DataPack();
+		dp.WriteString("db_viewPlayerInfo");
+		dp.WriteFloat(GetGameTime());
+		dp.WriteCell(client);
+
+		dp.Reset();
+
+		if (g_bApiDebug)
+		{
+			PrintToServer("API ROUTE: %s", apiRoute);
+		}
+
+		/* RipExt */
+		HTTPRequest request = new HTTPRequest(apiRoute);
+		request.Get(apiViewPlayerInfoCallback, dp);
+	}
+	else
+	{
+		char szQuery[512];
+		Format(szQuery, sizeof(szQuery), sql_stray_viewPlayerInfo, szSteamId);
+		SQL_TQuery(g_hDb, SQL_ViewPlayerInfoCallback, szQuery, client, DBPrio_Low);
+	}
 }
 
 

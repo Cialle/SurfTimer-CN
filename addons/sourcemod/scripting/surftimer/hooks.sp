@@ -807,7 +807,7 @@ public Action Hook_OnTakeDamage(int victim, int &attacker, int &inflictor, float
 	{
 		return Plugin_Handled;
 	}
-	return Plugin_Continue;
+	return Plugin_Handled;
 }
 
 
@@ -1212,6 +1212,7 @@ public Action Event_PlayerJump(Handle event, char[] name, bool dontBroadcast)
 
 		if (GetConVarInt(g_hLimitSpeedType) == 1)
 		{
+			// CPrintToChat(client, "{green}g_iTicksOnGround: {yellow}%i", g_iTicksOnGround[client]);
 			if (!g_bInStartZone[client] && !g_bInStageZone[client])
 				return Plugin_Continue;
 		

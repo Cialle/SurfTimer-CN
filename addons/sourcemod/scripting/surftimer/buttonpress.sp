@@ -179,9 +179,14 @@ public void CL_OnStartTimerPress(int client)
 				Format(preMessage, sizeof(preMessage), "%t", "BonusPrestrafe", g_szChatPrefix, g_iClientInZone[client][2], szSpeed, szPersonalDifference, szRecordDifference);
 				OnClientBonusTimerStartForward(client);
 			}
+
 			if (g_iPrespeedText[client])
+			{
 				CPrintToChat(client, preMessage);
-		
+				// Add Prestrafe to global VAR
+				FormatEx(g_szPrespeedValue[client], sizeof(g_szPrespeedValue), "\n(%i)", prestrafe);
+				CreateTimer(2.0, hudPrestrafe, GetClientUserId(client));
+			}
 			for (int i = 1; i <= MaxClients; i++) {
 				if (!IsClientInGame(i))
 					continue;
@@ -907,13 +912,7 @@ public void CL_OnStartWrcpTimerPress(int client)
 			Format(preMessage, sizeof(preMessage), "%t", "StagePrestrafe", g_szChatPrefix, g_Stage[0][client], szSpeed, szPersonalDifference, szRecordDifference);
 
 			if (g_iPrespeedText[client])
-			{
 				CPrintToChat(client, preMessage);
-
-				// Add Prestrafe to global VAR
-				FormatEx(g_szPrespeedValue[client], sizeof(g_szPrespeedValue), "\n(%i)", prestrafe);
-				CreateTimer(2.0, hudPrestrafe, GetClientUserId(client));
-			}
 		
 			for (int i = 1; i <= MaxClients; i++) {
 				if (!IsClientInGame(i)) 
@@ -990,12 +989,12 @@ public void CL_OnEndWrcpTimerPress(int client, float time2)
 		FormatTimeFloat(client, f_srDiff, 3, sz_srRawDiff, sizeof(sz_srRawDiff));
 		if (f_srDiff > 0)
 		{
-			Format(sz_srDiff, sizeof(sz_srDiff), "%cSR: %c-%s%c", WHITE, LIGHTGREEN, sz_srDiff, WHITE);
+			Format(sz_srDiff, sizeof(sz_srDiff), "%cWR: %c-%s%c", WHITE, LIGHTGREEN, sz_srDiff, WHITE);
 			Format(sz_srRawDiff, sizeof(sz_srRawDiff), "-%s", sz_srRawDiff);
 		}
 		else
 		{
-			Format(sz_srDiff, sizeof(sz_srDiff), "%cSR: %c+%s%c", WHITE, RED, sz_srDiff, WHITE);
+			Format(sz_srDiff, sizeof(sz_srDiff), "%cWR: %c+%s%c", WHITE, RED, sz_srDiff, WHITE);
 			Format(sz_srRawDiff, sizeof(sz_srRawDiff), "+%s", sz_srRawDiff);
 		}
 
@@ -1042,12 +1041,12 @@ public void CL_OnEndWrcpTimerPress(int client, float time2)
 		FormatTimeFloat(client, f_srDiff, 3, sz_srRawDiff, sizeof(sz_srRawDiff));
 		if (f_srDiff > 0)
 		{
-			Format(sz_srDiff, sizeof(sz_srDiff), "%cSR: %c-%s%c", WHITE, LIGHTGREEN, sz_srDiff, WHITE);
+			Format(sz_srDiff, sizeof(sz_srDiff), "%cWR: %c-%s%c", WHITE, LIGHTGREEN, sz_srDiff, WHITE);
 			Format(sz_srRawDiff, sizeof(sz_srRawDiff), "-%s", sz_srRawDiff);
 		}
 		else
 		{
-			Format(sz_srDiff, sizeof(sz_srDiff), "%cSR: %c+%s%c", WHITE, RED, sz_srDiff, WHITE);
+			Format(sz_srDiff, sizeof(sz_srDiff), "%cWR: %c+%s%c", WHITE, RED, sz_srDiff, WHITE);
 			Format(sz_srRawDiff, sizeof(sz_srRawDiff), "+%s", sz_srRawDiff);
 		}
 
