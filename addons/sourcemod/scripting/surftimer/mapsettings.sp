@@ -17,38 +17,38 @@ public void MapSettingsMenu(int client)
 {
 	Menu menu = CreateMenu(MapSettingsMenuHandler);
 	char szBuffer[256];
-	Format(szBuffer, sizeof(szBuffer), "Map Settings - %s\n \n", g_szMapName);
+	Format(szBuffer, sizeof(szBuffer), "地图设置 - %s\n \n", g_szMapName);
 	SetMenuTitle(menu, szBuffer);
 
-	Format(szBuffer, sizeof(szBuffer), "Tier: %d", g_iMapTier);
+	Format(szBuffer, sizeof(szBuffer), "难度: %d", g_iMapTier);
 	AddMenuItem(menu, "", szBuffer);
 
 	if (g_bRankedMap)
-		AddMenuItem(menu, "", "Ranked");
+		AddMenuItem(menu, "", "参与排名");
 	else
-		AddMenuItem(menu, "", "Unranked");
+		AddMenuItem(menu, "", "不参与排名");
 
-	Format(szBuffer, sizeof(szBuffer), "Max Velocity: %f", GetConVarFloat(g_hMaxVelocity));
+	Format(szBuffer, sizeof(szBuffer), "最大限速: %f", GetConVarFloat(g_hMaxVelocity));
 	AddMenuItem(menu, "", szBuffer);
 
 	if (g_fAnnounceRecord == 1)
-		AddMenuItem(menu, "", "Announce Finishes: PBs Only");
+		AddMenuItem(menu, "", "完成公告: 只有个人最佳记录");
 	else if (g_fAnnounceRecord == 2)
-		AddMenuItem(menu, "", "Announce Finishes: WRs Only");
+		AddMenuItem(menu, "", "完成公告: 只有地图最佳记录");
 	else
-		AddMenuItem(menu, "", "Announce Finishes: All");
+		AddMenuItem(menu, "", "完成公告: 全部公告");
 
 	if (g_bGravityFix)
-		AddMenuItem(menu, "", "Gravity Fix Enabled");
+		AddMenuItem(menu, "", "开启重力修复");
 	else
-		AddMenuItem(menu, "", "Gravity Fix Disabled");
+		AddMenuItem(menu, "", "关闭重力修复");
 
 	if (g_bhasStages)
-		AddMenuItem(menu, "", "Unlimit prespeed for all stage zones");
+		AddMenuItem(menu, "", "取消所有关卡区域的起点限速");
 	else
-		AddMenuItem(menu, "", "Unlimit prespeed for all stage zones", ITEMDRAW_DISABLED);
+		AddMenuItem(menu, "", "取消所有关卡区域的起点限速", ITEMDRAW_DISABLED);
 		
-	AddMenuItem(menu, "", "Remove onejumplimit for all zones");
+	AddMenuItem(menu, "", "移除所有起点只能跳跃一次的限制");
 
 	SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
 	DisplayMenu(menu, client, MENU_TIME_FOREVER);
@@ -149,14 +149,14 @@ public void MaxVelocityMenu(int client)
 {
 	Menu menu = CreateMenu(MaxVelocityMenuHandler);
 	char szTitle[128];
-	Format(szTitle, sizeof(szTitle), "Max Velocity: %f", g_fMaxVelocity);
+	Format(szTitle, sizeof(szTitle), "最大限速: %f", g_fMaxVelocity);
 	SetMenuTitle(menu, szTitle);
 
 	AddMenuItem(menu, "3500.0", "3500.0");
 	AddMenuItem(menu, "4000.0", "4000.0");
 	AddMenuItem(menu, "5000.0", "5000.0");
 	AddMenuItem(menu, "10000.0", "10000.0");
-	AddMenuItem(menu, "-1.0", "Custom Max Velocity");
+	AddMenuItem(menu, "-1.0", "自定义最大限速");
 
 	SetMenuExitBackButton(menu, true);
 	DisplayMenu(menu, client, MENU_TIME_FOREVER);
