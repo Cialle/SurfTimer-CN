@@ -162,7 +162,7 @@ void CreateCommands()
     RegConsoleCmd("sm_knife", Command_GiveKnife, "[surftimer] 给玩家一把刀");
     RegConsoleCmd("sm_prinfo_help", Command_PRinfo_help, "[surftimer] 在控制台显示如何使用该命令的信息");
     RegConsoleCmd("sm_csd", Command_CenterSpeed, "[surftimer] [settings] on/off - 切换中心速度显示");
-    RegConsoleCmd("sm_style_acronyms", Client_StyleAcronyms, "[surftimer] 显示所有可用的风格格式");
+    // RegConsoleCmd("sm_style_acronyms", Client_StyleAcronyms, "[surftimer] 显示所有可用的风格格式");
     RegConsoleCmd("sm_continent_acronyms", Client_ContinentAcronyms, "[surftimer] 显示所有可用的大洲格式");
     RegConsoleCmd("sm_restore", Restore_Menu, "[surftimer] 恢复客户端的上次已知位置");
 
@@ -182,8 +182,8 @@ void CreateCommands()
     RegConsoleCmd("sm_nextrank", Command_NextRank, "[surftimer] 显示达到下一等级所需的点数");
 
     // 风格
-    RegConsoleCmd("sm_style", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
-    RegConsoleCmd("sm_styles", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
+    // RegConsoleCmd("sm_style", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
+    // RegConsoleCmd("sm_styles", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
 
     // 测试
     RegAdminCmd("sm_test", sm_test, ADMFLAG_CUSTOM6);
