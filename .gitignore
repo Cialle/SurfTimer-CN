@@ -113,3 +113,10 @@ addons/sourcemod/scripting/include/usermessages.inc
 addons/sourcemod/scripting/include/vector.inc
 addons/sourcemod/scripting/include/version.inc
 addons/sourcemod/scripting/include/version_auto.inc
+addons/sourcemod/scripting/include/entitylump.inc
+addons/sourcemod/scripting/include/multicolors/morecolors.inc
+addons/sourcemod/scripting/include/multicolors/colors.inc
+addons/sourcemod/scripting/include/glib/assertutils.inc
+addons/sourcemod/scripting/include/glib/addressutils.inc
+addons/sourcemod/scripting/include/glib/memutils.inc
+addons/sourcemod/scripting/include/multicolors.inc

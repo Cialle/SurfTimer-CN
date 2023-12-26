@@ -13,7 +13,12 @@ char sql_updateBonus[] = "UPDATE ck_bonus SET runtime = '%f', name = '%s', velSt
 char sql_selectBonusCount[] = "SELECT zonegroup, style, count(1) FROM ck_bonus WHERE mapname = '%s' GROUP BY zonegroup, style;";
 char sql_selectPersonalBonusRecords[] = "SELECT runtime, zonegroup, style FROM ck_bonus WHERE steamid = '%s' AND mapname = '%s' AND runtime > '0.0'";
 char sql_selectPlayerRankBonus[] = "SELECT name FROM ck_bonus WHERE runtime <= (SELECT runtime FROM ck_bonus WHERE steamid = '%s' AND mapname= '%s' AND runtime > 0.0 AND zonegroup = %i AND style = 0) AND mapname = '%s' AND zonegroup = %i AND style = 0;";
-char sql_selectFastestBonus[] = "SELECT t1.name, t1.runtime, t1.zonegroup, t1.style, t1.velStartXY, t1.velStartXYZ, t1.velstartZ from ck_bonus t1 where t1.mapname = '%s' and t1.runtime = (select min(t2.runtime) from ck_bonus t2 where t2.mapname = t1.mapname and t2.zonegroup = t1.zonegroup and t2.style = t1.style);";
+
+// 优化SQL查询语句，之前的太慢了，百万数据需要跑十几分钟，很离谱。
+// 注意，我不会SQL，只是随便改改，可能会有BUG，但是就目前没有Style记录时，只存在主线记录，是没问题的
+// char sql_selectFastestBonus[] = "SELECT t1.name, t1.runtime, t1.zonegroup, t1.style, t1.velStartXY, t1.velStartXYZ, t1.velstartZ from ck_bonus t1 where t1.mapname = '%s' and t1.runtime = (select min(t2.runtime) from ck_bonus t2 where t2.mapname = t1.mapname and t2.zonegroup = t1.zonegroup and t2.style = t1.style);";
+char sql_selectFastestBonus[] = "SELECT name, runtime, zonegroup, style, velStartXY, velStartXYZ, velstartZ FROM (SELECT t1.name, t1.runtime, t1.zonegroup, t1.style, t1.velStartXY, t1.velStartXYZ, t1.velstartZ, ROW_NUMBER() OVER (PARTITION BY t1.zonegroup, t1.style ORDER BY t1.runtime) AS row_num FROM ck_bonus t1 WHERE t1.mapname = '%s') AS ranked_data WHERE row_num = 1;"
+
 char sql_deleteBonus[] = "DELETE FROM ck_bonus WHERE mapname = '%s'";
 char sql_selectAllBonusTimesinMap[] = "SELECT zonegroup, runtime from ck_bonus WHERE mapname = '%s';";
 char sql_selectTopBonusSurfers[] = "SELECT db2.steamid, db1.name, db2.runtime as overall, db1.steamid, db2.mapname FROM ck_bonus as db2 INNER JOIN ck_playerrank as db1 on db2.steamid = db1.steamid WHERE db2.mapname = '%s' AND db2.style = %i AND db1.style = %i AND db2.runtime > -1.0 AND zonegroup = %i ORDER BY overall ASC LIMIT 100;";
@@ -78,7 +83,14 @@ char sql_insertPlayer[] = "INSERT INTO ck_playertimes (steamid, mapname, name) V
 char sql_insertPlayerTime[] = "INSERT INTO ck_playertimes (steamid, mapname, name, runtimepro, style, velStartXY, velStartXYZ, velStartZ) VALUES('%s', '%s', '%s', '%f', %i, %i, %i, %i);";
 char sql_updateRecordPro[] = "UPDATE ck_playertimes SET name = '%s', runtimepro = '%f', velStartXY = '%i', velStartXYZ = '%i', velStartZ = '%i' WHERE steamid = '%s' AND mapname = '%s' AND style = %i;";
 char sql_selectPlayer[] = "SELECT steamid FROM ck_playertimes WHERE steamid = '%s' AND mapname = '%s';";
-char sql_selectMapRecord[] = "SELECT t1.runtimepro, t1.name, t1.steamid, t1.style, t1.velStartXY, t1.velStartXYZ, t1.velstartZ FROM ck_playertimes t1 JOIN ( SELECT MIN(runtimepro) AS min_runtime, style, mapname FROM ck_playertimes GROUP BY mapname, style ) AS t2 ON t1.runtimepro = t2.min_runtime AND t1.mapname = t2.mapname AND t1.style = t2.style WHERE t1.mapname = '%s'";
+
+
+// 优化SQL查询语句，之前的太慢了，百万数据需要跑十几分钟，很离谱。
+// 注意，我不会SQL，只是随便改改，可能会有BUG，但是就目前没有Style记录时，只存在主线记录，是没问题的
+// char sql_selectMapRecord[] = "SELECT t1.runtimepro, t1.name, t1.steamid, t1.style, t1.velStartXY, t1.velStartXYZ, t1.velstartZ FROM ck_playertimes t1 JOIN ( SELECT MIN(runtimepro) AS min_runtime, style, mapname FROM ck_playertimes GROUP BY mapname, style ) AS t2 ON t1.runtimepro = t2.min_runtime AND t1.mapname = t2.mapname AND t1.style = t2.style WHERE t1.mapname = '%s'";
+char sql_selectMapRecord[] = "SELECT runtimepro, name, steamid, style, velStartXY, velStartXYZ, velstartZ FROM (SELECT t1.runtimepro, t1.name, t1.steamid, t1.style, t1.velStartXY, t1.velStartXYZ, t1.velstartZ, ROW_NUMBER() OVER (PARTITION BY t1.style ORDER BY t1.runtimepro) AS row_num FROM ck_playertimes t1 WHERE t1.mapname = '%s') AS ranked_data WHERE row_num = 1;";
+
+
 char sql_selectPersonalAllRecords[] = "SELECT db1.name, db2.steamid, db2.mapname, db2.runtimepro as overall, db1.steamid, db3.tier FROM ck_playertimes as db2 INNER JOIN ck_playerrank as db1 on db2.steamid = db1.steamid INNER JOIN ck_maptier AS db3 ON db2.mapname = db3.mapname WHERE db2.steamid = '%s' AND db2.style = %i AND db1.style = %i AND db2.runtimepro > -1.0 ORDER BY mapname ASC;";
 char sql_selectTopSurfers[] = "SELECT db2.steamid, db1.name, db2.runtimepro as overall, db1.steamid, db2.mapname FROM ck_playertimes as db2 INNER JOIN ck_playerrank as db1 on db2.steamid = db1.steamid WHERE db2.mapname = '%s' AND db1.style = %i AND db2.style = %i AND db2.runtimepro > -1.0 ORDER BY overall ASC LIMIT 50;";
 char sql_selectTopSurfers2[] = "SELECT db2.steamid, db1.name, db2.runtimepro as overall, db1.steamid, db2.mapname FROM ck_playertimes as db2 INNER JOIN ck_playerrank as db1 on db2.steamid = db1.steamid WHERE db2.mapname = '%s' AND db1.style = 0 AND db2.style = 0 AND db2.runtimepro > -1.0 ORDER BY overall ASC LIMIT 100;";
