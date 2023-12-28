@@ -105,7 +105,7 @@ public void sql_DeleteMenuView(Handle owner, Handle hndl, const char[] error, an
 	int client = GetClientFromSerial(data);
 	
 	Menu editing = new Menu(callback_DeleteRecord);
-	editing.SetTitle("%s %s记录编辑菜单 - %s\n► 编辑%s记录\n► 按菜单项删除记录\n ", g_szMenuPrefix, g_EditingMap[client], g_EditTypes[g_SelectedEditOption[client]]);
+	editing.SetTitle("%s记录编辑菜单 - %s\n► 编辑%s记录\n► 按菜单项删除记录\n ", g_szMenuPrefix, g_EditingMap[client], g_EditTypes[g_SelectedEditOption[client]]);
 	
 	char menuFormat[88];
 	FormatEx(menuFormat, sizeof(menuFormat), "风格：%s\n► 按菜单项更改风格\n ", g_EditStyles[g_SelectedStyle[client]]);
