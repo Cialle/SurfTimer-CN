@@ -531,8 +531,94 @@ public Action Client_TargetName(int client, int args)
 
 public Action Command_Vip(int client, int args)
 {
+	if (IsValidClient(client))
+		VIPMenu(client);
 	return Plugin_Handled;
 }
+
+
+public void VIPMenu(int client)
+{
+	if (!IsPlayerVip(client))
+		{
+		CPrintToChat(client, "%t", "NotVIP", g_szChatPrefix);
+		return;
+		}
+
+
+	char szItem0[128], szItem1[128], szItem2[128], szItem3[128], szItem4[128], szItem5[128], szItem6[128], szColour[3][96];
+
+	getColourName(client, szColour[0], 32, g_iCustomColours[client][0]);
+	getColourName(client, szColour[1], 32, g_iCustomColours[client][1]);
+
+
+
+	Menu menu = CreateMenu(VIPMenuHandler);
+
+	SetMenuTitle(menu, "%t", "VIP_Menu_Title", g_szChatPrefix);
+
+	if (g_bDbCustomTitleInUse[client])
+		Format(szItem0, 128, "%t", "VIP_Menu_item_customtitle_enable");
+	else
+		Format(szItem0, 128, "%t", "VIP_Menu_item_customtitle_disabled");
+
+
+	Format(szItem1, 128, "%t", "VIP_Menu_item_title", g_szCustomTitle[client]); 
+	Format(szItem2, 128, "%t", "VIP_Menu_item_title_colour", szColour[0]);
+	Format(szItem3, 128, "%t", "VIP_Menu_item_chatmsg_colour", szColour[1]);
+	Format(szItem4, 128, "%t", "VIP_Menu_item_JoinMsg");
+	Format(szItem5, 128, "%t", "VIP_Menu_paint");
+	Format(szItem6, 128, "%t", "VIP_Menu_nvs");
+
+
+	AddMenuItem(menu, szItem0, szItem0);
+	AddMenuItem(menu, szItem1, szItem1); 
+	AddMenuItem(menu, szItem2, szItem2); 
+	AddMenuItem(menu, szItem3, szItem3); 
+	AddMenuItem(menu, szItem4, szItem4); 
+	AddMenuItem(menu, szItem5, szItem5);
+	AddMenuItem(menu, szItem6, szItem6);
+
+
+
+	SetMenuOptionFlags(menu, MENUFLAG_BUTTON_EXIT);
+	DisplayMenu(menu, client, MENU_TIME_FOREVER);
+}
+
+public int VIPMenuHandler(Handle menu, MenuAction action, int param1, int param2)
+{
+	if (action == MenuAction_Select)
+	{
+		switch (param2)
+		{	
+			case 0: 
+				db_toggleCustomPlayerTitle(param1);
+			case 1: 
+				CPrintToChat(param1, "%t", "set_VIP_Menu_item_title", g_szChatPrefix);
+			case 2: 
+				db_viewPlayerColours(param1, g_szSteamID[param1], 0);
+			case 3: 
+				db_viewPlayerColours(param1, g_szSteamID[param1], 1);
+			case 4: 
+				CPrintToChat(param1, "%t", "set_VIP_Menu_JoinMsg", g_szChatPrefix);
+			case 5: 
+				ClientCommand(param1, "sm_paint");
+			case 6: 
+				ClientCommand(param1, "sm_nvs");
+		}
+
+	}
+
+	if (action == MenuAction_End)
+	{
+		delete menu;
+	}
+
+	return 0;
+	
+}
+
+
 
 public void CustomTitleMenu(int client)
 {

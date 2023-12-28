@@ -2398,4 +2398,71 @@
 		"en"		"{1} Invalid observer mode, go to First Person or Third Person view."
 		"chi"		"{1} 无效的观察者模式，请切换到第一人称或第三人称视图。"
 	}
+	"NotVIP"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} You are not VIP."
+		"chi"		"{1} 你还不是VIP，无法使用该指令。"
+	}
+	"VIP_Menu_Title"
+	{
+		"en"		"VIP menu."
+		"chi"		"[ProHub] VIP 菜单"
+	}
+	"VIP_Menu_item_customtitle_enable"
+	{
+		"en"		"[Enabled]Custom Title"
+		"chi"		"[已启用]自定义头衔标题"
+	}
+	"VIP_Menu_item_customtitle_disabled"
+	{
+		"en"		"[Disabled]Custom Title"
+		"chi"		"[已关闭]自定义头衔标题"
+	}
+	"VIP_Menu_item_title"
+	{
+		"#format"	"{1:s}"
+		"en"		"Set custom title, now: {1} "
+		"chi"		"设置自定义头衔，当前: {1} "
+	}
+	"set_VIP_Menu_item_title"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} Usage: sm_customtitle \"{red}{ red}my cool {blue}{ blue}Title{default}\""
+		"chi"		"{1} 可以输入: !customtitle \"{red}{ red}嘎嘎牛{blue}{ blue}头衔{default}\"，注意双引号不要省略哈"
+	}
+	"VIP_Menu_item_title_colour"
+	{
+		"#format"	"{1:s}"
+		"en"		"Set custom title colour: {1}"
+		"chi"		"自定义名称颜色: {1} "
+	}
+	
+	"VIP_Menu_item_chatmsg_colour"
+	{
+		"#format"	"{1:s}"
+		"en"		"Set custom chatmsg colour: {1}"
+		"chi"		"自定义聊天颜色: {1} "
+	}
+	"VIP_Menu_item_JoinMsg"
+	{
+		"en"		"Set JoinMsgr"
+		"chi"		"设置自定义加入消息"
+	}
+	"set_VIP_Menu_JoinMsg"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} Usage: sm_joinmsg \"{red}{ red}my cool {blue}{ blue}join msg{default}\""
+		"chi"		"{1} 可以输入: !joinmsg \"{red}{ red}嘎嘎牛逼的{blue}{ blue}加入消息{default}\"，注意双引号不要省略哈"
+	}
+	"VIP_Menu_paint"
+	{
+		"en"		"paint menu"
+		"chi"		"自定义喷枪菜单"
+	}
+	"VIP_Menu_nvs"
+	{
+		"en"		"nv setting menu"
+		"chi"		"夜视仪菜单"
+	}
 }

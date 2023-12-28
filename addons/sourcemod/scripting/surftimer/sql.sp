@@ -4203,7 +4203,7 @@ public void SQL_selectMapTierCallback(Handle owner, Handle hndl, const char[] er
 			g_iMapTier = tier;
 			if (g_bMapperNameFound)
 			{	
-				Format(g_sTierString, 512, "%c%s \x01by \x03%s %c- ", BLUE, g_szMapName, g_szMapperName, WHITE);
+				Format(g_sTierString, 512, "%c%s \x01 by \x03%s %c- ", BLUE, g_szMapName, g_szMapperName, WHITE);
 			}
 			else
 			{
