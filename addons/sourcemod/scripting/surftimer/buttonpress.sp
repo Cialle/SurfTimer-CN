@@ -7,7 +7,7 @@ public void CL_OnStartTimerPress(int client)
 	if (g_szSteamID[client][6] == 'I' && g_szSteamID[client][7] == 'D' && !IsFakeClient(client))
 	{
 		g_bTimerEnabled[client] = false;
-		CPrintToChat(client, "%s{red}There is a problem with your steam id, please wait or try reconnecting.", g_szChatPrefix);
+		CPrintToChat(client, "%s{red}获取STEAM ID似乎出现了一些问题，这可能是V社的问题。建议你多等一会它自己就好了，或者重连(不建议)。", g_szChatPrefix);
 		// CPrintToChat(client, "%t", "BPress2", g_szChatPrefix);
 		return;
 	}
@@ -829,7 +829,7 @@ public void CL_OnStartWrcpTimerPress(int client)
 	if (g_szSteamID[client][6] == 'I' && g_szSteamID[client][7] == 'D' && !IsFakeClient(client))
 	{
 		g_bTimerEnabled[client] = false;
-		CPrintToChat(client, "%s{red}There is a problem with your steam id, please wait or try reconnecting.", g_szChatPrefix);
+		CPrintToChat(client, "%s{red}获取STEAM ID似乎出现了一些问题，这可能是V社的问题。建议你多等一会它自己就好了，或者重连(不建议)。", g_szChatPrefix);
 		// CPrintToChat(client, "%t", "BPress2", g_szChatPrefix);
 		return;
 	}

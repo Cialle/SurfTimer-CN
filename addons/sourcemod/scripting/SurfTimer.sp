@@ -415,6 +415,13 @@ public void OnClientPutInServer(int client)
 		return;
 	}
 
+	// Get SteamID
+	if (!GetClientAuthId(client, AuthId_Steam2, g_szSteamID[client], sizeof(g_szSteamID[]), true))
+	{
+		RequestFrame(OnClientPutInServer, client);
+		return;
+	}
+
 	if (IsFakeClient(client))
 	{
 		CS_SetMVPCount(client, 1);
@@ -447,13 +454,6 @@ public void OnClientPutInServer(int client)
 		SDKHook(client, SDKHook_OnTakeDamage, Hook_OnTakeDamage);
 		SDKHook(client, SDKHook_PreThink, OnPlayerThink);
 		g_bClientHooksCalled[client] = true;
-	}
-
-	// Get SteamID
-	if (!GetClientAuthId(client, AuthId_Steam2, g_szSteamID[client], sizeof(g_szSteamID[]), true))
-	{
-		RequestFrame(OnClientPutInServer, client);
-		return;
 	}
 
 	// Check if steamid has the value of "STEAM_ID_STOP_IGNORING_RETVALS"

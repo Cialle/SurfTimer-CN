@@ -6,232 +6,232 @@ void CreateCommands()
 {
 	// Client Commands
 	RegConsoleCmd("sm_usp", Client_Usp, "[surftimer] 生成一个USP消音器");
-    RegConsoleCmd("sm_glock", Client_Glock, "[surftimer] 生成一个格洛克手枪");
-    RegConsoleCmd("sm_avg", Client_Avg, "[surftimer] 在聊天中显示当前地图的平均时间");
-    RegConsoleCmd("sm_hidechat", Client_HideChat, "[surftimer] 隐藏你的游戏内聊天");
-    RegConsoleCmd("sm_hideweapon", Client_HideWeapon, "[surftimer] 隐藏你的武器模型");
-    RegConsoleCmd("sm_disarm", Client_HideWeapon, "[surftimer] 隐藏你的武器模型");
-    RegAdminCmd("sm_goto", Client_GoTo, ADMFLAG_CUSTOM2, "[surftimer] 传送到选择的玩家");
-    RegConsoleCmd("sm_sound", Client_QuakeSounds, "[surftimer] 开/关地震音效");
-    RegConsoleCmd("sm_bhop", Client_AutoBhop, "[surftimer] 开/关自动跳跃");
-    RegConsoleCmd("sm_flashlight", Client_Flashlight, "[surftimer] 开/关手电筒");
-    RegConsoleCmd("sm_maptop", Client_MapTop, "[surftimer] 显示当前地图的本地排行榜");
-    RegConsoleCmd("sm_wr", Client_Wr, "[surftimer] 在聊天中显示记录的世界纪录");
-    RegConsoleCmd("sm_wrb", Client_Wrb, "[surftimer] 在聊天中显示记录的世界纪录（按地图分类）");
-    RegConsoleCmd("sm_spec", Client_Spec, "[surftimer] 选择一个玩家进行观战并切换到观众模式");
-    RegConsoleCmd("sm_watch", Client_Spec, "[surftimer] 选择一个玩家进行观战并切换到观众模式");
-    RegConsoleCmd("sm_spectate", Client_Spec, "[surftimer] 选择一个玩家进行观战并切换到观众模式");
-    RegConsoleCmd("sm_helpmenu", Client_Help, "[surftimer] 显示所有SurfTimer命令的帮助菜单");
-    RegConsoleCmd("sm_help", Client_Help, "[surftimer] 显示所有SurfTimer命令的帮助菜单");
-    RegConsoleCmd("sm_profile", Client_Profile, "[surftimer] 打开玩家个人资料");
-    RegConsoleCmd("sm_options", Client_OptionMenu, "[surftimer] 打开选项菜单");
-    RegConsoleCmd("sm_top", Client_Top, "[surftimer] 显示排行榜（前100名玩家，前50名总体）");
-    RegConsoleCmd("sm_topsurfers", Client_Top, "[surftimer] 显示排行榜（前100名玩家，前50名总体）");
-    RegConsoleCmd("sm_bonustop", Client_BonusTop, "[surftimer] 显示奖励的排行榜");
-    RegConsoleCmd("sm_btop", Client_BonusTop, "[surftimer] 显示奖励的排行榜");
-    RegConsoleCmd("sm_stop", Client_Stop, "[surftimer] 停止计时器");
-    RegConsoleCmd("sm_ranks", Client_Ranks, "[surftimer] 显示可用玩家级别的菜单");
-    RegConsoleCmd("sm_pause", Client_Pause, "[surftimer] 开/关暂停（计时器暂停且移动被冻结）");
-    RegConsoleCmd("sm_latest", Client_Latest, "[surftimer] 显示最新的地图记录");
-    RegConsoleCmd("sm_rr", Client_Latest, "[surftimer] 显示最新的地图记录");
-    RegConsoleCmd("sm_rb", Client_Latest, "[surftimer] 显示最新的地图记录");
-    RegConsoleCmd("sm_hide", Client_Hide, "[surftimer] 开/关隐藏其他玩家");
-    RegConsoleCmd("sm_togglecheckpoints", ToggleCheckpoints, "[surftimer] 开/关启用玩家检查点");
-    RegConsoleCmd("+noclip", NoClip, "[surftimer] 开启无碰撞模式");
-    RegConsoleCmd("-noclip", UnNoClip, "[surftimer] 关闭无碰撞模式");
-    RegConsoleCmd("sm_nc", Command_ckNoClip, "[surftimer] 开/关玩家无碰撞模式");
-    RegConsoleCmd("sm_ctop", Client_CountryTOP, "[surftimer] 显示国家排行榜");
-    RegConsoleCmd("sm_ctop_help", Client_CountryTop_Help, "[surftimer] 显示如何使用sm_ctop命令的信息");
-    RegConsoleCmd("sm_crank", Client_CountryRank, "[surftimer] 显示玩家国家排名");
-    RegConsoleCmd("sm_crank_help", Client_CountryRank_Help, "[surftimer] 显示如何使用sm_crank命令的信息");
-    RegConsoleCmd("sm_continenttop", Client_ContinentTOP, "[surftimer] 显示洲排行榜");
-    RegConsoleCmd("sm_continenttop_help", Client_ContinentTop_Help, "[surftimer] 显示如何使用sm_ctop命令的信息");
-    RegConsoleCmd("sm_continentrank", Client_ContinentRank, "[surftimer] 显示玩家洲排名");
-    RegConsoleCmd("sm_continentrank_help", Client_ContinentRank_Help, "[surftimer] 显示如何使用sm_crank命令的信息");
+	RegConsoleCmd("sm_glock", Client_Glock, "[surftimer] 生成一个格洛克手枪");
+	RegConsoleCmd("sm_avg", Client_Avg, "[surftimer] 在聊天中显示当前地图的平均时间");
+	RegConsoleCmd("sm_hidechat", Client_HideChat, "[surftimer] 隐藏你的游戏内聊天");
+	RegConsoleCmd("sm_hideweapon", Client_HideWeapon, "[surftimer] 隐藏你的武器模型");
+	RegConsoleCmd("sm_disarm", Client_HideWeapon, "[surftimer] 隐藏你的武器模型");
+	RegAdminCmd("sm_goto", Client_GoTo, ADMFLAG_CUSTOM2, "[surftimer] 传送到选择的玩家");
+	RegConsoleCmd("sm_sound", Client_QuakeSounds, "[surftimer] 开/关地震音效");
+	RegConsoleCmd("sm_bhop", Client_AutoBhop, "[surftimer] 开/关自动跳跃");
+	RegConsoleCmd("sm_flashlight", Client_Flashlight, "[surftimer] 开/关手电筒");
+	RegConsoleCmd("sm_maptop", Client_MapTop, "[surftimer] 显示当前地图的本地排行榜");
+	RegConsoleCmd("sm_wr", Client_Wr, "[surftimer] 在聊天中显示记录的世界纪录");
+	RegConsoleCmd("sm_wrb", Client_Wrb, "[surftimer] 在聊天中显示记录的世界纪录（按地图分类）");
+	RegConsoleCmd("sm_spec", Client_Spec, "[surftimer] 选择一个玩家进行观战并切换到观众模式");
+	RegConsoleCmd("sm_watch", Client_Spec, "[surftimer] 选择一个玩家进行观战并切换到观众模式");
+	RegConsoleCmd("sm_spectate", Client_Spec, "[surftimer] 选择一个玩家进行观战并切换到观众模式");
+	RegConsoleCmd("sm_helpmenu", Client_Help, "[surftimer] 显示所有SurfTimer命令的帮助菜单");
+	RegConsoleCmd("sm_help", Client_Help, "[surftimer] 显示所有SurfTimer命令的帮助菜单");
+	RegConsoleCmd("sm_profile", Client_Profile, "[surftimer] 打开玩家个人资料");
+	RegConsoleCmd("sm_options", Client_OptionMenu, "[surftimer] 打开选项菜单");
+	RegConsoleCmd("sm_top", Client_Top, "[surftimer] 显示排行榜（前100名玩家，前50名总体）");
+	RegConsoleCmd("sm_topsurfers", Client_Top, "[surftimer] 显示排行榜（前100名玩家，前50名总体）");
+	RegConsoleCmd("sm_bonustop", Client_BonusTop, "[surftimer] 显示奖励的排行榜");
+	RegConsoleCmd("sm_btop", Client_BonusTop, "[surftimer] 显示奖励的排行榜");
+	RegConsoleCmd("sm_stop", Client_Stop, "[surftimer] 停止计时器");
+	RegConsoleCmd("sm_ranks", Client_Ranks, "[surftimer] 显示可用玩家级别的菜单");
+	RegConsoleCmd("sm_pause", Client_Pause, "[surftimer] 开/关暂停（计时器暂停且移动被冻结）");
+	RegConsoleCmd("sm_latest", Client_Latest, "[surftimer] 显示最新的地图记录");
+	RegConsoleCmd("sm_rr", Client_Latest, "[surftimer] 显示最新的地图记录");
+	RegConsoleCmd("sm_rb", Client_Latest, "[surftimer] 显示最新的地图记录");
+	RegConsoleCmd("sm_hide", Client_Hide, "[surftimer] 开/关隐藏其他玩家");
+	RegConsoleCmd("sm_togglecheckpoints", ToggleCheckpoints, "[surftimer] 开/关启用玩家检查点");
+	RegConsoleCmd("+noclip", NoClip, "[surftimer] 开启无碰撞模式");
+	RegConsoleCmd("-noclip", UnNoClip, "[surftimer] 关闭无碰撞模式");
+	RegConsoleCmd("sm_nc", Command_ckNoClip, "[surftimer] 开/关玩家无碰撞模式");
+	RegConsoleCmd("sm_ctop", Client_CountryTOP, "[surftimer] 显示国家排行榜");
+	RegConsoleCmd("sm_ctop_help", Client_CountryTop_Help, "[surftimer] 显示如何使用sm_ctop命令的信息");
+	RegConsoleCmd("sm_crank", Client_CountryRank, "[surftimer] 显示玩家国家排名");
+	RegConsoleCmd("sm_crank_help", Client_CountryRank_Help, "[surftimer] 显示如何使用sm_crank命令的信息");
+	RegConsoleCmd("sm_continenttop", Client_ContinentTOP, "[surftimer] 显示洲排行榜");
+	RegConsoleCmd("sm_continenttop_help", Client_ContinentTop_Help, "[surftimer] 显示如何使用sm_ctop命令的信息");
+	RegConsoleCmd("sm_continentrank", Client_ContinentRank, "[surftimer] 显示玩家洲排名");
+	RegConsoleCmd("sm_continentrank_help", Client_ContinentRank_Help, "[surftimer] 显示如何使用sm_crank命令的信息");
 
-	    // 传送命令
-    RegConsoleCmd("sm_stages", Command_SelectStage, "[surftimer] 打开关卡选择器");
-    RegConsoleCmd("sm_r", Command_Restart, "[surftimer] 将玩家传送回起点");
-    RegConsoleCmd("sm_restart", Command_Restart, "[surftimer] 将玩家传送回起点");
-    RegConsoleCmd("sm_start", Command_Restart, "[surftimer] 将玩家传送回起点");
-    RegConsoleCmd("sm_b", Command_ToBonus, "[surftimer] 将玩家传送到奖励关的起点");
-    RegConsoleCmd("sm_bonus", Command_ToBonus, "[surftimer] 将玩家传送到奖励关的起点");
-    RegConsoleCmd("sm_bonuses", Command_ListBonuses, "[surftimer] 显示当前地图中所有奖励的列表");
-    RegConsoleCmd("sm_s", Command_ToStage, "[surftimer] 将玩家传送到选定的关卡");
-    RegConsoleCmd("sm_stage", Command_ToStage, "[surftimer] 将玩家传送到选定的关卡");
-    RegConsoleCmd("sm_end", Command_ToEnd, "[surftimer] 将玩家传送到终点区域");
+		// 传送命令
+	RegConsoleCmd("sm_stages", Command_SelectStage, "[surftimer] 打开关卡选择器");
+	RegConsoleCmd("sm_r", Command_Restart, "[surftimer] 将玩家传送回起点");
+	RegConsoleCmd("sm_restart", Command_Restart, "[surftimer] 将玩家传送回起点");
+	RegConsoleCmd("sm_start", Command_Restart, "[surftimer] 将玩家传送回起点");
+	RegConsoleCmd("sm_b", Command_ToBonus, "[surftimer] 将玩家传送到奖励关的起点");
+	RegConsoleCmd("sm_bonus", Command_ToBonus, "[surftimer] 将玩家传送到奖励关的起点");
+	RegConsoleCmd("sm_bonuses", Command_ListBonuses, "[surftimer] 显示当前地图中所有奖励的列表");
+	RegConsoleCmd("sm_s", Command_ToStage, "[surftimer] 将玩家传送到选定的关卡");
+	RegConsoleCmd("sm_stage", Command_ToStage, "[surftimer] 将玩家传送到选定的关卡");
+	RegConsoleCmd("sm_end", Command_ToEnd, "[surftimer] 将玩家传送到终点区域");
 
-    // 杂项
-    RegConsoleCmd("sm_tier", Command_Tier, "[surftimer] 打印有关当前地图的信息");
-    RegConsoleCmd("sm_maptier", Command_Tier, "[surftimer] 打印有关当前地图的信息");
-    RegConsoleCmd("sm_mapinfo", Command_Tier, "[surftimer] 打印有关当前地图的信息");
-    RegConsoleCmd("sm_m", Command_Tier, "[surftimer] 打印有关当前地图的信息");
-    RegConsoleCmd("sm_difficulty", Command_Tier, "[surftimer] 打印有关当前地图的信息");
-    RegConsoleCmd("sm_howto", Command_HowTo, "[surftimer] 显示有关如何冲浪的YouTube视频");
+	// 杂项
+	RegConsoleCmd("sm_tier", Command_Tier, "[surftimer] 打印有关当前地图的信息");
+	RegConsoleCmd("sm_maptier", Command_Tier, "[surftimer] 打印有关当前地图的信息");
+	RegConsoleCmd("sm_mapinfo", Command_Tier, "[surftimer] 打印有关当前地图的信息");
+	RegConsoleCmd("sm_m", Command_Tier, "[surftimer] 打印有关当前地图的信息");
+	RegConsoleCmd("sm_difficulty", Command_Tier, "[surftimer] 打印有关当前地图的信息");
+	RegConsoleCmd("sm_howto", Command_HowTo, "[surftimer] 显示有关如何冲浪的YouTube视频");
 
-    // 传送到关卡起点
-    RegConsoleCmd("sm_stuck", Command_Teleport, "[surftimer] 将玩家传送回关卡的起点");
-    RegConsoleCmd("sm_back", Command_Teleport, "[surftimer] 将玩家传送回关卡的起点");
-    RegConsoleCmd("sm_rs", Command_Teleport, "[surftimer] 将玩家传送回关卡的起点");
-    RegConsoleCmd("sm_play", Command_Teleport, "[surftimer] 将玩家传送回起点");
-    RegConsoleCmd("sm_spawn", Command_Teleport, "[surftimer] 将玩家传送回起点");
+	// 传送到关卡起点
+	RegConsoleCmd("sm_stuck", Command_Teleport, "[surftimer] 将玩家传送回关卡的起点");
+	RegConsoleCmd("sm_back", Command_Teleport, "[surftimer] 将玩家传送回关卡的起点");
+	RegConsoleCmd("sm_rs", Command_Teleport, "[surftimer] 将玩家传送回关卡的起点");
+	RegConsoleCmd("sm_play", Command_Teleport, "[surftimer] 将玩家传送回起点");
+	RegConsoleCmd("sm_spawn", Command_Teleport, "[surftimer] 将玩家传送回起点");
 
-    // 玩家检查点
-    RegConsoleCmd("sm_teleport", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
-    RegConsoleCmd("sm_tele", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
-    RegConsoleCmd("sm_prac", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
-    RegConsoleCmd("sm_practice", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
-    RegConsoleCmd("sm_loadloc", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
-    RegConsoleCmd("sm_cp", Command_createPlayerCheckpoint, "[surftimer] 创建一个检查点，玩家可以传送回去");
-    RegConsoleCmd("sm_checkpoint", Command_createPlayerCheckpoint, "[surftimer] 创建一个检查点，玩家可以传送回去");
-    RegConsoleCmd("sm_saveloc", Command_createPlayerCheckpoint, "[surftimer] 创建一个检查点，玩家可以传送回去");
-    RegConsoleCmd("sm_savelocs", Command_SaveLocList);
-    RegConsoleCmd("sm_loclist", Command_SaveLocList);
-    RegConsoleCmd("sm_normal", Command_normalMode, "[surftimer] 切换玩家回到正常模式");
-    RegConsoleCmd("sm_n", Command_normalMode, "[surftimer] 切换玩家回到正常模式");
-    RegConsoleCmd("sm_clearsavelocs", Command_clearPlayerCheckpoints, "[surftimer] 清除玩家的检查点");
-    RegConsoleCmd("sm_clearlocs", Command_clearPlayerCheckpoints, "[surftimer] 清除玩家的检查点");
-    RegConsoleCmd("sm_addsaveloc", Command_recreatePlayerCheckpoint, "[surftimer] 重新创建一个检查点，玩家可以传送回去");
-    RegConsoleCmd("sm_addloc", Command_recreatePlayerCheckpoint, "[surftimer] 重新创建一个检查点，玩家可以传送回去");
-    RegConsoleCmd("sm_teleprev", Command_previousSaveloc, "[surftimer] 向后循环通过创建的检查点");
-    RegConsoleCmd("sm_telenext", Command_nextSaveloc, "[surftimer] 向前循环通过创建的检查点");
+	// 玩家检查点
+	RegConsoleCmd("sm_teleport", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
+	RegConsoleCmd("sm_tele", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
+	RegConsoleCmd("sm_prac", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
+	RegConsoleCmd("sm_practice", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
+	RegConsoleCmd("sm_loadloc", Command_goToPlayerCheckpoint, "[surftimer] 将玩家传送到他的最后一个检查点");
+	RegConsoleCmd("sm_cp", Command_createPlayerCheckpoint, "[surftimer] 创建一个检查点，玩家可以传送回去");
+	RegConsoleCmd("sm_checkpoint", Command_createPlayerCheckpoint, "[surftimer] 创建一个检查点，玩家可以传送回去");
+	RegConsoleCmd("sm_saveloc", Command_createPlayerCheckpoint, "[surftimer] 创建一个检查点，玩家可以传送回去");
+	RegConsoleCmd("sm_savelocs", Command_SaveLocList);
+	RegConsoleCmd("sm_loclist", Command_SaveLocList);
+	RegConsoleCmd("sm_normal", Command_normalMode, "[surftimer] 切换玩家回到正常模式");
+	RegConsoleCmd("sm_n", Command_normalMode, "[surftimer] 切换玩家回到正常模式");
+	RegConsoleCmd("sm_clearsavelocs", Command_clearPlayerCheckpoints, "[surftimer] 清除玩家的检查点");
+	RegConsoleCmd("sm_clearlocs", Command_clearPlayerCheckpoints, "[surftimer] 清除玩家的检查点");
+	RegConsoleCmd("sm_addsaveloc", Command_recreatePlayerCheckpoint, "[surftimer] 重新创建一个检查点，玩家可以传送回去");
+	RegConsoleCmd("sm_addloc", Command_recreatePlayerCheckpoint, "[surftimer] 重新创建一个检查点，玩家可以传送回去");
+	RegConsoleCmd("sm_teleprev", Command_previousSaveloc, "[surftimer] 向后循环通过创建的检查点");
+	RegConsoleCmd("sm_telenext", Command_nextSaveloc, "[surftimer] 向前循环通过创建的检查点");
 
-    // 管理命令
-    RegConsoleCmd("sm_ckadmin", Admin_ckPanel, "[surftimer] 显示SurfTimer管理员菜单面板");
-    RegConsoleCmd("sm_refreshprofile", Admin_RefreshProfile, "[surftimer] 重新计算给定Steam ID的玩家档案");
-    RegConsoleCmd("sm_clearassists", Admin_ClearAssists, "[surftimer] 清除所有玩家的协助点（地图进度）"); // 重新加载地图
-    RegConsoleCmd("sm_refreshranks", Admin_RefreshPlayerRankTable, "[surftimer] 刷新玩家排名表");
+	// 管理命令
+	RegConsoleCmd("sm_ckadmin", Admin_ckPanel, "[surftimer] 显示SurfTimer管理员菜单面板");
+	RegConsoleCmd("sm_refreshprofile", Admin_RefreshProfile, "[surftimer] 重新计算给定Steam ID的玩家档案");
+	RegConsoleCmd("sm_clearassists", Admin_ClearAssists, "[surftimer] 清除所有玩家的协助点（地图进度）"); // 重新加载地图
+	RegConsoleCmd("sm_refreshranks", Admin_RefreshPlayerRankTable, "[surftimer] 刷新玩家排名表");
 
-    // 分区/地图设置命令
-    RegConsoleCmd("sm_zones", Command_Zones, "[surftimer] [zoner] 打开区域创建菜单");
-    RegConsoleCmd("sm_hookzone", Command_HookZones, "[surftimer] [zoner] 打开区域挂钩创建菜单");
-    RegConsoleCmd("sm_addmaptier", Admin_insertMapTier, "[surftimer] [zoner] 更改地图层级");
-    RegConsoleCmd("sm_amt", Admin_insertMapTier, "[surftimer] [zoner] 更改地图层级");
-    RegConsoleCmd("sm_amn", Admin_insertMapperName, "[surftimer] [zoner] 将映射器名称添加到数据库");
-    RegConsoleCmd("sm_addmappername", Admin_insertMapperName, "[surftimer] [zoner] 将映射器名称添加到数据库");
-    RegConsoleCmd("sm_addspawn", Admin_insertSpawnLocation, "[surftimer] [zoner] 更改 !r 对玩家传送的位置");
-    RegConsoleCmd("sm_delspawn", Admin_deleteSpawnLocation, "[surftimer] [zoner] 移除自定义 !r 位置");
-    RegConsoleCmd("sm_mapsettings", Admin_MapSettings, "[surftimer] [zoner] 显示包含更改地图设置的各种选项的菜单");
-    RegConsoleCmd("sm_ms", Admin_MapSettings, "[surftimer] [zoner] 显示包含更改地图设置的各种选项的菜单");
-    RegConsoleCmd("sm_maxvelocity", Command_SetMaxVelocity, "[surftimer] [zoner] 设置当前地图的最大速度");
-    RegConsoleCmd("sm_mv", Command_SetMaxVelocity, "[surftimer] [zoner] 设置当前地图的最大速度");
-    RegConsoleCmd("sm_announcerecord", Command_SetAnnounceRecord, "[surftimer] [zoner] 设置记录是否将在所有完成时宣布，仅限PB或仅限客户端");
-    RegConsoleCmd("sm_ar", Command_SetAnnounceRecord, "[surftimer] [zoner] 设置记录是否将在所有完成时宣布，仅限PB或仅限客户端");
-    RegConsoleCmd("sm_gravityfix", Command_SetGravityFix, "[surftimer] [zoner] 切换当前地图的重力修复");
-    RegConsoleCmd("sm_gf", Command_SetGravityFix, "[surftimer] [zoner] 切换当前地图的重力修复");
-    RegConsoleCmd("sm_triggers", Command_ToggleTriggers, "[surftimer] [zoner] 切换地图触发器的显示");
-    RegConsoleCmd("sm_noclipspeed", Command_NoclipSpeed, "[surftimer] [zoner] 更改 sv_noclipspeed 的值");
+	// 分区/地图设置命令
+	RegConsoleCmd("sm_zones", Command_Zones, "[surftimer] [zoner] 打开区域创建菜单");
+	RegConsoleCmd("sm_hookzone", Command_HookZones, "[surftimer] [zoner] 打开区域挂钩创建菜单");
+	RegConsoleCmd("sm_addmaptier", Admin_insertMapTier, "[surftimer] [zoner] 更改地图层级");
+	RegConsoleCmd("sm_amt", Admin_insertMapTier, "[surftimer] [zoner] 更改地图层级");
+	RegConsoleCmd("sm_amn", Admin_insertMapperName, "[surftimer] [zoner] 将映射器名称添加到数据库");
+	RegConsoleCmd("sm_addmappername", Admin_insertMapperName, "[surftimer] [zoner] 将映射器名称添加到数据库");
+	RegConsoleCmd("sm_addspawn", Admin_insertSpawnLocation, "[surftimer] [zoner] 更改 !r 对玩家传送的位置");
+	RegConsoleCmd("sm_delspawn", Admin_deleteSpawnLocation, "[surftimer] [zoner] 移除自定义 !r 位置");
+	RegConsoleCmd("sm_mapsettings", Admin_MapSettings, "[surftimer] [zoner] 显示包含更改地图设置的各种选项的菜单");
+	RegConsoleCmd("sm_ms", Admin_MapSettings, "[surftimer] [zoner] 显示包含更改地图设置的各种选项的菜单");
+	RegConsoleCmd("sm_maxvelocity", Command_SetMaxVelocity, "[surftimer] [zoner] 设置当前地图的最大速度");
+	RegConsoleCmd("sm_mv", Command_SetMaxVelocity, "[surftimer] [zoner] 设置当前地图的最大速度");
+	RegConsoleCmd("sm_announcerecord", Command_SetAnnounceRecord, "[surftimer] [zoner] 设置记录是否将在所有完成时宣布，仅限PB或仅限客户端");
+	RegConsoleCmd("sm_ar", Command_SetAnnounceRecord, "[surftimer] [zoner] 设置记录是否将在所有完成时宣布，仅限PB或仅限客户端");
+	RegConsoleCmd("sm_gravityfix", Command_SetGravityFix, "[surftimer] [zoner] 切换当前地图的重力修复");
+	RegConsoleCmd("sm_gf", Command_SetGravityFix, "[surftimer] [zoner] 切换当前地图的重力修复");
+	RegConsoleCmd("sm_triggers", Command_ToggleTriggers, "[surftimer] [zoner] 切换地图触发器的显示");
+	RegConsoleCmd("sm_noclipspeed", Command_NoclipSpeed, "[surftimer] [zoner] 更改 sv_noclipspeed 的值");
 
-    // VIP 命令
-    RegAdminCmd("sm_fixbot", Admin_FixBot, g_VipFlag, "[surftimer] 切换回放机器人的开关");
-    RegAdminCmd("sm_fixbots", Admin_FixBot, g_VipFlag, "[surftimer] 切换回放机器人的开关");
-    RegAdminCmd("sm_fb", Admin_FixBot, g_VipFlag, "[surftimer] 切换回放机器人的开关");
+	// VIP 命令
+	RegAdminCmd("sm_fixbot", Admin_FixBot, g_VipFlag, "[surftimer] 切换回放机器人的开关");
+	RegAdminCmd("sm_fixbots", Admin_FixBot, g_VipFlag, "[surftimer] 切换回放机器人的开关");
+	RegAdminCmd("sm_fb", Admin_FixBot, g_VipFlag, "[surftimer] 切换回放机器人的开关");
 
-    RegConsoleCmd("sm_vip", Command_Vip, "[surftimer] [vip] 向客户端显示VIP菜单");
-    RegConsoleCmd("sm_mytitle", Command_PlayerTitle, "[surftimer] [vip] 向玩家显示一个菜单，显示他们的自定义标题并允许他们更改颜色");
-    RegConsoleCmd("sm_title", Command_PlayerTitle, "[surftimer] [vip] 向玩家显示一个菜单，显示他们的自定义标题并允许他们更改颜色");
-    RegConsoleCmd("sm_customtitle", Command_SetDbTitle, "[surftimer] [vip] VIP 可以将自己的自定义标题设置到数据库");
-    RegConsoleCmd("sm_namecolour", Command_SetDbNameColour, "[surftimer] [vip] VIP 可以将自己的自定义名称颜色设置到数据库");
-    RegConsoleCmd("sm_textcolour", Command_SetDbTextColour, "[surftimer] [vip] VIP 可以将自己的自定义文本颜色设置到数据库");
-    RegConsoleCmd("sm_ve", Command_VoteExtend, "[surftimer] [vip] 投票延长地图时间");
-    RegConsoleCmd("sm_colours", Command_ListColours, "[surftimer] 列出 sm_mytitle 和 sm_namecolour 可用的颜色");
-    RegConsoleCmd("sm_colors", Command_ListColours, "[surftimer] 列出 sm_mytitle 和 sm_namecolour 可用的颜色");
-    RegConsoleCmd("sm_toggletitle", Command_ToggleTitle, "[surftimer] [vip] VIP 可以切换他们的标题");
-    RegConsoleCmd("sm_joinmsg", Command_JoinMsg, "[surftimer] [vip] 允许 VIP 设置他们的加入消息");
+	RegConsoleCmd("sm_vip", Command_Vip, "[surftimer] [vip] 向客户端显示VIP菜单");
+	RegConsoleCmd("sm_mytitle", Command_PlayerTitle, "[surftimer] [vip] 向玩家显示一个菜单，显示他们的自定义标题并允许他们更改颜色");
+	RegConsoleCmd("sm_title", Command_PlayerTitle, "[surftimer] [vip] 向玩家显示一个菜单，显示他们的自定义标题并允许他们更改颜色");
+	RegConsoleCmd("sm_customtitle", Command_SetDbTitle, "[surftimer] [vip] VIP 可以将自己的自定义标题设置到数据库");
+	RegConsoleCmd("sm_namecolour", Command_SetDbNameColour, "[surftimer] [vip] VIP 可以将自己的自定义名称颜色设置到数据库");
+	RegConsoleCmd("sm_textcolour", Command_SetDbTextColour, "[surftimer] [vip] VIP 可以将自己的自定义文本颜色设置到数据库");
+	RegConsoleCmd("sm_ve", Command_VoteExtend, "[surftimer] [vip] 投票延长地图时间");
+	RegConsoleCmd("sm_colours", Command_ListColours, "[surftimer] 列出 sm_mytitle 和 sm_namecolour 可用的颜色");
+	RegConsoleCmd("sm_colors", Command_ListColours, "[surftimer] 列出 sm_mytitle 和 sm_namecolour 可用的颜色");
+	RegConsoleCmd("sm_toggletitle", Command_ToggleTitle, "[surftimer] [vip] VIP 可以切换他们的标题");
+	RegConsoleCmd("sm_joinmsg", Command_JoinMsg, "[surftimer] [vip] 允许 VIP 设置他们的加入消息");
 
 	// VIP
-    RegAdminCmd("sm_givevip", VIP_GiveVip, ADMFLAG_ROOT, "[surftimer] 给玩家授予VIP");
-    RegAdminCmd("sm_removevip", VIP_RemoveVip, ADMFLAG_ROOT, "[surftimer] 移除玩家的VIP");
-    RegAdminCmd("sm_addcredits", VIP_GiveCredits, ADMFLAG_ROOT, "[surftimer] 给玩家授予积分");
+	RegAdminCmd("sm_givevip", VIP_GiveVip, ADMFLAG_ROOT, "[surftimer] 给玩家授予VIP");
+	RegAdminCmd("sm_removevip", VIP_RemoveVip, ADMFLAG_ROOT, "[surftimer] 移除玩家的VIP");
+	RegAdminCmd("sm_addcredits", VIP_GiveCredits, ADMFLAG_ROOT, "[surftimer] 给玩家授予积分");
 
-    // WRCP
-    RegConsoleCmd("sm_wrcp", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
-    RegConsoleCmd("sm_wrcps", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
-    RegConsoleCmd("sm_srcp", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
-    RegConsoleCmd("sm_srcps", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
+	// WRCP
+	RegConsoleCmd("sm_wrcp", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
+	RegConsoleCmd("sm_wrcps", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
+	RegConsoleCmd("sm_srcp", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
+	RegConsoleCmd("sm_srcps", Client_Wrcp, "[surftimer] 显示地图的阶段时间");
 
-    // QOL命令
-    RegConsoleCmd("sm_gb", Command_GoBack, "[surftimer] 回到上一阶段");
-    RegConsoleCmd("sm_goback", Command_GoBack, "[surftimer] 回到上一阶段");
-    RegConsoleCmd("sm_mtop", Client_MapTop, "[surftimer] 显示给定地图的本地地图排名");
-    RegConsoleCmd("sm_p", Client_Profile, "[surftimer] 打开玩家档案");
-    RegConsoleCmd("sm_timer", Client_OptionMenu, "[surftimer] 打开选项菜单");
-    RegConsoleCmd("sm_toggletimer", Client_ToggleTimer, "[surftimer] 切换计时器的开关");
-    RegConsoleCmd("sm_surftimer", Client_OptionMenu, "[surftimer] 打开选项菜单");
-    RegConsoleCmd("sm_bhoptimer", Client_OptionMenu, "[surftimer] 打开选项菜单");
-    RegConsoleCmd("sm_knife", Command_GiveKnife, "[surftimer] 给玩家一把刀");
-    RegConsoleCmd("sm_prinfo_help", Command_PRinfo_help, "[surftimer] 在控制台显示如何使用该命令的信息");
-    RegConsoleCmd("sm_csd", Command_CenterSpeed, "[surftimer] [settings] on/off - 切换中心速度显示");
-    // RegConsoleCmd("sm_style_acronyms", Client_StyleAcronyms, "[surftimer] 显示所有可用的风格格式");
-    RegConsoleCmd("sm_continent_acronyms", Client_ContinentAcronyms, "[surftimer] 显示所有可用的大洲格式");
-    RegConsoleCmd("sm_restore", Restore_Menu, "[surftimer] 恢复客户端的上次已知位置");
+	// QOL命令
+	RegConsoleCmd("sm_gb", Command_GoBack, "[surftimer] 回到上一阶段");
+	RegConsoleCmd("sm_goback", Command_GoBack, "[surftimer] 回到上一阶段");
+	RegConsoleCmd("sm_mtop", Client_MapTop, "[surftimer] 显示给定地图的本地地图排名");
+	RegConsoleCmd("sm_p", Client_Profile, "[surftimer] 打开玩家档案");
+	RegConsoleCmd("sm_timer", Client_OptionMenu, "[surftimer] 打开选项菜单");
+	RegConsoleCmd("sm_toggletimer", Client_ToggleTimer, "[surftimer] 切换计时器的开关");
+	RegConsoleCmd("sm_surftimer", Client_OptionMenu, "[surftimer] 打开选项菜单");
+	RegConsoleCmd("sm_bhoptimer", Client_OptionMenu, "[surftimer] 打开选项菜单");
+	RegConsoleCmd("sm_knife", Command_GiveKnife, "[surftimer] 给玩家一把刀");
+	RegConsoleCmd("sm_prinfo_help", Command_PRinfo_help, "[surftimer] 在控制台显示如何使用该命令的信息");
+	RegConsoleCmd("sm_csd", Command_CenterSpeed, "[surftimer] [settings] on/off - 切换中心速度显示");
+	// RegConsoleCmd("sm_style_acronyms", Client_StyleAcronyms, "[surftimer] 显示所有可用的风格格式");
+	RegConsoleCmd("sm_continent_acronyms", Client_ContinentAcronyms, "[surftimer] 显示所有可用的大洲格式");
+	RegConsoleCmd("sm_restore", Restore_Menu, "[surftimer] 恢复客户端的上次已知位置");
 
-    // 新命令
-    RegConsoleCmd("sm_mrank", Command_SelectMapTime, "[surftimer] 在聊天中打印玩家地图记录");
-    RegConsoleCmd("sm_brank", Command_SelectBonusTime, "[surftimer] 在聊天中打印玩家奖励记录");
-    RegConsoleCmd("sm_pr", Command_SelectPlayerPr, "[surftimer] 显示PR菜单到客户端");
-    RegConsoleCmd("sm_togglemapfinish", Command_ToggleMapFinish, "[surftimer] 切换玩家进入终点时是否完成地图");
-    RegConsoleCmd("sm_tmf", Command_ToggleMapFinish, "[surftimer] 切换玩家进入终点时是否完成地图");
-    RegConsoleCmd("sm_repeat", Command_Repeat, "[surftimer] 切换玩家是否保持重复同一阶段");
-    RegConsoleCmd("sm_rank", Command_SelectRank, "[surftimer] 在聊天中显示玩家的服务器排名");
-    RegConsoleCmd("sm_mi", Command_MapImprovement, "[surftimer] 打开地图改进点面板");
-    RegConsoleCmd("sm_specbot", Command_SpecBot, "[surftimer] 观看地图机器人");
-    RegConsoleCmd("sm_specbotbonus", Command_SpecBonusBot, "[surftimer] 观看奖励机器人");
-    RegConsoleCmd("sm_specbotb", Command_SpecBonusBot, "[surftimer] 观看奖励机器人");
-    RegConsoleCmd("sm_showzones", Command_ShowZones, "[surftimer] 客户端可以切换区域是否对其可见");
-    RegConsoleCmd("sm_nextrank", Command_NextRank, "[surftimer] 显示达到下一等级所需的点数");
+	// 新命令
+	RegConsoleCmd("sm_mrank", Command_SelectMapTime, "[surftimer] 在聊天中打印玩家地图记录");
+	RegConsoleCmd("sm_brank", Command_SelectBonusTime, "[surftimer] 在聊天中打印玩家奖励记录");
+	RegConsoleCmd("sm_pr", Command_SelectPlayerPr, "[surftimer] 显示PR菜单到客户端");
+	RegConsoleCmd("sm_togglemapfinish", Command_ToggleMapFinish, "[surftimer] 切换玩家进入终点时是否完成地图");
+	RegConsoleCmd("sm_tmf", Command_ToggleMapFinish, "[surftimer] 切换玩家进入终点时是否完成地图");
+	RegConsoleCmd("sm_repeat", Command_Repeat, "[surftimer] 切换玩家是否保持重复同一阶段");
+	RegConsoleCmd("sm_rank", Command_SelectRank, "[surftimer] 在聊天中显示玩家的服务器排名");
+	RegConsoleCmd("sm_mi", Command_MapImprovement, "[surftimer] 打开地图改进点面板");
+	RegConsoleCmd("sm_specbot", Command_SpecBot, "[surftimer] 观看地图机器人");
+	RegConsoleCmd("sm_specbotbonus", Command_SpecBonusBot, "[surftimer] 观看奖励机器人");
+	RegConsoleCmd("sm_specbotb", Command_SpecBonusBot, "[surftimer] 观看奖励机器人");
+	RegConsoleCmd("sm_showzones", Command_ShowZones, "[surftimer] 客户端可以切换区域是否对其可见");
+	RegConsoleCmd("sm_nextrank", Command_NextRank, "[surftimer] 显示达到下一等级所需的点数");
 
-    // 风格
-    // RegConsoleCmd("sm_style", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
-    // RegConsoleCmd("sm_styles", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
+	// 风格
+	// RegConsoleCmd("sm_style", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
+	// RegConsoleCmd("sm_styles", Client_SelectStyle, "[surftimer] 打开风格选择菜单");
 
-    // 测试
-    RegAdminCmd("sm_test", sm_test, ADMFLAG_CUSTOM6);
-    RegAdminCmd("sm_vel", Client_GetVelocity, ADMFLAG_ROOT);
-    RegAdminCmd("sm_targetname", Client_TargetName, ADMFLAG_ROOT);
+	// 测试
+	RegAdminCmd("sm_test", sm_test, ADMFLAG_CUSTOM6);
+	RegAdminCmd("sm_vel", Client_GetVelocity, ADMFLAG_ROOT);
+	RegAdminCmd("sm_targetname", Client_TargetName, ADMFLAG_ROOT);
 
-    // !Startpos -- Goose
-    RegConsoleCmd("sm_startpos", Command_Startpos, "[surftimer] 保存当前位置作为新的 !r 生成点。");
-    RegConsoleCmd("sm_sp", Command_Startpos, "[surftimer] 保存当前位置作为新的 !r 生成点。");
-    RegConsoleCmd("sm_resetstartpos", Command_ResetStartpos, "[surftimer] 移除自定义 !r 生成点。");
-    RegConsoleCmd("sm_rsp", Command_ResetStartpos, "[surftimer] 移除自定义 !r 生成点。");
+	// !Startpos -- Goose
+	RegConsoleCmd("sm_startpos", Command_Startpos, "[surftimer] 保存当前位置作为新的 !r 生成点。");
+	RegConsoleCmd("sm_sp", Command_Startpos, "[surftimer] 保存当前位置作为新的 !r 生成点。");
+	RegConsoleCmd("sm_resetstartpos", Command_ResetStartpos, "[surftimer] 移除自定义 !r 生成点。");
+	RegConsoleCmd("sm_rsp", Command_ResetStartpos, "[surftimer] 移除自定义 !r 生成点。");
 
-    // CPR
-    RegConsoleCmd("sm_cpr", Command_CPR, "[surftimer] 比较客户端时间与另一个客户端的时间");
-    RegConsoleCmd("sm_prinfo", Command_PRinfo, "[surftimer] 关于地图上个人信息的信息");
+	// CPR
+	RegConsoleCmd("sm_cpr", Command_CPR, "[surftimer] 比较客户端时间与另一个客户端的时间");
+	RegConsoleCmd("sm_prinfo", Command_PRinfo, "[surftimer] 关于地图上个人信息的信息");
 
-    // CCP
-    RegConsoleCmd("sm_ccp", Command_CCP, "[surftimer] 关于地图上检查点信息的信息");
+	// CCP
+	RegConsoleCmd("sm_ccp", Command_CCP, "[surftimer] 关于地图上检查点信息的信息");
 
-    // 重新加载地图
-    RegAdminCmd("sm_rm", Command_ReloadMap, ADMFLAG_ROOT, "[surftimer] 重新加载当前地图");
+	// 重新加载地图
+	RegAdminCmd("sm_rm", Command_ReloadMap, ADMFLAG_ROOT, "[surftimer] 重新加载当前地图");
 
-    // 播放记录
-    RegConsoleCmd("sm_replay", Command_PlayRecord, "[surftimer] 设置回放机器人播放一次记录");
-    RegConsoleCmd("sm_replays", Command_PlayRecord, "[surftimer] 设置回放机器人播放一次记录");
+	// 播放记录
+	RegConsoleCmd("sm_replay", Command_PlayRecord, "[surftimer] 设置回放机器人播放一次记录");
+	RegConsoleCmd("sm_replays", Command_PlayRecord, "[surftimer] 设置回放机器人播放一次记录");
 
-    // 删除记录
-    RegAdminCmd("sm_deleterecords", Command_DeleteRecords, g_ZonerFlag, "[surftimer] [zoner] 删除记录");
-    RegAdminCmd("sm_dr", Command_DeleteRecords, g_ZonerFlag, "[surftimer] [zoner] 删除记录");
-    RegAdminCmd("sm_wipeplayer", Admin_ResetRecords, ADMFLAG_ROOT, "[surfTimer] 移除特定steamid的所有数据库条目 - 需要z标志");
+	// 删除记录
+	RegAdminCmd("sm_deleterecords", Command_DeleteRecords, g_ZonerFlag, "[surftimer] [zoner] 删除记录");
+	RegAdminCmd("sm_dr", Command_DeleteRecords, g_ZonerFlag, "[surftimer] [zoner] 删除记录");
+	RegAdminCmd("sm_wipeplayer", Admin_ResetRecords, ADMFLAG_ROOT, "[surfTimer] 移除特定steamid的所有数据库条目 - 需要z标志");
 
-    // 设置命令
-    RegConsoleCmd("sm_pre", Command_Prestrafe, "[surftimer] [settings] 切换玩家的prestrafe消息");
-    RegConsoleCmd("sm_prestrafe", Command_Prestrafe, "[surftimer] [settings] 切换玩家的prestrafe消息");
-    RegConsoleCmd("sm_togglehints", Command_ToggleHints, "[surftimer] [settings] 切换提示消息");
-    RegConsoleCmd("sm_hints", Command_ToggleHints, "[surftimer] [settings] 切换提示消息");
-    RegConsoleCmd("sm_silentspec", Command_SilentSpec, "[surftimer] [settings] 切换玩家的无声观看");
-    RegConsoleCmd("sm_sspec", Command_SilentSpec, "[surftimer] [settings] 切换玩家的无声观看");
-    RegConsoleCmd("sm_togglewrcps", Command_ToggleWrcps, "[surftimer] [settings] on/off - 启用/禁用玩家检查点");
-    RegConsoleCmd("sm_togglecps", Command_ToggleCps, "[surftimer] [settings] on/off - 启用/禁用玩家检查点");
-    RegConsoleCmd("sm_quake", Command_ToggleQuake, "[surftimer] [settings] on/off - 启用/禁用声音");
-    RegConsoleCmd("sm_startside", Command_ChangeStartSide, "[surftimer] [settings] left/right - 更改起始方向");
-    RegConsoleCmd("sm_speedgradient", Command_ChangeSpeedGradient, "[surftimer] [settings] white/green/rainbow/momentum - 更改速度梯度");
-    RegConsoleCmd("sm_speedmode", Command_ChangeSpeedMode, "[surftimer] [settings] xy/xyz/z - 更改速度模式");
-    RegConsoleCmd("sm_prespeedmode", Command_ChangePreSpeedMode, "[surftimer] [settings] xy/xyz/z - 更改prestrafe速度模式");
-    RegConsoleCmd("sm_centerspeed", Command_CenterSpeed, "[surftimer] [settings] on/off - 切换中心速度显示");
-    RegConsoleCmd("sm_nctriggers", Command_ToggleNcTriggers, "[surftimer] [settings] on/off - 切换在无裁剪时触发器");
-    RegConsoleCmd("sm_autoreset", Command_ToggleAutoReset, "[surftimer] [settings] on/off - 切换当前地图/奖励运行的自动重置，如果您超过您的pb");
+	// 设置命令
+	RegConsoleCmd("sm_pre", Command_Prestrafe, "[surftimer] [settings] 切换玩家的prestrafe消息");
+	RegConsoleCmd("sm_prestrafe", Command_Prestrafe, "[surftimer] [settings] 切换玩家的prestrafe消息");
+	RegConsoleCmd("sm_togglehints", Command_ToggleHints, "[surftimer] [settings] 切换提示消息");
+	RegConsoleCmd("sm_hints", Command_ToggleHints, "[surftimer] [settings] 切换提示消息");
+	RegConsoleCmd("sm_silentspec", Command_SilentSpec, "[surftimer] [settings] 切换玩家的无声观看");
+	RegConsoleCmd("sm_sspec", Command_SilentSpec, "[surftimer] [settings] 切换玩家的无声观看");
+	RegConsoleCmd("sm_togglewrcps", Command_ToggleWrcps, "[surftimer] [settings] on/off - 启用/禁用玩家检查点");
+	RegConsoleCmd("sm_togglecps", Command_ToggleCps, "[surftimer] [settings] on/off - 启用/禁用玩家检查点");
+	RegConsoleCmd("sm_quake", Command_ToggleQuake, "[surftimer] [settings] on/off - 启用/禁用声音");
+	RegConsoleCmd("sm_startside", Command_ChangeStartSide, "[surftimer] [settings] left/right - 更改起始方向");
+	RegConsoleCmd("sm_speedgradient", Command_ChangeSpeedGradient, "[surftimer] [settings] white/green/rainbow/momentum - 更改速度梯度");
+	RegConsoleCmd("sm_speedmode", Command_ChangeSpeedMode, "[surftimer] [settings] xy/xyz/z - 更改速度模式");
+	RegConsoleCmd("sm_prespeedmode", Command_ChangePreSpeedMode, "[surftimer] [settings] xy/xyz/z - 更改prestrafe速度模式");
+	RegConsoleCmd("sm_centerspeed", Command_CenterSpeed, "[surftimer] [settings] on/off - 切换中心速度显示");
+	RegConsoleCmd("sm_nctriggers", Command_ToggleNcTriggers, "[surftimer] [settings] on/off - 切换在无裁剪时触发器");
+	RegConsoleCmd("sm_autoreset", Command_ToggleAutoReset, "[surftimer] [settings] on/off - 切换当前地图/奖励运行的自动重置，如果您超过您的pb");
 
 }
 
@@ -708,25 +708,25 @@ public void VoteExtend(int client)
 
 public Action Command_normalMode(int client, int args)
 {
-    if (!IsValidClient(client))
-        return Plugin_Handled;
+	if (!IsValidClient(client))
+		return Plugin_Handled;
 
-    Client_Stop(client, 1);
+	Client_Stop(client, 1);
 
-    if (g_bPracticeMode[client])
-        g_bPracticeMode[client] = false;
+	if (g_bPracticeMode[client])
+		g_bPracticeMode[client] = false;
 
-    g_iCurrentStyle[client] = 0;
-    g_iInitalStyle[client] = 0;
-    Format(g_szInitalStyle[client], 128, "Normal");
-    Format(g_szStyleHud[client], 32, "");
-    g_bRankedStyle[client] = true;
-    g_bFunStyle[client] = false;
+	g_iCurrentStyle[client] = 0;
+	g_iInitalStyle[client] = 0;
+	Format(g_szInitalStyle[client], 128, "Normal");
+	Format(g_szStyleHud[client], 32, "");
+	g_bRankedStyle[client] = true;
+	g_bFunStyle[client] = false;
 
-    Command_Restart(client, 1);
+	Command_Restart(client, 1);
 
-    CPrintToChat(client, "%t", "PracticeNormal", g_szChatPrefix);
-    return Plugin_Handled;
+	CPrintToChat(client, "%t", "PracticeNormal", g_szChatPrefix);
+	return Plugin_Handled;
 }
 
 public Action Command_createPlayerCheckpoint(int client, int args)
